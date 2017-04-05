@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "LactBot",
   "version": "0.0.1",
   "description": "",
   "main": "server.js",
@@ -9,8 +9,11 @@
   },
   "scripts": {
     "test": "mocha test",
-    "start": "babel-node server.js",
-    "build": "babel "
+    "start": "node --require babel-register --require babel-polyfill server.js",
+    "develop": "nodemon server.js --exec babel-node",
+    "console": "node --require babel-register --require babel-polyfill",
+    "heroku-prebuild": "bash scripts/preinstall.sh",
+    "heroku-postbuild": "bash scripts/postinstall.sh"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -22,5 +25,10 @@
     "eslint": "3.19.0",
     "eslint-plugin-mocha": "4.9.0",
     "nodemon": "1.11.0"
+  },
+  "dependencies": {
+    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#ac6a4dfcdb64fdda24ad1e7242dc1595a39bc1f4",
+    "dotenv": "4.0.0",
+    "js-yaml": "^3.8.1"
   }
 }

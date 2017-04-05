@@ -1,11 +1,11 @@
 import './loadenv';
 import {App, log} from 'deepdialog';
 import {MainDialog, MainNLP} from './maindialog';
-import {PromptDialog} from './promptdialog';
+//import {PromptDialog} from './promptdialog';
 import {MenuTreeDialog} from './menutreedialog';
-import {OnboardDialog} from './onboarddialog';
+//import {OnboardDialog} from './onboarddialog';
 import {YesNoDialog} from './yesnodialog';
-import {BirthdayInputDialog} from './birthdayinputdialog';
+
 
 log.level = process.env.LOGGER_LEVEL || 'info';
 
@@ -28,7 +28,7 @@ process.on('unhandledRejection', function (e) {
 });
 
 app.addNLPModels(MainNLP);
-app.addDialogs(MainDialog, PromptDialog, MenuTreeDialog, OnboardDialog, YesNoDialog, BirthdayInputDialog);
+app.addDialogs(MainDialog, MenuTreeDialog, YesNoDialog );
 app.server.start(process.env.PORT, async function () {
   log.info('Bot started');
   await app.save();
