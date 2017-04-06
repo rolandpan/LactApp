@@ -11,9 +11,7 @@
     "test": "mocha test",
     "start": "node --require babel-register --require babel-polyfill server.js",
     "develop": "nodemon server.js --exec babel-node",
-    "console": "node --require babel-register --require babel-polyfill",
-    "heroku-prebuild": "bash scripts/preinstall.sh",
-    "heroku-postbuild": "bash scripts/postinstall.sh"
+    "console": "node --require babel-register --require babel-polyfill"
   },
   "author": "",
   "license": "UNLICENSED",
