@@ -27,6 +27,8 @@
     "nodemon": "1.11.0"
   },
   "dependencies": {
+    "babel-env": "^2.3.1",
+    "babel-preset-stage-3": "^6.22.0",
     "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#ac6a4dfcdb64fdda24ad1e7242dc1595a39bc1f4",
     "dotenv": "4.0.0",
     "js-yaml": "^3.8.1"
