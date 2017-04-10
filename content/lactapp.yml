@@ -1,20 +1,359 @@
-question: “Hola! Soy la ayudante de LactApp!. Me encantaría ayudarte :) Como nos has conocido?"
+question:
+ - “Hola! Soy la ayudante de LactApp!"
+ - "Me encantaría ayudarte :) "
+ - "¿Cómo nos has conocido?"
 menu:
   Redes Sociales:
-    question: "¿Genial! A ver si nos llegan mas mamis como tu. ¿Sabes que? Colecciono likes :) ¿Me ayudas?"
+    question:
+     - "¡Genial! A ver si nos llegan más mamis como tú. "
+     - "¿Sabes qué? Colecciono likes :) ¿Me ayudas?"
     menu:
       OK:
-        question: "¡Perfecto! A mi me encanta hablar de lactancia, no se a ti. ¿Quieres que hablemos de lactancia?"
+        question:
+         - "¡Perfecto! "
+         - "A mí me encanta hablar de lactancia, no se a ti. "
+         - "¿Quieres que hablemos de lactancia?"
         menu:
           Si:
-            question: "¡Me lo sé todo de la lactancia! ¿Sobre qué temas te gustaría que hablásemos?"
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
             menu:
-              Sobre mi: "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
-              Sobre mi bebé: "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
-              Sobre nuestra lactancia: "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
-          No: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: contacta@lactapp.es"
-      En otro momento: "Hasta la proxima!"
-      Ya soy fan: "Que bueno."
-  Una Amiga: "Ok - una amiga."
-  Blog: "Ok - un blog."
-  He aterrizado aqui: "Ok - otra manera."
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      En otro momento:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      Ya soy fan:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+  Una Amiga:
+    question: "¡Genial! A ver si nos llegan más mamis como tú. "
+              "¿Sabes qué? Colecciono likes :) ¿Me ayudas?"
+    menu:
+      OK:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      En otro momento:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      Ya soy fan:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+  Blog:
+    question: "¡Genial! A ver si nos llegan más mamis como tú. "
+              "¿Sabes qué? Colecciono likes :) ¿Me ayudas?"
+    menu:
+      OK:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      En otro momento:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      Ya soy fan:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+  He aterrizado aqui:
+    question: "¡Genial! A ver si nos llegan más mamis como tú. "
+              "¿Sabes qué? Colecciono likes :) ¿Me ayudas?"
+    menu:
+      OK:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      En otro momento:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
+      Ya soy fan:
+        question: "¡Perfecto! "
+                  "A mí me encanta hablar de lactancia, no se a ti. "
+                  "¿Quieres que hablemos de lactancia?"
+        menu:
+          Si:
+            question: "¡Me lo sé todo de la lactancia! "
+                      "¿Sobre qué temas te gustaría que hablásemos?"
+            menu:
+              Sobre mi:
+                question:   "Dentro de la app de LactApp podrás encontrar respuestas acerca del dolor al amamantar, la falta de leche, la vuelta al trabajo, preparar la lactancia durante el embarazo y mucho más."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre mi bebé:
+                question:   "Tener un bebé lactante puede conllevar muchas preocupaciones. La app de LactApp te ofrece muchas respuestas adaptadas a la edad de tu bebé."
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+              Sobre nuestra lactancia:
+                question:   "¡Lo sé! La lactancia despierta muchísimas dudas, entre las crisis de lactancia, la conservación de la leche y toda la gama de productos para la lactancia... En la app de LactApp hay respuestas para todo, ¡o casi!"
+                            "¿Quieres consultar en la app de LactApp alguno de estos temas?"
+                menu:
+                  Si: "enlace a markets"
+                  Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
+          Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
