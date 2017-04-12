@@ -1,8 +1,13 @@
 //
+// LactBot
+// - onboard to LactApp
+// 
 // Main Dialog
 //
 // This is the dialog that gets control when your bot starts a new
 // session with a user
+//
+//
 //
 
 import {Dialog, NLPModel,log} from 'deepdialog';
