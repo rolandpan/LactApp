@@ -9,14 +9,14 @@ menu:
      - "¿Sabes qué? Colecciono likes :) ¿Me ayudas?"
     menu:
       OK:
-        question:
-         - "¡Perfecto! "
-         - "A mí me encanta hablar de lactancia, no se a ti. "
-         - "¿Quieres que hablemos de lactancia?"
+        question: &respuesto_1
+          - "¡Perfecto!"
+          - "A mí me encanta hablar de lactancia, no se a ti. "
+          - "¿Quieres que hablemos de lactancia?"
         menu:
           Si:
             question:
-              - "¡Me lo sé todo de la lactancia! "
+              - &respuesto_2 "¡Me lo sé todo de la lactancia! "
               - "¿Sobre qué temas te gustaría que hablásemos?"
             menu:
               Sobre mi:
@@ -42,14 +42,11 @@ menu:
                   Más tarde: "¡Genial! Recuerda que si tienes consultas de lactancia, las puedes resolver en LactApp de forma gratuita. Por cierto, si no has dado al like, no dejes de hacerlo para recibir todas las novedades de LactApp."
           Ahora no: "Ya entiendo, quizá quieras contactar directamente con alguien del equipo. Aquí tienes el mail: hola@lactapp.es"
       En otro momento:
-        question:
-          - "¡Perfecto! "
-          - "A mí me encanta hablar de lactancia, no se a ti. "
-          - "¿Quieres que hablemos de lactancia?"
+        question: *respuesto_1
         menu:
           Si:
             question:
-              - "¡Me lo sé todo de la lactancia! "
+              - *respuesto_2
               - "¿Sobre qué temas te gustaría que hablásemos?"
             menu:
               Sobre mi:
