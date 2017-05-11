@@ -57,7 +57,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   // note: response can be a string (if there are no more menu items) or a menu tree subsection
   //
   var versionName = session.get('versionName');
-  var path = session.get('path');
+  var path = session.get('path') || [];
   var fullMenuTree = await loadMenuTree(versionName);
   var newPath = [...path, notification.data.payload];
   var responseToUser = getPath(fullMenuTree, newPath);
