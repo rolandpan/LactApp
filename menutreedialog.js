@@ -10,9 +10,9 @@
 //        menu:
 //          etc.
 //
-
 import {Dialog, any, log} from 'deepdialog';
 import {isString} from 'util';
+import {loadMenuTree, getPath} from './loadMenuTree';
 
 export const MenuTreeDialog = new Dialog({
   name: 'MenuTreeDialog',
@@ -21,9 +21,11 @@ export const MenuTreeDialog = new Dialog({
   allowUnwinding: true
 });
 
-
-MenuTreeDialog.onStart(async function (session, {menuTree}) {
+MenuTreeDialog.onStart(async function (session, {versionName, path}) {
   log.info('Started MenuTreeDialog');
+
+  var fullMenuTree = await loadMenuTree(versionName, path);
+  var menuTree = getPath(fullMenuTree, path);
 
   if (menuTree) {
     await sendQuestionAndMenu(session, menuTree);
@@ -54,8 +56,11 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   // point to next level of menu, given user response
   // note: response can be a string (if there are no more menu items) or a menu tree subsection
   //
-  var menuTreeTmp = session.get('menuTree');
-  var responseToUser = menuTreeTmp.menu[notification.data.payload];
+  var versionName = session.get('versionName');
+  var path = session.get('path');
+  var fullMenuTree = await loadMenuTree(versionName);
+  var newPath = [...path, notification.data.payload];
+  var responseToUser = getPath(fullMenuTree, newPath);
 
   //
   // check if menu reponse is in list of defined items
@@ -66,7 +71,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   // else send messages and exit
   //
     if ( hasMenu(responseToUser)) {
-      await session.start('MenuTreeDialog', 'dummy',{menuTree: responseToUser} );
+      await session.start('MenuTreeDialog', 'dummy',{versionName: versionName, path: newPath} );
     }
     else {
       // check if response should be sent as one message or multiple messages
@@ -86,7 +91,8 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
     // re-send prior message
     //
     await session.send({text: `I'm very sorry, I didn't understand "${notification.data.text}".  Please choose a menu item.`});
-    await sendQuestionAndMenu(session, menuTreeTmp);
+    var currentMenuTree = getPath(fullMenuTree, path);
+    await sendQuestionAndMenu(session, currentMenuTree);
   }
 
 });

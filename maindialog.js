@@ -6,7 +6,8 @@
 //
 
 import {Dialog, NLPModel,log} from 'deepdialog';
-import {loadYML} from './loadyml';
+
+const CURRENT_VERSION='2017-04-10';
 
 export const MainNLP = new NLPModel({
   name: 'MainNLP',
@@ -22,8 +23,6 @@ export const MainDialog = new Dialog({
 
 MainDialog.nlpModelName = 'MainNLP';
 
-var lactAppContent = loadYML('lactapp.yml');
-
 MainDialog.onStart(async function (session) {
   await session.send("Hi, I'm test LactApp bot.  Please type Start.");
   //await session.send("Would you like to start?");
@@ -31,13 +30,13 @@ MainDialog.onStart(async function (session) {
 });
 
 MainDialog.onText('Start', async function(session) {
-  await session.start('MenuTreeDialog', 'maindailog', {menuTree: lactAppContent});
+  await session.start('MenuTreeDialog', 'maindailog', {versionName: CURRENT_VERSION});
 });
 
 MainDialog.onResult('YesNoDialog', 'startmenutree', async function(session, answer) {
   if (answer == 'Yes') {
     log.debug('got here');
-    await session.start('MenuTreeDialog', 'maindailog', {menuTree: lactAppContent});
+    await session.start('MenuTreeDialog', 'maindailog', {versionName: CURRENT_VERSION});
   }
   else {
     session.send('Ok.  If you want to start, just type Yes.');
