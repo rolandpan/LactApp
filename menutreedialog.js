@@ -16,7 +16,7 @@ import {loadMenuTree, getPath} from './loadMenuTree';
 
 export const MenuTreeDialog = new Dialog({
   name: 'MenuTreeDialog',
-  description: 'Recursively traverse a YAML menu tree (in given question: menu: format)',
+  description: 'Traverse a YAML menu tree (in given question: menu: format)',
   handleUnwinding: false,
   allowUnwinding: true
 });
@@ -59,9 +59,10 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   var versionName = session.get('versionName');
   var path = session.get('path') || [];
   var fullMenuTree = await loadMenuTree(versionName);
-  var newPath = [...path, notification.data.payload];
+  var newPath = [...path, 'menu', notification.data.payload];
+  log.debug(`newPath: %j`, newPath);
   var responseToUser = getPath(fullMenuTree, newPath);
-
+  log.debug(`responseToUser: %j`, responseToUser);
   //
   // check if menu reponse is in list of defined items
   //
