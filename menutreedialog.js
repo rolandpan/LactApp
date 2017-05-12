@@ -57,7 +57,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   // note: response can be a string (if there are no more menu items) or a menu tree subsection
   //
   var versionName = session.get('versionName');
-  var path = session.get('path');
+  var path = session.get('path') || [];
   var fullMenuTree = await loadMenuTree(versionName);
   var newPath = [...path, notification.data.payload];
   var responseToUser = getPath(fullMenuTree, newPath);
@@ -66,12 +66,15 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   // check if menu reponse is in list of defined items
   //
   if (responseToUser != undefined) {
-  //
-  // if response is an object with another menu then start another dialog with that menu
-  // else send messages and exit
-  //
+    //
+    // if response is an object with another menu then start another dialog with that menu
+    // else send messages and exit
+    //
     if ( hasMenu(responseToUser)) {
-      await session.start('MenuTreeDialog', 'dummy',{versionName: versionName, path: newPath} );
+      session.set({path: newPath});
+      await session.save();
+      var childMenuTree = getPath(fullMenuTree, newPath);
+      await sendQuestionAndMenu(session, childMenuTree);
     }
     else {
       // check if response should be sent as one message or multiple messages
