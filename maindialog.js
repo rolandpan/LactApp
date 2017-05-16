@@ -37,6 +37,10 @@ MainDialog.onText('Start', async function(session) {
   await session.start('MenuTreeDialog', 'maindailog', {versionName: CURRENT_VERSION});
 });
 
+MainDialog.onText('botdolor_test', async function(session) {
+  await session.start('MenuTreeDialog', 'maindailog', {versionName: 'botdolor_test'});
+});
+
 MainDialog.onResult('YesNoDialog', 'startmenutree', async function(session, answer) {
   if (answer == 'Yes') {
     log.debug('got here');

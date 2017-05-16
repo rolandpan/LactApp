@@ -1,6 +1,6 @@
 //
 // MenuTreeDialog:
-// recursively traverse a questionaire passed as arg (with given, expected YML format)
+// traverse a questionaire passed as arg (with given, expected YML format)
 // Expected format of menuTree
 //   question: '....'
 //   menu:
@@ -13,6 +13,9 @@
 import {Dialog, any, log} from 'deepdialog';
 import {isString} from 'util';
 import {loadMenuTree, getPath} from './loadMenuTree';
+import {sleep} from 'deepdialog/lib/util';
+
+const BACK_BUTTON='Atras';
 
 export const MenuTreeDialog = new Dialog({
   name: 'MenuTreeDialog',
@@ -60,9 +63,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   var path = session.get('path') || [];
   var fullMenuTree = await loadMenuTree(versionName);
   var newPath = [...path, 'menu', notification.data.payload];
-  log.debug(`newPath: %j`, newPath);
   var responseToUser = getPath(fullMenuTree, newPath);
-  log.debug(`responseToUser: %j`, responseToUser);
   //
   // check if menu reponse is in list of defined items
   //
@@ -78,13 +79,10 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       await sendQuestionAndMenu(session, childMenuTree);
     }
     else {
-      // check if response should be sent as one message or multiple messages
-      if (isString(responseToUser)) {
-        await session.send({text: responseToUser} );
-      }
-      else {
-        for (const i in responseToUser)
-          await session.send({text: responseToUser[i]});
+      var responseList = [];
+      responseList = createResponseList(responseToUser);
+      for (const i in responseList) {
+        await session.send(responseList[i]);
       }
       await session.finish(true);
     }
@@ -94,9 +92,27 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
     // temporary recovery handler - recovery handler not active yet
     // re-send prior message
     //
-    await session.send({text: `I'm very sorry, I didn't understand "${notification.data.text}".  Please choose a menu item.`});
-    var currentMenuTree = getPath(fullMenuTree, path);
-    await sendQuestionAndMenu(session, currentMenuTree);
+    if (notification.data.text == BACK_BUTTON) {
+      var len = path.length;
+      // if at top of tree, end and return to main dialog
+      if (len <= 1) {
+        await session.finish(false);
+      }
+      else {
+        // otherwise go to parent node
+        newPath = path.slice(0,len-2);
+        var parentMenuTree = getPath(fullMenuTree, newPath);
+        await sendQuestionAndMenu(session, parentMenuTree);
+        session.set({path: newPath});
+        await session.save();
+      }
+    }
+    else {
+      await session.send({text: `I'm very sorry, I didn't understand "${notification.data.text}".  Please choose a menu item.`});
+      var currentMenuTree = getPath(fullMenuTree, path);
+      await sendQuestionAndMenu(session, currentMenuTree);
+    }
+
   }
 
 });
@@ -114,22 +130,64 @@ MenuTreeDialog.onResult('MenuTreeDialog', 'dummy', async function (session) {
 
 
 // function to send question and reply buttons based on menu tree
+// if array, last element must be text: (not image) to allow sending quick reply buttons
 async function sendQuestionAndMenu(session, menuTree) {
 
   // build menu buttons - iterate over menu items and return array of action objects
   var replyButtons = [];
   for (const mi in menuTree.menu) {
-    replyButtons.push(makeButton(mi, menuTree.menu[mi]));
+    replyButtons.push(makeButton(mi));
+  }
+  replyButtons.push(makeButton(BACK_BUTTON));
+
+  var responseList = [];
+  responseList = createResponseList(menuTree.question);
+
+  for (const i in responseList) {
+    // if last element, add reply buttons
+    if (i == responseList.length - 1) {
+      // add replyButtons object to responseList[i] object and send
+      responseList[i].actions = replyButtons;
+    }
+    await session.send(responseList[i]);
+    // hack to await image loading on FB
+    if (responseList[i].type == 'image') {
+      await sleep(3000);
+    }
   }
 
-  // send question text and menus to user
-  await session.send( {
-    text: menuTree.question,
-    actions: replyButtons
-  } );
 }
 
 
+// function: return list of send objects given user response inputs specified in YML file
+function createResponseList(responseToUser) {
+  var responseList = [];
+  // if only a string is specified, create simple text response
+  if (isString(responseToUser)) {
+    responseList[0] = {text: responseToUser};
+  }
+  else {
+    // if not a string then expect a list
+    for (const i in responseToUser) {
+      // if list item is string then send simple text response
+      if (isString(responseToUser[i])) {
+        responseList[i] = {text: responseToUser[i]};
+      }
+      // if not a string then check for different types of ojects - image w caption, image w/o caption, others to be added
+      else if ('image' in responseToUser[i]) {
+        // create image object
+        responseList[i] = {type: 'image', mediaType: 'image', mediaUrl: responseToUser[i].image};
+        // optionally add caption
+        if (responseToUser[i].text) {
+          responseList[i].text = responseToUser[i].text;
+        }
+      // add response types here with else if statements
+      }
+    }
+  }
+  // return list of objects
+  return responseList;
+}
 
 // function to return required fields to create quick reply button
 function makeButton( name ) {
