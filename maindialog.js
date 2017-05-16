@@ -12,6 +12,7 @@
 import {Dialog, NLPModel,log} from 'deepdialog';
 
 const CURRENT_VERSION='2017-04-10';
+const INTRO_TEXT="Please type Start or botdolor_test.";
 
 export const MainNLP = new NLPModel({
   name: 'MainNLP',
@@ -28,27 +29,25 @@ export const MainDialog = new Dialog({
 MainDialog.nlpModelName = 'MainNLP';
 
 MainDialog.onStart(async function (session) {
-  await session.send("Hi, I'm test LactApp bot.  Please type Start.");
+  await session.send(INTRO_TEXT);
   //await session.send("Would you like to start?");
   //await session.start('YesNoDialog', 'startmenutree');
 });
 
 MainDialog.onText('Start', async function(session) {
-  await session.start('MenuTreeDialog', 'maindailog', {versionName: CURRENT_VERSION});
+  await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
 });
 
 MainDialog.onText('botdolor_test', async function(session) {
-  await session.start('MenuTreeDialog', 'maindailog', {versionName: 'botdolor_test'});
+  await session.start('MenuTreeDialog', 'botdolor_test', {versionName: 'botdolor_test'});
 });
 
-MainDialog.onResult('YesNoDialog', 'startmenutree', async function(session, answer) {
-  if (answer == 'Yes') {
-    log.debug('got here');
-    await session.start('MenuTreeDialog', 'maindailog', {versionName: CURRENT_VERSION});
-  }
-  else {
-    session.send('Ok.  If you want to start, just type Yes.');
-  }
+MainDialog.onResult('MenuTreeDialog', 'current', async function(session) {
+  await session.send(INTRO_TEXT);
+});
+
+MainDialog.onResult('MenuTreeDialog', 'botdolor_test', async function(session) {
+  await session.send(INTRO_TEXT);
 });
 //
 // Basic intent handlers
