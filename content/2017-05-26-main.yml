@@ -1,0 +1,439 @@
+question:
+  - "¡Hola! Soy la ayudante de LactApp"
+  - "Estaré aquí para ayudarte y podrás responder pulsando los botones de abajo"
+menu:
+  Como este:
+    question:
+      - "¡Perfecto!"
+      - "¿Quieres saber más sobre mí?"
+    menu:
+      Vale, cuéntame:
+        question:
+          - "Estoy aprendiendo muchas cosas cada día, seguro que tú me puedes ayudar"
+          - "¿Has visto el menú de ayuda que tengo?"
+          - "Siempre estará abajo para cuando lo necesites"
+        menu: &BIEN_3
+          Ok:
+            question:
+              - "¿Qué puedo hacer por ti?"
+            menu: &BIEN_4
+              Saber cómo funcionas:
+                question:
+                  - "Puedes hablar conmigo de lactancia siempre que quieras"
+                  - "Cada día sé más cosas"
+                  - image: 'http://www.lactapp.es/lactbot/broma.jpg'
+                    text: "Aprendo rápido ;P"
+                  - "¿Qué quieres hacer ahora?"
+                menu:
+                  Contactar con LactApp: &contacta
+                    - "¡Pensaba que no me lo pedirías nunca!"
+                    - "Escribe un email a hola@lactapp.es"
+                    - "Aquí estoy para cuando me necesites"
+                  Hablar de lactancia:
+                    question:
+                      - "Yo he aprendido mucho en la app de LactApp"
+                      - "¿Quieres hablar un rato conmigo de lactancia o prefieres ver los temas que hay en la app?"
+                    menu:
+                      Hablar contigo:
+                        question:
+                          - "Estoy aprendiendo poco a poco"
+                          - "Te propongo algunos temas:"
+                        menu: &temas_app
+                          Sobre mí:
+                            question:
+                              - "Muchas mujeres sienten dolor al amamantar"
+                              - "¿Es tu caso?"
+                            menu:
+                              Sí:
+                                question:
+                                  - "El dolor no debería formar parte de la lactancia"
+                                  - "Es importante que lo soluciones lo antes posible"
+                                  - "¿En qué momento sientes dolor?"
+                                menu:
+                                  Al inicio de la toma:
+                                    question:
+                                      "¿Tu bebé es un recién nacido?"
+                                    menu:
+                                      Sí:
+                                        question: "¿Notas el pecho duro?"
+                                        menu:
+                                          Sí:
+                                            question:
+                                              - "Es posible que en los primeros días padezcas una ingurgitación en el pecho"
+                                              - "Si el pecho está muy duro, te puedes sentir incómoda"
+                                              - "En la app de LactApp podrás encontrar información para solucionarla"
+                                              - "Entra en el apartado 'Sobre mí' y consulta 'Dolor al amamantar'"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu: &menu_descarga
+                                              Sí:
+                                                question: "Qué teléfono tienes?"
+                                                menu:
+                                                  iPhone: "¡Perfecto! Aquí tienes el enlace a la App Store, LactApp es gratis: http://bit.ly/lactappios"
+                                                  Android: "¡Genial! Aquí tienes el enlace a Google Play, LactApp es gratis: http://bit.ly/lactappandroid"
+                                                  Otro:
+                                                    - "¡Vaya! Por el momento, LactApp solo está disponible para Android o iPhone."
+                                                    - "Si quieres seguir nuestras publicaciones puedes entrar en nuestro blog: (LINK BLOG)"
+                                              Ya la tengo instalada: "¡Genial, esperamos que te sea de mucha ayuda!"
+                                              En otro momento:
+                                                - "Ok, cuando te vaya bien."
+                                                - "Igualmente, si tienes más dudas puedes visitar la web www.lactapp.es"
+                                          No:
+                                            question: "¿Quizá tienes heridas o grietas en el pezón?"
+                                            menu:
+                                              Sí:
+                                                question:
+                                                  - "Está muy bien que hayas pedido ayuda"
+                                                  - "Las grietas no deberían formar parte de la lactancia"
+                                                  - "Habitualmente, las grietas se producen por un mal agarre del bebé pero puede haber otras causas"
+                                                  - "Cuánto antes sepas qué te las causa, antes podrás solucionar el problema"
+                                                  - "Entra en LactApp, en el menú 'Sobre mí' y consulta el apartado 'Grietas'"
+                                                  - "¿Quieres descargarte la app de LactApp?"
+                                                menu: *menu_descarga
+                                              No:
+                                                question:
+                                                  - "Aproximadamente durante los primeros 15 días de vida, el agarre del bebé puede ser molesto"
+                                                  - "Pero hay que asegurarse de que las molestias no estén causadas por otras razones"
+                                                  - "Entra en LactApp para encontrar soluciones, ¿Quieres descargarte la app de LactApp?"
+                                                menu: *menu_descarga
+                                      No:
+                                        question: "¿Cuánto hace que sientes dolor?"
+                                        menu:
+                                          Hace poco:
+                                            question:
+                                              - "Haces bien en pedir ayuda"
+                                              - "El dolor no debe formar parte de la lactancia y hay que atajarlo cuánto antes"
+                                              - "Entra en LactApp para encontrar la causa del dolor"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu: *menu_descarga
+                                          Siempre tengo dolor:
+                                            question:
+                                              - "Ninguna madre debería amamantar con dolor"
+                                              - "El dolor es una de las principales causas de abandono de la lactancia"
+                                              - "Si quieres resolverlo, entra en la app de LactApp, en el apartado 'Sobre mí' y consulta 'Dolor al amamantar'"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu: *menu_descarga
+                                  Al final de la toma:
+                                    question:
+                                     - "Comprueba que tu pezón no cambie de color"
+                                     - "Cuando un bebé se agarra mal o comprime el pezón con la encía, se produce una falta de riego sanguíneo"
+                                     - "Intenta aplicar calor justo después de terminar la toma"
+                                     - "Si quieres más información sobre el dolor al final de la toma, consulta la app de LactApp"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Todo el rato:
+                                    question:
+                                      - "La lactancia con dolor es muy dura"
+                                      - "Es importante que busques ayuda"
+                                      - "En la app de LactApp podrás averiguar cuál es la causa del dolor"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              No:
+                                question:
+                                - "Genial, así debería ser"
+                                - "Si quieres puedo hablar de otros temas"
+                                - image: 'http://www.lactapp.es/lactbot/madre-bebe.jpg'
+                                  text: "Madre lactante"
+                                - "Te propongo algunos:"
+                                menu:
+                                  Vuelta al trabajo:
+                                    question:
+                                      - "Volver a trabajar y seguir amamantando es posible si te apetece"
+                                      - "En la mayoría de casos es cuestión de planificación"
+                                      - "Es importante saber qué edad tendrá el bebé, con quién se va a quedar y cuánto tiempo vais a estar separados"
+                                      - "¿Te gustaría hacer un plan personalizado?"
+                                      - image: 'http://www.lactapp.es/lactbot/plan_personalizado.jpg'
+                                        text: "Vuelta al Trabajo"
+                                      - "En la app de LactApp podrás crear tu plan personalizado para volver a trabajar y seguir con la lactancia"
+                                    menu: *menu_descarga
+                                  Falta de leche:
+                                    question:
+                                      - "La percepción de no tener leche suficiente es algo que casi todas las madres sienten en algún momento"
+                                      - "Es importante que te ayuden a evaluar si se trata de una percepción o realmente hay alguna dificultad en vuestra lactancia"
+                                      - "LactApp puede ayudarte a descubrirlo. Entra en el apartado 'Sobre mí' y en '¿Tengo poca leche?'"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Otros temas:
+                                    question:
+                                    - "Veo que los temas más habituales de consulta ya los tienes superados"
+                                    - "Estoy aprendiendo cosas cada día, pronto dominaré más temas"
+                                    - "Mientras tanto, puedes consultar la app de LactApp que tiene todos los temas de lactancia que puedas necesitar"
+                                    - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                          Sobre mi bebé:
+                            question:
+                             - "Tener un bebé despierta siempre muchas dudas"
+                             - "¡Ojalá vinieran con un manual bajo el brazo!"
+                             - image: 'http://www.lactapp.es/lactbot/bebe.jpg'
+                               text: "Sobre mi bebé"
+                             - "Te propongo algunos temas:"
+                            menu:
+                              No gana peso:
+                                question:
+                                  - "La lactancia materna es muy importante para tu bebé pero también es importante que gane peso adecuadamente"
+                                  - image: 'http://www.lactapp.es/lactbot/bebe_peso.jpg'
+                                    text: "Evolución del bebé"
+                                  - "¿Qué edad tiene tu bebé?"
+                                menu:
+                                  De 0 a 15 días:
+                                    question:
+                                      - "¡Oh! ¡Felicidades por tu bebé!"
+                                      - "Los bebés pierden peso los 3 primeros días y empiezan a ganar peso a partir del quinto"
+                                      - "Deberían recuperar el peso del nacimiento sobre los 15 días"
+                                      - "Si lo recuperan antes, ¡muchísimo mejor!"
+                                      - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                      - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Hasta 3 meses:
+                                    question:
+                                     - "Los tres primeros meses son los más complicados, así que felicidades por vuestra lactancia"
+                                     - "En este período de tiempo, los bebés tienen que ganar unos 30 gramos cada día"
+                                     - "Pero, ¡ojo! No ganan peso de manera regular por lo que te puedes llevar un susto si lo pesas cada día"
+                                     - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                     - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  De 3 a 6 meses:
+                                    question:
+                                      - "¡Felicidades por vuestra lactancia!"
+                                      - "Ya empezáis a ser unos expertos en el tema"
+                                      - "Cada vez tu bebé va a ir ganando menos peso"
+                                      - "Aproximadamente unos 20 gramos diarios"
+                                      - "Pero, ¡ojo! No ganan peso de manera regular por lo que te puedes llevar un susto si lo pesas cada día"
+                                      - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                      - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  De 6 a 12 meses:
+                                    question:
+                                      - "¡Enhorabuena por haber llegado hasta aquí!"
+                                      - "Igual ya has empezado con los alimentos sólidos"
+                                      - "Debes saber que no por ello tu bebé va a ganar tanto peso como antes, ¡al contrario!"
+                                      - "En esta etapa, los bebés suelen engordar unos 15 gramos diarios"
+                                      - "En la app de LactApp podrás encontrar más información sobre esta etapa"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Más de 12 meses:
+                                    question:
+                                      - "¡Felicidades por haber llegado hasta aquí!"
+                                      - "Al año, el bebé debería triplicar el peso de su nacimiento"
+                                      - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              Pide mucho pecho:
+                                question:
+                                 - "La demanda de los bebés puede ser sorprendente"
+                                 - "Antes de que nazcan, pensamos que solo maman cada tres horas y después nos damos cuenta de que no es verdad"
+                                 - "Y, por si fuera poco con eso, en ciertos momentos los bebés aumentan su demanda"
+                                 - "¿En qué franja de edad está tu bebé?"
+                                menu:
+                                  24-48 horas:
+                                    question:
+                                      - "¡Enhorabuena! <3"
+                                      - "Quizá te ha sorprendido que tu bebé quiera estar pegado a la teta"
+                                      - "Esto lo hace para aumentar tu prducción de leche"
+                                      - "Además, la segunda noche de vida los bebés suelen querer mamar muchísimo. La llaman 'la noche de las vacas locas'"
+                                      - "¡Vaya nombre! :-P"
+                                      - "Lo hacen para que tengas la subida de leche lo antes posible"
+                                      - "Si tienes más dudas sobre este tema en la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  15-18 días:
+                                    question:
+                                      - "Quizá no lo sabes pero estáis viviendo la primera gran crisis de lactancia"
+                                      - "¡Vaya! Lo que quiero decir es que la 'crisis' es tuya, tu bebé sabe perfectamente lo que debe hacer"
+                                      - "Si mama mucho, tendrá más leche"
+                                      - "Si le dejas mamar todo lo que quiera, tu producción aumentará y superaréis este bache"
+                                      - "Si tienes más dudas sobre los baches y crisis, en la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  6-7 semanas:
+                                    question:
+                                     - "Si tu bebé tiene esta edad casi seguro que está experimentando un aumento de demanda"
+                                     - "Los bebés están nerviosos en el pecho"
+                                     - "Se estiran y tiran del pezón como si fuera chicle"
+                                     - "Lo habitual es que se le pase en pocos días, si le dejas mamar todo lo que quiera"
+                                     - "Seguro que tienes más dudas sobre todo esto. La app de LactApp te puede ayudar"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  3 meses:
+                                    question:
+                                    - "¡Vaya, 3 meses!"
+                                    - "¿Has notado que mama raro?"
+                                    - "Se pelea con el pecho... mama a toda velocidad..."
+                                    - "y si le ofreces más pecho, se enfada y lo rechaza"
+                                    - "¡Ah! y por si fuera poco, igual notas el pecho blando"
+                                    - "Si has notado algo de esto, es muy posible que sea la crisis de los tres meses"
+                                    - "Si necesitas más información, no dudes en consultar la app de LactApp en el aparatdo 'Nuestra lactancia'"
+                                    - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  4 u 8 meses:
+                                    question:
+                                      - "Bueno, debes saber que si tu bebé ronda estas edades es posible que se despierte más"
+                                      - "¡Ups! Quizá ya lo has notado"
+                                      - "Pero te tengo que decir que ahora no es por culpa de la lactancia"
+                                      - "Tu bebé expermienta nuevas fases de sueño y por esa razón está más inquieto de noche"
+                                      - "La teta le ayuda a domirse antes"
+                                      - "No sé si te convenzo, así que si quieres más información en la app de LactApp te van a informar genial"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  2 años:
+                                    question:
+                                      - "¡Vaya! ¡Dos años de teta!"
+                                      - "Mi más sincera enhorabuena"
+                                      - "Ya habrás notado que los dos años son alucinantes en todos los sentidos"
+                                      - "Seguro que ves muy mayor a tu hijo"
+                                      - "A la mayoría de madres les pilla por sorpesa que vuelvan a mamar tanto"
+                                      - "Ejem... además, no lo suelen pedir de buenas maneras"
+                                      - "En la app de LactApp hay información sobre el tema, te pueden ayudar a entender qué está pasando"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Otra edad:
+                                    question:
+                                     - "Pensaba que podía ser un bache de lactancia, pero veo que no coincide con ninguna de las etapas típicas de aumento de demanda"
+                                     - "En la app de LactApp tienes un apartado específico donde podrás saber a qué se debe la alta demanda de tu bebé"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              Alimentos sólidos:
+                                  question:
+                                   - "¡Una nueva etapa por explorar!"
+                                   - "Recuerda que durante el primer año, la lactancia materna sigue siendo el principal alimento para tu bebé"
+                                   - "Los alimentos sólidos no desplazan ni sustituyen a la leche materna"
+                                   - "La complementan, por eso la llaman alimentación complementaria"
+                                   - image: 'http://www.lactapp.es/lactbot/AC.jpg'
+                                     text: "Alimentación complementaria"
+                                   - "Te cuento lo que me puedes preguntar sobre este tema:"
+                                  menu:
+                                    ¿Con qué empiezo?:
+                                      question:
+                                        - "Muchas madres me lo preguntan, ¡es una duda muy habitual!"
+                                        - "La verdad es que todo es mucho más fácil de lo que parece"
+                                        - "Entre la fruta, la verdura, los cereales y la carne... puedes elegir lo que quieras"
+                                        - "Evita los alimentos muy duros o muy pequeños"
+                                        - "E intenta ofecer lo que coméis en casa"
+                                        - "En la app de LactApp hay mucha más información sobre este tema"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    ¿Cuántas veces al día?:
+                                      question:
+                                        - "Cuando se empiezan a ofrecer alimentos, el bebé solo necesita probar algo una vez al día"
+                                        - "Comen muy poquito"
+                                        - "A medida que crezca, la puedes ir ofreciendo alimentos más veces al día"
+                                        - "Si tienes más dudas en la app de LactApp encontrarás más respuestas"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    ¿Está preparado?:
+                                      question:
+                                        - "Pues la verdad es que no lo sé, pero te puedo ayudar a saberlo"
+                                        - "Hay tres cosas que debes observar:"
+                                        - "¿Se mantiene sentado? Puede ser con un poco de ayuda"
+                                        - "¿Muestra interés por los alimentos? Vamos, que si quiere meter la mano en tu plato o te mira embobado"
+                                        - "¿Tiene el reflejo de extrusión desconectado? Eso suena raro, quiere decir que sabe tragar la comida y no la escupe"
+                                        - "Si cumple estos parámetros está listo para comer"
+                                        - "Si aún no, vas a tener que esperar un poco"
+                                        - "En la app de LactApp puedes encontrar más información sobre este tema"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    No quiere comer nada:
+                                      question:
+                                        - "¿Nada de nada?"
+                                        - "¿O quizá solo un poco de algo?"
+                                        - "La mayoría de bebés comen solo un poco de algunos alimentos"
+                                        - "Si no come nada de nada y ya está preparado para comer, no duedes en consultar la app de LactApp para tener más información"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    ¿Papillas o sólidos?:
+                                      question:
+                                        - "Por lo que me han contado, depende un poco de los gustos de cada familia"
+                                        - "Algunos prefieren preparar papillas y otros les ofrecen trozos de comida"
+                                        - "Para poder decidir si prefieres una u otra opción, puedes consultar la app de LactApp"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                              Sueño:
+                                question:
+                                  - "¡Todos los adultos sois unos dormilones!"
+                                  - "Los bebés duermen diferente que los adultos"
+                                  - "je, je :-P"
+                                  - "Te voy a contar un secreto, no duermen más a medida que crecen"
+                                  - image: 'http://www.lactapp.es/lactbot/sueño.jpg'
+                                    text: "Sueño del bebé"
+                                  - "En la app de LactApp podrás encontrar toda la información que necesitas acerca del sueño"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                          Relactar:
+                            question:
+                              - "De acuerdo, vamos a hablar de cómo eliminar los suplementos de leche artificial?"
+                              - "Para iniciar una relactación debes saber qué cantidad aproximada de leche artificial toma tu bebé"
+                              - "Y, por otro lado, es necesario estimular el pecho con un sacaleches"
+                              - "Cada madre y cada bebé son un mundo y no hay una única manera de hacer una relactación"
+                              - image: 'http://www.lactapp.es/lactbot/leche_materna.jpg'
+                                text: "Relactación"
+                              - "Me han dicho que en la app de LactApp encontrarás la opción de hacer un plan personalizado"
+                              - "¿Quieres descargarte la app de LactApp?"
+                            menu: *menu_descarga
+                          Estoy embarazada:
+                            question:
+                              - "¡Felicidades!"
+                              - "Como estás hablando conmigo, deduzco que quieres amamantar"
+                              - image: 'http://www.lactapp.es/lactbot/consulta_embarazo.jpg'
+                                text: "Embarazo y lactancia"
+                              - "Te propongo algunos temas para hablar:"
+                            menu:
+                              Cómo me preparo:
+                                question:
+                                 - "¡Está genial que te informes antes de que llegue tu bebé!"
+                                 - "Los bebés saben mamar pero vosotras las madres tenéis que aprender"
+                                 - "Seguro que has preparado muchas cositas para tu bebé"
+                                 - "Ahora toca preparar la lactancia y te doy los 3 puntos clave para conseguirla:"
+                                 - "1) Lee mucho sobre lactancia. Los libros del Dr. Carlos González, por ejemplo, son muy útiles"
+                                 - "2) No dudes en acudir a un grupo de apoyo a la lactancia, es importante que veas cómo se da el pecho"
+                                 - "¿A qué no adivinas cuál es la tercera?"
+                                 - "Exacto, descárgate la app de LactApp, es gratuita y podrás preparar tu lactancia y resolver todas tus dudas"
+                                 - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                              Miedos y dudas:
+                                question:
+                                  - "Es normal tener dudas y algún miedo respecto a la lactancia"
+                                  - "Tanto si esta es tu primera lactancia como si tienes una experiencia anterior, no hay dos lactancias iguales"
+                                  - "La mejor manera de borrar las dudas y el miedo del mapa es con información"
+                                  - "Suerte que tenemos la app de LactApp para acompañarte en todo el proceso"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                              Tándem:
+                                question:
+                                  - "Dicen muchas cosas, y no todas buenas, de amamantar durante el embarazo"
+                                  - "Habrás oído de todo"
+                                  - "Como todo en la lactancia, la base es una buena información y un buen acompañamiento"
+                                  - image: 'http://www.lactapp.es/lactbot/tandem.jpg'
+                                    text: "Lactancia en tándem"
+                                  - "Te recomiendo que te descargues la app de LactApp que tiene un apartado específico para la lactancia en tándem"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                          Destete:
+                            question:
+                              - "El destete también forma parte de la lactancia"
+                              - "Y, siempre que sea posible, es mejor terminar con un buen sabor de boca"
+                              - "Hay muchos tipos de destete, algunos dirigidos por la madre, otros iniciados por el bebé..."
+                              - "Incluso algunos que deben ser de emergencia"
+                              - "En cualquier caso, en la app de LactApp encontrarás dos apartados para conseguir el mejor destete"
+                              - "¿Quieres descargarte la app de LactApp?"
+                            menu: *menu_descarga
+                          Ninguno de estos temas:
+                            question: "¿Quieres ver los contenidos que hay en LactApp?"
+                            menu:
+                              Sí: "Muy bien, entra en www.lactapp.es/blog"
+                              Ahora no:
+                                question:
+                                  - "Quizá quieres hablar de otro tema"
+                                  - "En la app de LactApp encontrarás todo lo que necesites"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                      Ver los temas puedo encontrar en LactApp: "Revisa nuestro blog www.lactapp.es"
+              Saber qué es LactApp:
+                question:
+                  - "LactApp es una app gratuita de lactancia que ofrece respuestas personalizadas a las dudas que puedas tener."
+                  - "¿Quieres descargarte LactApp ahora?"
+                menu: *menu_descarga
+      Hablamos de lactancia, por favor:
+        question: "Bueno! Te propongo algunos temas:"
+        menu: *temas_app

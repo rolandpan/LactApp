@@ -14,8 +14,10 @@ import {Dialog, any, log} from 'deepdialog';
 import {isString} from 'util';
 import {loadMenuTree, getPath} from './loadMenuTree';
 import {sleep} from 'deepdialog/lib/util';
+import {COMPLETION_QUESTIONAIRE} from './maindialog';
 
 const BACK_BUTTON='Atras';
+const AFFIRMATIVE='Sí';
 
 export const MenuTreeDialog = new Dialog({
   name: 'MenuTreeDialog',
@@ -64,12 +66,13 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   var fullMenuTree = await loadMenuTree(versionName);
   var newPath = [...path, 'menu', notification.data.payload];
   var responseToUser = getPath(fullMenuTree, newPath);
+
   //
   // check if menu reponse is in list of defined items
   //
   if (responseToUser != undefined) {
     //
-    // if response is an object with another menu then start another dialog with that menu
+    // if response is an object with another menu then create another message with that menu
     // else send messages and exit
     //
     if ( hasMenu(responseToUser)) {
@@ -79,12 +82,28 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       await sendQuestionAndMenu(session, childMenuTree);
     }
     else {
+
       var responseList = [];
       responseList = createResponseList(responseToUser);
       for (const i in responseList) {
         await session.send(responseList[i]);
       }
-      await session.finish(true);
+
+      //
+      // check if menutree is completion dialog
+      //
+      if (versionName == COMPLETION_QUESTIONAIRE) {
+        if (notification.data.payload == AFFIRMATIVE) {
+          await session.finish(true);
+        }
+        else {
+          await session.finish(false);
+        }
+      }
+      else {
+        await session.finish(true);
+      }
+
     }
   }
   else {
@@ -112,7 +131,6 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       var currentMenuTree = getPath(fullMenuTree, path);
       await sendQuestionAndMenu(session, currentMenuTree);
     }
-
   }
 
 });
@@ -138,7 +156,10 @@ async function sendQuestionAndMenu(session, menuTree) {
   for (const mi in menuTree.menu) {
     replyButtons.push(makeButton(mi));
   }
-  replyButtons.push(makeButton(BACK_BUTTON));
+  // leave off back button for completion questionaire
+  if (session.get('versionName') != COMPLETION_QUESTIONAIRE) {
+    replyButtons.push(makeButton(BACK_BUTTON));
+  }
 
   var responseList = [];
   responseList = createResponseList(menuTree.question);

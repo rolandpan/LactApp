@@ -1,0 +1,6 @@
+question:
+  - "¡Me encanta hablar contigo!"
+  - "¿Puedo ayudarte en alguna cosa más?"
+menu:
+  Sí: "Bueno!"
+  Ahora no: "Ok, aquí estoy para cuando me necesites"

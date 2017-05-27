@@ -7,19 +7,20 @@
 // This is the dialog that gets control when your bot starts a new
 // session with a user
 //
-
+//
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-const CURRENT_VERSION='2017-04-10';
-const INTRO_TEXT="Please type Start or botdolor_test.";
+const CURRENT_VERSION='2017-05-26-main';
+const restartPath = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
 
+export const COMPLETION_QUESTIONAIRE='2017-05-26-completion';
+export const HELP_MENU_TREE = '2017-05-26-help';
 export const MainNLP = new NLPModel({
   name: 'MainNLP',
   provider:'apiai',
   accessToken: process.env.APIAI_ACCESSKEY_SECRET
 });
-
 
 export const MainDialog = new Dialog({
   name: 'MainDialog',
@@ -29,26 +30,21 @@ export const MainDialog = new Dialog({
 MainDialog.nlpModelName = 'MainNLP';
 
 MainDialog.onStart(async function (session) {
-  await session.send(INTRO_TEXT);
-  //await session.send("Would you like to start?");
-  //await session.start('YesNoDialog', 'startmenutree');
-});
-
-MainDialog.onText('Start', async function(session) {
   await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
 });
 
-MainDialog.onText('botdolor_test', async function(session) {
-  await session.start('MenuTreeDialog', 'botdolor_test', {versionName: 'botdolor_test'});
+MainDialog.onText('Empezar', async function(session) {
+  await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
 });
 
 MainDialog.onResult('MenuTreeDialog', 'current', async function(session) {
-  await session.send(INTRO_TEXT);
+  await session.start('MenuTreeDialog', 'completion_questionaire', {versionName: COMPLETION_QUESTIONAIRE} );
 });
 
-MainDialog.onResult('MenuTreeDialog', 'botdolor_test', async function(session) {
-  await session.send(INTRO_TEXT);
+MainDialog.onResult('MenuTreeDialog', 'completion_questionaire', async function(session, result) {
+  if (result) await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION, path: restartPath});
 });
+
 //
 // Basic intent handlers
 //
