@@ -60,6 +60,10 @@ MainDialog.onIntent('image_input', async function (session, {entities}, {message
   }
 });
 
+MainDialog.onRecovery(async function (session) {
+  await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
+});
+
 function imageHandler(session, message) {
   //
   // thumbs up icons
