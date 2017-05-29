@@ -14,6 +14,9 @@ import {Dialog, NLPModel,log} from 'deepdialog';
 const CURRENT_VERSION='2017-05-26-main';
 const restartPath = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
 
+export const UNRECOGNIZED_IMAGE_RESPONSE = `I\'m so sorry, but I\'m still working on recognizing stickers and images...until I figure it out its best to use text with me.`;
+export const UNRECOGNIZED_TEXT_RESPONSE = `I\'m sorry, but I didn't understand `;
+export const CHOOSE_MENU_ITEM_RESPONSE = `Please choose a menu item.`;
 export const COMPLETION_QUESTIONAIRE='2017-05-26-completion';
 export const HELP_MENU_TREE = '2017-05-26-help';
 export const MainNLP = new NLPModel({
@@ -50,10 +53,10 @@ MainDialog.onResult('MenuTreeDialog', 'completion_questionaire', async function(
 //
 MainDialog.onIntent('image_input', async function (session, {entities}, {message}) {
   if (imageHandler(session, message)) {
-    await session.send('Thumbs up to you too!');
+    await session.send('Bueno!');
   }
   else {
-    await session.send({text: `I\'m so sorry, but I\'m still working on recognizing stickers and images...until I figure it out its best to use text with me.`});
+    await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE});
   }
 });
 
@@ -74,7 +77,3 @@ function imageHandler(session, message) {
     return false;
   }
 }
-
-MainDialog.onIntent('help', async function (session) {
-  await session.send('I am in development.  Type Start to begin.');
-});

@@ -15,8 +15,13 @@ import {isString} from 'util';
 import {loadMenuTree, getPath} from './loadMenuTree';
 import {sleep} from 'deepdialog/lib/util';
 import {COMPLETION_QUESTIONAIRE} from './maindialog';
+import {UNRECOGNIZED_IMAGE_RESPONSE} from './maindialog';
+import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
+import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
+import {restartPath} from '.maindialog';
 
 const BACK_BUTTON='Atras';
+const START_BUTTON='Volver al inicio';
 const AFFIRMATIVE='Sí';
 
 export const MenuTreeDialog = new Dialog({
@@ -51,7 +56,7 @@ MenuTreeDialog.onIntent('thank_you', async function (session) {
 });
 
 MenuTreeDialog.onIntent('image_input', async function (session) {
-  await session.send({text: `I\'m so sorry, but I\'m still working on recognizing stickers and images...until I figure it out please use text to speak with me.`});
+  await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE});
 });
 
 // handle response for any payload for menu item selections
@@ -109,7 +114,9 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   else {
     //
     // temporary recovery handler - recovery handler not active yet
-    // re-send prior message
+    // if not recognized input from user, re-send prior message
+    //
+    // Check for Navigation buttons: back (up one level) or start (go to beginning)
     //
     if (notification.data.text == BACK_BUTTON) {
       var len = path.length;
@@ -126,8 +133,14 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
         await session.save();
       }
     }
+    else if (notification.data.text == START_BUTTON) {
+      newPath = restartPath;
+      session.set({path: newPath});
+      await session.save();
+    }
     else {
-      await session.send({text: `I'm very sorry, I didn't understand "${notification.data.text}".  Please choose a menu item.`});
+      await session.send({text: UNRECOGNIZED_TEXT_RESPONSE});
+      await session.send({text: CHOOSE_MENU_ITEM_RESPONSE});
       var currentMenuTree = getPath(fullMenuTree, path);
       await sendQuestionAndMenu(session, currentMenuTree);
     }
@@ -138,7 +151,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
 // recovery handler not active yet - need changes to lib
 MenuTreeDialog.onRecovery(async function (session, message) {
   await session.send({
-    text: `I'm very sorry, I didn't understand "${message.text}"`});
+    text: UNRECOGNIZED_TEXT_RESPONSE});
 });
 
 // exit dialog when completed
@@ -159,6 +172,7 @@ async function sendQuestionAndMenu(session, menuTree) {
   // leave off back button for completion questionaire
   if (session.get('versionName') != COMPLETION_QUESTIONAIRE) {
     replyButtons.push(makeButton(BACK_BUTTON));
+    replyButtons.push(makeButton(START_BUTTON));
   }
 
   var responseList = [];
