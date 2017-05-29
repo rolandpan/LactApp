@@ -13,9 +13,9 @@ import {Dialog, NLPModel,log} from 'deepdialog';
 
 export const CURRENT_VERSION='2017-05-26-main';
 export const RESTART_PATH = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
-export const UNRECOGNIZED_IMAGE_RESPONSE = `I\'m so sorry, but I\'m still working on recognizing stickers and images...until I figure it out its best to use text with me.`;
-export const UNRECOGNIZED_TEXT_RESPONSE = `I\'m sorry, but I didn't understand `;
-export const CHOOSE_MENU_ITEM_RESPONSE = `Please choose a menu item.`;
+export const UNRECOGNIZED_IMAGE_RESPONSE = `Lo siento.  🙈 Aun estoy aprendindo a reconocer iconos e imágenes... mientras tanto será mejor que uses texto`;
+export const UNRECOGNIZED_TEXT_RESPONSE = `Lo siento 😐 no te he entendido`;
+export const CHOOSE_MENU_ITEM_RESPONSE = `Por favor. Escoge una opción del menú`;
 export const COMPLETION_QUESTIONAIRE='2017-05-26-completion';
 export const HELP_MENU_TREE = '2017-05-26-help';
 export const MainNLP = new NLPModel({
