@@ -134,8 +134,8 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       }
     }
     else if (notification.data.text == START_BUTTON) {
-      newPath = restartPath;
-      session.set({path: newPath});
+      await sendQuestionAndMenu(session, restartPath);
+      session.set({path: restartPath});
       await session.save();
     }
     else {
