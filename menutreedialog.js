@@ -18,7 +18,7 @@ import {COMPLETION_QUESTIONAIRE} from './maindialog';
 import {UNRECOGNIZED_IMAGE_RESPONSE} from './maindialog';
 import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
 import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
-import {restartPath} from '.maindialog';
+import {restartPath} from './maindialog';
 
 const BACK_BUTTON='Atras';
 const START_BUTTON='Volver al inicio';
