@@ -11,9 +11,8 @@
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-const CURRENT_VERSION='2017-05-26-main';
-const restartPath = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
-
+export const CURRENT_VERSION='2017-05-26-main';
+export const RESTART_PATH = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
 export const UNRECOGNIZED_IMAGE_RESPONSE = `I\'m so sorry, but I\'m still working on recognizing stickers and images...until I figure it out its best to use text with me.`;
 export const UNRECOGNIZED_TEXT_RESPONSE = `I\'m sorry, but I didn't understand `;
 export const CHOOSE_MENU_ITEM_RESPONSE = `Please choose a menu item.`;
@@ -45,7 +44,7 @@ MainDialog.onResult('MenuTreeDialog', 'current', async function(session) {
 });
 
 MainDialog.onResult('MenuTreeDialog', 'completion_questionaire', async function(session, result) {
-  if (result) await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION, path: restartPath});
+  if (result) await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION, path: RESTART_PATH});
 });
 
 //

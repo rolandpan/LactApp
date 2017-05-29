@@ -18,7 +18,7 @@ import {COMPLETION_QUESTIONAIRE} from './maindialog';
 import {UNRECOGNIZED_IMAGE_RESPONSE} from './maindialog';
 import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
 import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
-import {restartPath} from './maindialog';
+import {RESTART_PATH} from './maindialog';
 
 const BACK_BUTTON='Atras';
 const START_BUTTON='Volver al inicio';
@@ -71,6 +71,8 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   var fullMenuTree = await loadMenuTree(versionName);
   var newPath = [...path, 'menu', notification.data.payload];
   var responseToUser = getPath(fullMenuTree, newPath);
+  var restartPath = [];
+  var restartMenuTree = getPath(fullMenuTree, restartPath);
 
   //
   // check if menu reponse is in list of defined items
@@ -134,8 +136,8 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       }
     }
     else if (notification.data.text == START_BUTTON) {
-      newPath = restartPath;
-      await sendQuestionAndMenu(session, newPath);
+      log.debug('restart path: %j', restartPath );
+      await sendQuestionAndMenu(session, restartMenuTree);
       session.set({path: restartPath});
       await session.save();
     }
