@@ -1,0 +1,43 @@
+question:
+  - "Hi, I'm LactApp bot here to help you with questions and advice regarding nursing and lactation."
+  - "What can I help you with?"
+menu:
+  I am having symptoms:
+    question: "What symptoms are you having?"
+    menu:
+      Abrasions on nipple:
+      Low milk supply:
+      Other (type your answer):
+      I have a painful lump on my breast:
+        question: "Ok, you have a small lump that is tender to the touch.  Do you have a fever or any other symptoms?"
+        menu:
+          Yes:
+          No:
+            question: "How old is your baby?"
+            menu:
+              Less than 3 days:
+              3 to 5 days:
+                question: "After nursing, does the lump temporarily decrease in size?"
+                menu:
+                  Yes:
+                    - "You've told us: You have a baby 3-5 days old, are experiencing lump that decreases with nursing, and may be tender to the touch, but no fever or other symptoms."
+                    - "Based on this you may have a CLOGGED DUCT."
+                    - "This may be caused by pressure or an infection. They normally last a maximum about 72 hours.  While it's nothing to be immediately alarmed about you should monitor carefully as it may be a precursor to mastitis which is a more serious condition."
+                    - "You can following things to speed recovery and provide comfort for yourself:"
+                    - "1) Apply comfortably warm, moist towels on the affected breast several times a day."
+                    - "2) Do your best to orient your little one's chin to the spot where the blocked duct is."
+                    - "3) Gently massage the lump while baby is nursing."
+                    - "4) Probiotics help maintain a healthy intestinal flora and lessen the chance of a clogged duct."
+                    - "If the lump doesn't disappear in 72 hours or if you get a fever, seek medical attention and this condition can be a pre-cursor to mastitis."
+                  No:
+              5 days to 2 weeks:
+              2 to 4 weeks:
+              1 to 3 months:
+              More than 3 months:
+  My baby:
+  Learn more about:
+    question: "Sounds good, what would you like to learn more about?"
+    menu:
+      Nursing and latching:
+      My pregnancy:
+      Other (type a subject):

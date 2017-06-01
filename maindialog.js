@@ -40,7 +40,7 @@ MainDialog.onText('Empezar', async function(session) {
   await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
 });
 
-MainDialog.onText('Demo', async function(session) {
+MainDialog.onText('Hello', async function(session) {
   await session.start('MenuTreeDialog', 'current', {versionName: DEMO_VERSION});
 });
 

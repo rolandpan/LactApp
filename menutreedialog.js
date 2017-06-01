@@ -20,9 +20,12 @@ import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
 import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
 import {RESTART_PATH} from './maindialog';
 
-const BACK_BUTTON='Atrás';
-const START_BUTTON='Volver al inicio';
+// const BACK_BUTTON='Atrás';
+// const START_BUTTON='Volver al inicio';
 const AFFIRMATIVE='Sí';
+
+const BACK_BUTTON='Back';
+const START_BUTTON='Start over';
 
 export const MenuTreeDialog = new Dialog({
   name: 'MenuTreeDialog',
