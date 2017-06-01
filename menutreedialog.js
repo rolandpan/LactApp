@@ -20,7 +20,7 @@ import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
 import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
 import {RESTART_PATH} from './maindialog';
 
-const BACK_BUTTON='Atras';
+const BACK_BUTTON='Atrás';
 const START_BUTTON='Volver al inicio';
 const AFFIRMATIVE='Sí';
 
@@ -94,6 +94,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       responseList = createResponseList(responseToUser);
       for (const i in responseList) {
         await session.send(responseList[i]);
+        await sleep(1000);
       }
 
       //
@@ -188,6 +189,7 @@ async function sendQuestionAndMenu(session, menuTree) {
       responseList[i].actions = replyButtons;
     }
     await session.send(responseList[i]);
+    await sleep(1000);
     // hack to await image loading on FB
     if (responseList[i].type == 'image') {
       await sleep(3000);

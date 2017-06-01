@@ -11,7 +11,8 @@
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-export const CURRENT_VERSION='2017-05-26-main';
+export const CURRENT_VERSION='2017-06-01-main';
+export const DEMO_VERSION='2017-06-02-lact-demo-eng';
 export const RESTART_PATH = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
 export const UNRECOGNIZED_IMAGE_RESPONSE = `Lo siento.  🙈 Aun estoy aprendindo a reconocer iconos e imágenes... mientras tanto será mejor que uses texto`;
 export const UNRECOGNIZED_TEXT_RESPONSE = `Lo siento 😐 no te he entendido`;
