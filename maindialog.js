@@ -13,7 +13,7 @@ import {Dialog, NLPModel,log} from 'deepdialog';
 
 export const CURRENT_VERSION='2017-06-01-main';
 export const DEMO_VERSION='2017-06-02-lact-demo-eng';
-export const RESTART_PATH = ['menu','Como este','menu','Vale, cuéntame','menu','Ok'];
+export const RESTART_PATH = ['menu','¡Entendido!','menu','Vale, cuéntame','menu','Ok'];
 export const UNRECOGNIZED_IMAGE_RESPONSE = `Lo siento.  🙈 Aun estoy aprendindo a reconocer iconos e imágenes... mientras tanto será mejor que uses texto`;
 export const UNRECOGNIZED_TEXT_RESPONSE = `Lo siento 😐 no te he entendido`;
 export const CHOOSE_MENU_ITEM_RESPONSE = `Por favor. Escoge una opción del menú`;
@@ -38,6 +38,10 @@ MainDialog.onStart(async function (session) {
 
 MainDialog.onText('Empezar', async function(session) {
   await session.start('MenuTreeDialog', 'current', {versionName: CURRENT_VERSION});
+});
+
+MainDialog.onText('Demo', async function(session) {
+  await session.start('MenuTreeDialog', 'current', {versionName: DEMO_VERSION});
 });
 
 MainDialog.onResult('MenuTreeDialog', 'current', async function(session) {
