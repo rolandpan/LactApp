@@ -7,11 +7,11 @@
 // This is the dialog that gets control when your bot starts a new
 // session with a user
 //
-//
+
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-export const CURRENT_VERSION='2017-06-01-main';
+export const CURRENT_VERSION='2017-06-27-main';
 export const DEMO_VERSION='2017-06-02-lact-demo-eng';
 export const RESTART_PATH = ['menu','¡Entendido!','menu','Vale, cuéntame','menu','Ok'];
 export const UNRECOGNIZED_IMAGE_RESPONSE = `Lo siento.  🙈 Aun estoy aprendindo a reconocer iconos e imágenes... mientras tanto será mejor que uses texto`;
