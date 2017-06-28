@@ -18,7 +18,8 @@ import {COMPLETION_QUESTIONAIRE} from './maindialog';
 import {UNRECOGNIZED_IMAGE_RESPONSE} from './maindialog';
 import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
 import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
-import {RESTART_PATH} from './maindialog';
+import {HELP_MENU_TREE} from './maindialog';
+//import {RESTART_PATH} from './maindialog';
 
 const BACK_BUTTON='Atrás';
 const START_BUTTON='Volver al inicio';
@@ -49,14 +50,25 @@ MenuTreeDialog.onStart(async function (session, {versionName, path}) {
 
 });
 
-
+// exit
 MenuTreeDialog.onText('exit', async function (session) {
   await session.finish();
 });
 
-MenuTreeDialog.onIntent('thank_you', async function (session) {
-  await session.send({text: 'You\'re welcome!  Have a great day!'});
+// text matching for help
+MenuTreeDialog.onText('ayuda', async function (session) {
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
 });
+MenuTreeDialog.onText('Ayuda', async function (session) {
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+});
+MenuTreeDialog.onText('no lo entiendo', async function (session) {
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+});
+MenuTreeDialog.onIntent('help', async function (session) {
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+});
+
 
 MenuTreeDialog.onIntent('image_input', async function (session) {
   await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE});
@@ -156,10 +168,21 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
 });
 
 // recovery handler not active yet - need changes to lib
-MenuTreeDialog.onRecovery(async function (session, message) {
+MenuTreeDialog.onRecovery(async function (session) {
   await session.send({
     text: UNRECOGNIZED_TEXT_RESPONSE});
 });
+
+
+// after help dialog, repeat current text and menu options
+MenuTreeDialog.onResult('MenuTreeDialog', 'help', async function (session) {
+  var versionName = session.get('versionName');
+  var path = session.get('path') || [];
+  var fullMenuTree = await loadMenuTree(versionName);
+  var currentMenuTree = getPath(fullMenuTree, path);
+  await sendQuestionAndMenu(session, currentMenuTree);
+});
+
 
 // exit dialog when completed
 MenuTreeDialog.onResult('MenuTreeDialog', 'dummy', async function (session) {
@@ -176,7 +199,7 @@ async function sendQuestionAndMenu(session, menuTree) {
   for (const mi in menuTree.menu) {
     replyButtons.push(makeButton(mi));
   }
-  // leave off back button for completion questionaire
+  // leave off back and to beginning buttons for completion questionaire
   if (session.get('versionName') != COMPLETION_QUESTIONAIRE) {
     replyButtons.push(makeButton(BACK_BUTTON));
     replyButtons.push(makeButton(START_BUTTON));

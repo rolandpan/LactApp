@@ -18,7 +18,7 @@ export const UNRECOGNIZED_IMAGE_RESPONSE = `Lo siento.  🙈 Aun estoy aprendind
 export const UNRECOGNIZED_TEXT_RESPONSE = `Lo siento 😐 no te he entendido`;
 export const CHOOSE_MENU_ITEM_RESPONSE = `Por favor. Escoge una opción del menú`;
 export const COMPLETION_QUESTIONAIRE='2017-05-26-completion';
-export const HELP_MENU_TREE = '2017-05-26-help';
+export const HELP_MENU_TREE = '2017-06-27-help';
 export const MainNLP = new NLPModel({
   name: 'MainNLP',
   provider:'apiai',
