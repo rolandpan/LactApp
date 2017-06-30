@@ -1,0 +1,41 @@
+question: "En que temas te puedo ayudar?"
+menu:
+  ¿Quién eres?: &menu_help_1
+    question:
+     - "Soy la ayudante de LactApp"
+     - "Soy un chatbot programado por el equipo de LactApp para atenderte"
+     - "Cada día aprendo cosas nuevas"
+     - "¿Quizá tienes dudas sobre lo que es un chatbot?"
+    menu:
+      ¿Qué es un chatbot?: &menu_help_2
+        question:
+         - "Soy un programa informático"
+         - "Y tengo la suerte de que me hayan enseñado cosas de lactancia"
+         - "Porque me parece un tema interesantísimo"
+         - "¿Quieres saber cómo funciono o cómo aprendo cosas nuevas?"
+        menu:
+          ¿Cómo funcionas?: &menu_help_3
+            - "Puedes hablar conmigo siempre que quieras"
+            - "Puedo ofrecer propuestas de temas para hablar y tú puedes seleccionar la que más te apetezca"
+            - "Por el momento, para responderme solo puedes seleccionar las opciones que yo te voy ofreciendo"
+            - "El menú de ayuda de abajo te servirá para resolver tus dudas sobre mí"
+          ¿Cómo aprendes?: &menu_help_4
+            - "Soy muy aplicada y me han enseñado muchísimas cosas"
+            - "Aprendo cada día gracias a personas como tú que hablan conmigo"
+            - "Poco a poco iré aprendiendo y podremos hablar de más temas"
+          ¿Cómo vuelvo atrás?: &menu_help_5
+            - "Siempre te aparecerá un botón de Atrás para ir a la pregunta anterior"
+            - "También puedes acceder al menú de abajo para resolver dudas"
+          Quiero hablar con alguien: "Email: hola@lactap.es"
+      ¡Ya sé lo que es!:
+          question:
+            - "¡Así me gusta! Que cada vez más gente sepa que podemos ser útiles"
+            - "¿Qué más te gustaría saber?"
+          menu:
+            ¿De qué temas puedes hablar?: &menu_help_6
+               - "Soy muy joven pero aprendo muy rápido"
+               - "Puedo hablar un poquito de lactancia, pero también puedes conversar sobre LactApp o sobre mí"
+            ¿Cómo aprendes?: *menu_help_4
+            ¿Puedo hablar con alguien?:  "Email: hola@lactap.es"
+  ¿Cómo funcionas?: *menu_help_3
+  ¿Cómo vuelvo atrás?: *menu_help_5
