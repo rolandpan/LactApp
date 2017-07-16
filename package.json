@@ -30,7 +30,7 @@
     "babel-cli": "6.24.0",
     "babel-env": "^2.3.1",
     "babel-preset-stage-3": "^6.22.0",
-    "deepdialog": "git+https://b426c6f581a3c829d709624a810ed5e828ffce45:x-oauth-basic@github.com/aneilbaboo/deepdialog-node-client.git#152e8b2f117222f164f812c9b64c94803aa94be4",
+    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#152e8b2f117222f164f812c9b64c94803aa94be4",
     "dotenv": "4.0.0",
     "js-yaml": "^3.8.1"
   }
