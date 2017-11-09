@@ -20,5 +20,5 @@ export function getPath(obj, path) {
 }
 
 async function loadYML(fileName) {
-  return safeLoad(await fs.readFileAsync('../content/' + fileName, 'utf8'));
+  return safeLoad(await fs.readFileAsync('./content/' + fileName, 'utf8'));
 }
