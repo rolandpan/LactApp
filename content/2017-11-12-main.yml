@@ -1,0 +1,1262 @@
+question:
+  - "¡Hola! Soy la ayudante de LactApp!"
+  - "Estaré aquí para ayudarte y podrás responder pulsando los botones de abajo 👇"
+menu:
+  ¡Entendido!:
+    question:
+      - "¡Perfecto!"
+      - "¿Quieres saber más sobre mí?"
+    menu:
+      Vale, cuéntame:
+        question:
+          - "Te aseguro que no conocerás a otro chatbot más entregado al tema de la lactancia que yo 😎"
+          - "Conmigo podrás encontrar información de lactancia, te puedo proporcionar artículos interesantes, puedes jugar conmigo..."
+          - "¡Y no encontrarás mejor compañía para las noches infinitas de tu bebé pegado a la teta! 😉"
+          - "Estaré aquí siempre que me necesites"
+          - "Escribe AYUDA para seguir hablando de cómo funciono"
+        menu:
+          Ok:
+            question:
+              - "¿Qué puedo hacer por ti?"
+            menu:
+              Saber cómo funcionas: &BIEN_4
+                question:
+                  - "Puedes hablar conmigo de muchos temas que pueden interesarte"
+                  - "Cada día sé más cosas 💪"
+                  - "A medida que vayamos hablando, te propondré temas de los que hablar conmigo"
+                  - "y tú puedes elegir de lo que te apetece hablar"
+                  - "Los botones que aparecen abajo 👇, nos ayudarán a entendernos"
+                  - image: 'http://www.lactapp.es/lactbot/broma.jpg'
+                    text: "Aprendo rápido"
+                  - "¿Qué quieres hacer ahora?"
+                menu:
+                  Contacto de LactApp: &contacta
+                    - "¡Pensaba que no me lo pedirías nunca!"
+                    - "Escribe un email 📬 a hola@lactapp.es"
+                    - "Aquí estoy para cuando me necesites"
+                  Hablar de lactancia:
+                    question:
+                      - "Yo he aprendido mucho en la app de LactApp"
+                      - "¿Quieres hablar un rato conmigo de lactancia o prefieres ver los temas que hay en la app?"
+                    menu:
+                      Hablar contigo:
+                        question:
+                          - "Estoy aprendiendo poco a poco"
+                          - "Te propongo algunos temas:"
+                        menu: &temas_app
+                          Sobre mí:
+                            question:
+                              - "Muchas mujeres sienten dolor al amamantar 😥"
+                              - "¿Es tu caso?"
+                            menu:
+                              Sí:
+                                question:
+                                  - "El dolor no debería formar parte de la lactancia"
+                                  - "Es importante que lo soluciones lo antes posible"
+                                  - "¿En qué momento sientes dolor?"
+                                menu:
+                                  Al inicio de la toma:
+                                    question:
+                                      "¿Tu bebé es un recién nacido?"
+                                    menu:
+                                      Sí:
+                                        question: "¿Notas el pecho duro?"
+                                        menu:
+                                          Sí:
+                                            question:
+                                              - "Es posible que en los primeros días padezcas una ingurgitación en el pecho"
+                                              - "Si el pecho está muy duro, te puedes sentir incómoda"
+                                              - "En la app de LactApp podrás encontrar información para solucionarla"
+                                              - "Entra en el apartado 'Sobre mí' y consulta 'Dolor al amamantar'"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu:
+                                              Sí: &menu_descarga
+                                                question: "¿Qué teléfono tienes?"
+                                                menu:
+                                                  iPhone: "¡Perfecto! Aquí tienes el enlace a la App Store, LactApp es gratis: http://bit.ly/lactappios"
+                                                  Android: "¡Genial! Aquí tienes el enlace a Google Play, LactApp es gratis: http://bit.ly/lactappandroid"
+                                                  Otro:
+                                                    - "¡Vaya! Por el momento, LactApp solo está disponible para Android o iPhone."
+                                                    - "Si quieres seguir nuestras publicaciones puedes entrar en nuestro blog: www.lactapp.es/blog"
+                                              Ya la tengo: "¡Genial, esperamos que te sea de mucha ayuda!"
+                                              En otro momento:
+                                                - "Ok, cuando te vaya bien."
+                                                - "Igualmente, si tienes más dudas puedes visitar la web www.lactapp.es"
+                                          No:
+                                            question: "¿Quizá tienes heridas o grietas en el pezón?"
+                                            menu:
+                                              Sí:
+                                                question:
+                                                  - "Está muy bien que hayas pedido ayuda"
+                                                  - "Las grietas no deberían formar parte de la lactancia 😖"
+                                                  - "Habitualmente, las grietas se producen por un mal agarre del bebé pero puede haber otras causas"
+                                                  - "Cuánto antes sepas qué te las causa, antes podrás solucionar el problema"
+                                                  - "Entra en LactApp, en el menú 'Sobre mí' y consulta el apartado 'Grietas'"
+                                                  - "¿Quieres descargarte la app de LactApp ahora?"
+                                                menu: *menu_descarga
+                                              No:
+                                                question:
+                                                  - "Aproximadamente durante los primeros 15 días de vida, el agarre del bebé puede ser molesto"
+                                                  - "Pero hay que asegurarse de que las molestias no estén causadas por otras razones"
+                                                  - "Entra en LactApp para encontrar soluciones, ¿Quieres descargarte la app de LactApp?"
+                                                menu: *menu_descarga
+                                      No:
+                                        question: "¿Cuánto hace que sientes dolor?"
+                                        menu:
+                                          Hace poco:
+                                            question:
+                                              - "Haces bien en pedir ayuda"
+                                              - "El dolor no debe formar parte de la lactancia y hay que atajarlo cuánto antes"
+                                              - "Podría tratarse de diversas cosas"
+                                              - "Desde una obstrucción a una mastitis en el caso que tengas fiebre"
+                                              - "Hay otro tipo de infecciones en la mama que solo producen un dolor punzante cuando sale la leche al inicio de la toma"
+                                              - "Es importante averiguarde qué se trata"
+                                              - "Entra en LactApp para encontrar la causa del dolor"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu: *menu_descarga
+                                          Siempre tengo dolor:
+                                            question:
+                                              - "Ninguna madre debería amamantar con dolor"
+                                              - "El dolor es una de las principales causas de abandono de la lactancia"
+                                              - "Quizá has aguantado dolor durante mucho tiempo"
+                                              - "Es posible que te hayan dicho que tu bebé se agarra bien o que mama bien"
+                                              - "Pero no tengo ninguna duda de que algo podemos mejorar"
+                                              - "En la app de LactApp encontrarás un apartado llamado 'Sobre mí' y dentro verás un tema llamado 'Dolor al amamantar'"
+                                              - "Creo que te puede ser muy útil seguir los pasos que te va a proponer la app"
+                                              - "y así podrás averiguar y solucionar la causa del dolor"
+                                              - "¿Quieres descargarte la app de LactApp?"
+                                            menu: *menu_descarga
+                                  Al final de la toma:
+                                    question:
+                                     - "Comprueba que tu pezón no cambie de color"
+                                     - "Cuando un bebé se agarra mal o comprime el pezón con la encía, se produce una falta de riego sanguíneo"
+                                     - "Intenta aplicar calor justo después de terminar la toma"
+                                     - "Si te funciona, es probable que sea eso"
+                                     - "Mira este artículo con más información:"
+                                     - image: 'http://www.lactapp.es/lactbot/compresion.jpg'
+                                       text: "Aquí tienes un artículo que puede interesarte: http://www.lactapp.es/blog/isquemia-del-pezon-tres-posibles-causas/"
+                                     - "Si quieres más información sobre el dolor al final de la toma, consulta la app de LactApp"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Todo el rato:
+                                    question:
+                                      - "La lactancia con dolor es muy dura"
+                                      - "Es importante que busques ayuda"
+                                      - "En la app de LactApp podrás averiguar cuál es la causa del dolor"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              No:
+                                question:
+                                  - "Genial, así debería ser"
+                                  - "Si quieres puedo hablar de otros temas"
+                                  - image: 'http://www.lactapp.es/lactbot/madre-bebe.jpg'
+                                    text: "Madre lactante"
+                                  - "Te propongo algunos:"
+                                menu:
+                                  Vuelta al trabajo:
+                                    question:
+                                      - "Volver a trabajar y seguir amamantando es posible si te apetece"
+                                      - "En la mayoría de casos es cuestión de planificación"
+                                      - "Es importante saber qué edad tendrá el bebé, con quién se va a quedar y cuánto tiempo vais a estar separados"
+                                      - "¿Te gustaría hacer un plan personalizado?"
+                                      - image: 'http://www.lactapp.es/lactbot/plan_personalizado.jpg'
+                                        text: "Vuelta al Trabajo"
+                                      - "En la app de LactApp podrás crear tu plan personalizado para volver a trabajar y seguir con la lactancia"
+                                      - "¿Quieres descargar la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Falta de leche:
+                                    question:
+                                      - "La percepción de no tener leche suficiente es algo que casi todas las madres sienten en algún momento"
+                                      - "Es importante que te ayuden a evaluar si se trata de una percepción o realmente hay alguna dificultad en vuestra lactancia"
+                                      - "LactApp puede ayudarte a descubrirlo. Entra en el apartado 'Sobre mí' y en '¿Tengo poca leche?'"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Otros temas:
+                                    question:
+                                      - "Veo que los temas más habituales de consulta ya los tienes superados"
+                                      - "Estoy aprendiendo cosas cada día, pronto dominaré más temas"
+                                      - "¿Me ayudas a decidir cuál será el próximo tema sobre el que aprenda?"
+                                      - "Elige un tema:"
+                                    menu:
+                                      Sentimientos:
+                                        question:
+                                          - "¡Ok! Las emociones durante la lactancia pueden ser una montaña rusa"
+                                          - "Tomo nota, gracias por la sugerencia"
+                                          - "Si necesitas resolver tus dudas de manera inmediata, entra en la app de LactApp"
+                                          - "En el apartado 'Sobre mí' escoge el tema 'Sobre mis sentimientos'"
+                                          - "¿Quieres descargarte la app de LactApp?"
+                                        menu: *menu_descarga
+                                      Producir más leche:
+                                        question:
+                                          - "Ummm 👍, ¡es cierto que es un tema que preocupa a muchas madres!"
+                                          - "Me parece buena idea aprender sobre ello"
+                                          - "Si ahora necesitas ayuda para aumentar tu producción, sé que encontrarás respuestas en LactApp"
+                                          - "En el apartado 'Sobre mí' escoge el tema '¿Cómo puedo producir más leche?'"
+                                          - "¿Quieres descargar la app de LactApp ahora?"
+                                        menu: *menu_descarga
+                                      Conservación de la leche:
+                                        question:
+                                          - "¡Ah! Pues de esto sé alguna cosita..."
+                                          - "La leche materna a temperatura ambiente aguanta entre 4 y 6 horas"
+                                          - "Si la guardas en la nevera, te puede durar unos 5 días más o menos"
+                                          - "Y, si la congelas, unos 6 meses tranquilamente"
+                                          - "¿Quieres más información?"
+                                        menu:
+                                          Sí, cuéntame más:
+                                            question:
+                                             - "Ok, te cuento alguna cosa más:"
+                                             - "La puedes conservar en botes de cristal o de plástico que estén creados para contener alimentos"
+                                             - "Y que se puedan limpiar bien, ¡claro!"
+                                             - "También existen bolsas específicas para guardar la leche"
+                                             - "¿Qué más te puedo contar? 😬"
+                                             - "Sé que la puedes descongelar en el momento en que la necesites"
+                                             - "Y no hace falta que esté demasiado caliente"
+                                             - "¡Madre mía, cuántas cosas! 😮"
+                                             - "Pero las chicas de LactApp saben más que yo y te podrán completar la información"
+                                             - "Entra en la app gratuita de LactApp en el apartado 'Nuestra lactancia' y selecciona 'Cómo conservar y manipular la leche'"
+                                             - "¿Quieres descargarla ahora?"
+                                            menu: *menu_descarga
+                                          No, gracias:
+                                            question: "Muy bien, ¿qué te apetece hacer ahora?"
+                                            menu:
+                                              Jugar conmigo: &GAME
+                                                question:
+                                                  - "¡Pon a prueba tus conocimientos de lactancia!"
+                                                  - "Elige si la siguiente afirmación es cierta o falsa:"
+                                                  - "¿Preparada?"
+                                                menu:
+                                                  Sí: &Q1
+                                                    question:
+                                                      - "Perfecto, ¡vamos allá!"
+                                                      - "Cierto o falso: el pecho se da siempre a demanda"
+                                                    menu:
+                                                      Cierto:
+                                                        question:
+                                                          - "¡No es correcto!"
+                                                          - image: 'http://www.lactapp.es/lactbot/falso.jpg'
+                                                            text: "¡Noooo! ¡Qué pena!"
+                                                          - "La lactancia no siempre es a demanda"
+                                                          - "Solo lo es a partir de que el bebé ha recuperado el peso del nacimiento y es capaz de demandar lo que necesita"
+                                                          - "Si el bebé es prematuro, está enfermo o no gana peso, la madre tiene que marcar la demanda"
+                                                          - "¿Quieres seguir jugando?"
+                                                        menu:
+                                                          Sí: &Q2
+                                                            question:
+                                                              - "¡Vamos a por la siguiente afirmación!"
+                                                              - "Cierto o falso: la leche materna tiene pocas proteínas"
+                                                            menu:
+                                                              Cierto:
+                                                                question:
+                                                                  - "¡Correcto!"
+                                                                  - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                    text: "¡Muy bien!"
+                                                                  - "La leche materna tiene pocas proteínas en su composición, ya que se adapta al crecimiento lento de los bebés humanos"
+                                                                  - "La leche de los mamíferos que tienen un crecimiento rápido tiene más proteínas"
+                                                                  - "¿Quieres seguir jugando?"
+                                                                menu:
+                                                                  Sí: &Q3
+                                                                    question:
+                                                                      - "¡Genial! Siguiente afirmación:"
+                                                                      - "Cierto o falso: para tener leche, te tienes que hidratar mucho"
+                                                                    menu:
+                                                                      Cierto:
+                                                                        question:
+                                                                          - "¡No es correcto!"
+                                                                          - image: 'http://www.lactapp.es/lactbot/falso2.jpg'
+                                                                            text: "¡Ay! Se me escapa una lagrimilla"
+                                                                          - "Es importante que la madre beba agua en función de la sed que tenga, no por beber más agua vas a tener más leche"
+                                                                          - "El aumento excesivo de líquido en la dieta hace tan solo orinar más"
+                                                                          - "¿Quieres seguir jugando?"
+                                                                        menu:
+                                                                          Sí: &Q4
+                                                                            question:
+                                                                              - "¡Genial!"
+                                                                              - "Cierto o falso: la leche materna tiene muchas bacterias"
+                                                                            menu:
+                                                                              Cierto:
+                                                                                question:
+                                                                                  - "¡Correcto!"
+                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto2.jpg'
+                                                                                    text: "¡Doy saltos de alegría!"
+                                                                                  - "La leche materna es una fuente muy importante de bacterias para el bebé"
+                                                                                  - "Hay más de 700 bacterias en la leche materna esenciales para el desarrollo de la salud intestinal del bebé"
+                                                                                  - "¿Quieres seguir jugando?"
+                                                                                menu:
+                                                                                  Sí: &Q5
+                                                                                    question:
+                                                                                      - "Ahí va otra pregunta:"
+                                                                                      - "Cierto o falso: Los mejores botes para conservar la leche materna son los de cristal"
+                                                                                    menu:
+                                                                                      Cierto:
+                                                                                        question:
+                                                                                          - "No es correcto"
+                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                            text: "¡Ops!"
+                                                                                          - "La leche materna se puede almacenar indistintamente en botes de plástico o cristal siempre y cuando sean aptos para conservar alimentos"
+                                                                                          - "¿Quieres seguir jugando?"
+                                                                                        menu:
+                                                                                          Sí: &Q6
+                                                                                            question:
+                                                                                              - "Muy bien, prepárate:"
+                                                                                              - "Cierto o falso: Antes de sacarse leche, puede ser de ayuda realizar un masaje en el pecho"
+                                                                                            menu:
+                                                                                              Cierto:
+                                                                                                question:
+                                                                                                  - "Correctísimo"
+                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                    text: "¡Oleeee!"
+                                                                                                  - "Un masaje en los pechos previo a sacarse leche puede favorecer la extracción de leche"
+                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                menu:
+                                                                                                  Sí: &Q7
+                                                                                                    question:
+                                                                                                      - "¡Muy bien!"
+                                                                                                      - "Cierto o falso: Si te has sacado leche y no la vas a usar en los próximos días, será mejor congelarla"
+                                                                                                    menu:
+                                                                                                      Cierto:
+                                                                                                        question:
+                                                                                                          - "Exacto"
+                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto4.jpg'
+                                                                                                            text: "¡Correcto!"
+                                                                                                          - "Si no le vas a ofrecer la leche en las siguientes horas o tardarás más de 5 días en dársela es mejor que la congeles para que no pierda propiedades"
+                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                        menu:
+                                                                                                          Sí: &Q8
+                                                                                                            question:
+                                                                                                              - "Muy bien, pues ahí va otra pregunta de conservación de la leche"
+                                                                                                              - "Cierto o falso: Puedes dejar la leche fuera de la nevera durante 12 horas"
+                                                                                                            menu:
+                                                                                                              Cierto:
+                                                                                                                question:
+                                                                                                                  - "No es correcto"
+                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                                    text: "Casi lo adivinas"
+                                                                                                                  - "A pesar de que es mejor refrigerar la leche cuando la extraigas, la puedes dejar a temperatura ambiente idealmente unas 4 horas máximo"
+                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                menu:
+                                                                                                                  Sí: &Q9
+                                                                                                                    question:
+                                                                                                                      - "¡Estás a tope!"
+                                                                                                                      - "Cierto o falso: Antes de sacarse leche, hay que beber mucho líquido"
+                                                                                                                    menu:
+                                                                                                                      Cierto:
+                                                                                                                        question:
+                                                                                                                          - "No es correcto"
+                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso.jpg'
+                                                                                                                            text: "Es un error muy común"
+                                                                                                                          - "A pesar de que hay un mito que dice que si bebes líquido puedes producir más leche, la verdad es que no afecta a la producción"
+                                                                                                                          - "Bebe según la sed que tengas"
+                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                        menu:
+                                                                                                                          Sí: &Q10
+                                                                                                                            question:
+                                                                                                                              - "Vamos allá:"
+                                                                                                                              - "Cierto o falso: A partir de los 6 meses, hay que ofrecer primero alimentos y luego pecho"
+                                                                                                                            menu:
+                                                                                                                              Cierto:
+                                                                                                                                question:
+                                                                                                                                  - "¡Oh, vaya! No es correcto"
+                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso2.jpg'
+                                                                                                                                    text: "Seguro que lo has respondido al azar"
+                                                                                                                                  - "Durante el primer año de vida, la leche (ya sea materna o artificial) sigue siendo el alimento principal para el bebé"
+                                                                                                                                  - "Y el resto de alimentos son complementarios"
+                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                menu:
+                                                                                                                                  Sí: &Q11
+                                                                                                                                    question:
+                                                                                                                                      - "Ok, seguimos"
+                                                                                                                                      - "Ahora una facilita..."
+                                                                                                                                      - "Cierto o falso: Cuando das el pecho no puedes tomar ningún medicamento"
+                                                                                                                                    menu:
+                                                                                                                                      Cierto:
+                                                                                                                                        question:
+                                                                                                                                          - "Ops, pues no era tan fácil como pensaba"
+                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                                                                            text: "La próxima la aciertas seguro"
+                                                                                                                                          - "La mayoría de medicamentos son compatibles con la lactancia"
+                                                                                                                                          - "puedes consultarlos todos en la página web de los pediatras de APILAM: www.e-lactancia.org"
+                                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                                        menu:
+                                                                                                                                          Sí: &Q12
+                                                                                                                                            question:
+                                                                                                                                              - "¡Venga! Una nueva pregunta:"
+                                                                                                                                              - "Cierto o falso: No es necesario que los bebés hagan un eructo después de tomar pecho"
+                                                                                                                                            menu:
+                                                                                                                                              Cierto:
+                                                                                                                                                question:
+                                                                                                                                                  - "¡Muy bien!"
+                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                                    text: "Correcto"
+                                                                                                                                                  - "Cuando un bebé está bien agarrado al pecho, no traga aire y, por lo tanto, no necesita eructar cada vez que mama"
+                                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                                menu:
+                                                                                                                                                  Sí: &Q13
+                                                                                                                                                    question:
+                                                                                                                                                      - "¡Creo que has conseguido el récord jugando a este juego"
+                                                                                                                                                      - "¡Vamos allá!"
+                                                                                                                                                      - "Cierto o falso: Dar el pecho es un anticonceptivo natural durante los primeros 6 meses del bebé"
+                                                                                                                                                    menu:
+                                                                                                                                                      Cierto:
+                                                                                                                                                        question:
+                                                                                                                                                          - "¡Sí, señora!"
+                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto4.jpg'
+                                                                                                                                                            text: "Correcto"
+                                                                                                                                                          - "Es muy poco probable quedarse embarazada si cumples todas las condiciones que implica el método MELA"
+                                                                                                                                                          - "¿Te animas a seguir jugando?"
+                                                                                                                                                        menu:
+                                                                                                                                                          Sí: &Q14
+                                                                                                                                                            question:
+                                                                                                                                                              - "¡Eres imparable! Seguimos para bingo:"
+                                                                                                                                                              - "Cierto o falso: Si das el pecho, no puedes hacer dieta"
+                                                                                                                                                            menu:
+                                                                                                                                                              Cierto:
+                                                                                                                                                                question:
+                                                                                                                                                                  - "¡Ohhh! Es incorrecto"
+                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso.jpg'
+                                                                                                                                                                    text: "¡Vaya! La próxima será..."
+                                                                                                                                                                  - "A partir de los tres meses después del parto, puedes hacer dieta"
+                                                                                                                                                                  - "Eso sí, es recomendable que no sea una dieta de menos de 1.800 kilocalorías"
+                                                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                                                menu:
+                                                                                                                                                                  Sí: &Q15
+                                                                                                                                                                    question:
+                                                                                                                                                                      - "Venga, una más:"
+                                                                                                                                                                      - "Cierto o falso: Los pechos pequeños pueden fabricar leche suficiente para mantener la lactancia"
+                                                                                                                                                                    menu:
+                                                                                                                                                                      Cierto:
+                                                                                                                                                                        question:
+                                                                                                                                                                          - "¡Correcto!"
+                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto2.jpg'
+                                                                                                                                                                            text: "¡Muy bien!"
+                                                                                                                                                                          - "El tamaño de los pechos no afecta a la producción de leche de la madre."
+                                                                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                                                                        menu:
+                                                                                                                                                                          Sí: &Q16
+                                                                                                                                                                            question:
+                                                                                                                                                                              - "Muy bien, ¡seguimos!"
+                                                                                                                                                                              - "Cierto o falso: La lactancia debe ser placentera para madre y bebé"
+                                                                                                                                                                            menu:
+                                                                                                                                                                              Cierto:
+                                                                                                                                                                                question:
+                                                                                                                                                                                  - "¡Muy bien!"
+                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                                                                    text: "Esta era fácil"
+                                                                                                                                                                                  - "La lactancia no debe doler"
+                                                                                                                                                                                  - "Si no fuera placentera, no habríamos llegado hasta aquí como especie :)"
+                                                                                                                                                                                  - "¿Seguimos jugando?"
+                                                                                                                                                                                menu:
+                                                                                                                                                                                  Sí: &Q17
+                                                                                                                                                                                    question:
+                                                                                                                                                                                      - "Muy bien, continuamos:"
+                                                                                                                                                                                      - "Cierto o falso: Si tienes un disgusto, la leche se corta"
+                                                                                                                                                                                    menu:
+                                                                                                                                                                                      Cierto:
+                                                                                                                                                                                        question:
+                                                                                                                                                                                          - "¡Noooo!"
+                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                                                                                                                            text: "No es correcto"
+                                                                                                                                                                                          - "¡El disgusto que me da a mí cada vez que escucho este mito!"
+                                                                                                                                                                                          - "Es totalmente falso"
+                                                                                                                                                                                          - "¿Seguimos jugando?"
+                                                                                                                                                                                        menu:
+                                                                                                                                                                                          Sí: &Q18
+                                                                                                                                                                                            question:
+                                                                                                                                                                                              - "Vale, seguimos jugando:"
+                                                                                                                                                                                              - "Cierto o falso: Todas las madres tienen leche suficiente para amamantar a sus hijos"
+                                                                                                                                                                                            menu:
+                                                                                                                                                                                              Cierto:
+                                                                                                                                                                                                question:
+                                                                                                                                                                                                  - "Lo siento pero... no es correcto"
+                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                                                                                                                    text: "Era difícil..."
+                                                                                                                                                                                                  - "La mayoría de madres tienen leche suficiente"
+                                                                                                                                                                                                  - "pero eso no quiere decir que no exista una pequeña parte de la población que pueda tener dificultades para producir la cantidad suficiente para el bebé"
+                                                                                                                                                                                                  - "¿Quieres jugar más?"
+                                                                                                                                                                                                menu:
+                                                                                                                                                                                                  Sí: &Q19
+                                                                                                                                                                                                    question:
+                                                                                                                                                                                                      - "¡Lo tuyo ya es vicio!"
+                                                                                                                                                                                                      - "Cierto o falso: La lactancia no debería causar dolor"
+                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                      Cierto:
+                                                                                                                                                                                                        question:
+                                                                                                                                                                                                          - "¡Muy bien!"
+                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                                                            text: "Esta era fácil"
+                                                                                                                                                                                                          - "La lactancia debería ser placentera"
+                                                                                                                                                                                                          - "el dolor es una señal de que algo no va bien y debe ser revisado"
+                                                                                                                                                                                                          - "¿Quieres jugar más?"
+                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                          Sí: &Q20
+                                                                                                                                                                                                            question:
+                                                                                                                                                                                                              - "Venga, esta seguro que te la sabes:"
+                                                                                                                                                                                                              - "Cierto o falso: La leche materna sigue alimentando al bebé a los dos años"
+                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                              Cierto:
+                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                  - "¡Felicidades!"
+                                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto2.jpg'
+                                                                                                                                                                                                                    text: "¡Has acertado!"
+                                                                                                                                                                                                                  - "La leche materna a los dos años contiene mayor cantidad de grasa que al inicio de la misma"
+                                                                                                                                                                                                                  - "y, por lo tanto, sigue alimentando al bebé"
+                                                                                                                                                                                                                  - "¿Seguimos jugando?"
+                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                  Sí: &Q21
+                                                                                                                                                                                                                    question:
+                                                                                                                                                                                                                      - "Lo tuyo ya es vocacional"
+                                                                                                                                                                                                                      - "Cierto o falso: Si me quedo embarazada mientras amamanto, puedo seguir dando el pecho"
+                                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                                      Cierto:
+                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                          - "¡Claro que sí!"
+                                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                                                                                                            text: "¡Has acertado!"
+                                                                                                                                                                                                                          - "A eso se le llama lactancia en tándem"
+                                                                                                                                                                                                                          - "Y puede hacerse, a menos que exista una indicación médica de que no puedes, entre otras cosas, mantener relaciones sexuales"
+                                                                                                                                                                                                                          - "¿Quieres jugar más conmigo?"
+                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                          Sí: &Q22
+                                                                                                                                                                                                                            question:
+                                                                                                                                                                                                                              - "¡Eres imparable!"
+                                                                                                                                                                                                                              - "Esta seguro que te la sabes!"
+                                                                                                                                                                                                                              - "Cierto o falso: Dormir también alimenta al bebé"
+                                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                                              Cierto:
+                                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                                  - "¡No! Es falso"
+                                                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso2.jpg'
+                                                                                                                                                                                                                                    text: "Esta no la has acertado"
+                                                                                                                                                                                                                                  - "Por suerte para muchos adultos, dormir no alimenta"
+                                                                                                                                                                                                                                  - "Si el bebé no ha recuperado el peso del nacimiento y duerme mucho, es mejor que le despiertes y le ofrezcas el pecho"
+                                                                                                                                                                                                                                  - "¿Seguimos jugando?"
+                                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                                  Sí: &Q23
+                                                                                                                                                                                                                                    question:
+                                                                                                                                                                                                                                      - "Vale, esta seguro que la adivinas:"
+                                                                                                                                                                                                                                      - "Cierto o falso: El bebé usa la teta de chupete"
+                                                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                                                      Cierto:
+                                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                                          - "¡Qué va!"
+                                                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                                                                                                                                                                            text: "Esta no la has acertado"
+                                                                                                                                                                                                                                          - "Los bebés usan los chupetes de teta y no al contrario"
+                                                                                                                                                                                                                                          - "¿Seguimos jugando?"
+                                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                                          Sí: &Q24
+                                                                                                                                                                                                                                            question:
+                                                                                                                                                                                                                                              - "Vale, te hago una pregunta más:"
+                                                                                                                                                                                                                                              - "Cierto o falso: Si te hacen una radiografía puedes seguir con la lactancia"
+                                                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                                                              Cierto:
+                                                                                                                                                                                                                                                - "¡Muy bien!"
+                                                                                                                                                                                                                                                - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                                                                                                  text: "Correcto"
+                                                                                                                                                                                                                                                - "La mayoría de pruebas diagnósticas son compatibles con la lactancia"
+                                                                                                                                                                                                                                                - "puedes consultarlas todas en la página web de los pediatras de APILAM: www.e-lactancia.org"
+                                                                                                                                                                                                                                                - "¡Oye! ¡Me has dejado sin preguntas!"
+                                                                                                                                                                                                                                                - "Gracias por jugar conmigo, ha sido un placer"
+                                                                                                                                                                                                                                                - "¿Qué quieres hacer ahora?"
+                                                                                                                                                                                                                                              Falso:
+                                                                                                                                                                                                                                                - "¡No es correcto!"
+                                                                                                                                                                                                                                                - image: 'http://www.lactapp.es/lactbot/falso.jpg'
+                                                                                                                                                                                                                                                  text: "¡Vaya!"
+                                                                                                                                                                                                                                                - "La mayoría de pruebas diagnósticas son compatibles con la lactancia"
+                                                                                                                                                                                                                                                - "puedes consultarlas todas en la página web de los pediatras de APILAM: www.e-lactancia.org "
+                                                                                                                                                                                                                                                - "¡Oye! ¡Me has dejado sin preguntas!"
+                                                                                                                                                                                                                                                - "Gracias por jugar conmigo, ha sido un placer"
+                                                                                                                                                                                                                                                - "¿Qué quieres hacer ahora?"
+                                                                                                                                                                                                                                          No: &gracias_fin "¡Gracias por jugar conmigo! Si quieres seguir hablando conmigo, selecciona 'Volver al inicio'"
+                                                                                                                                                                                                                                      Falso:
+                                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                                          - "¡Muy bien!"
+                                                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto4.jpg'
+                                                                                                                                                                                                                                            text: "Has acertado"
+                                                                                                                                                                                                                                          - "Los bebés usan los chupetes de teta y no al contrario"
+                                                                                                                                                                                                                                          - ¿Seguimos jugando?
+                                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                                          Sí: *Q24
+                                                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                                                              Falso:
+                                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                                  - "¡Muy bien!"
+                                                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                                                                                                                    text: "Correcto"
+                                                                                                                                                                                                                                  - "Por suerte para muchos adultos, dormir no alimenta"
+                                                                                                                                                                                                                                  - "Si el bebé no ha recuperado el peso del nacimiento y duerme mucho, es mejor que le despiertes y le ofrezcas el pecho"
+                                                                                                                                                                                                                                  - "¿Seguimos jugando?"
+                                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                                  Sí: *Q23
+                                                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                                      Falso:
+                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                          - "¡Oh! No es correcto"
+                                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso.jpg'
+                                                                                                                                                                                                                            text: "¡Esta vez no has acertado!"
+                                                                                                                                                                                                                          - "A eso se le llama lactancia en tándem"
+                                                                                                                                                                                                                          - "Y puede hacerse, a menos que exista una indicación médica de que no puedes, entre otras cosas, mantener relaciones sexuales"
+                                                                                                                                                                                                                          - ¿Quieres jugar más conmigo?
+                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                          Sí: *Q22
+                                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                                              Falso:
+                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                  - "¡No es correcto!"
+                                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso2.jpg'
+                                                                                                                                                                                                                    text: "¡Casi aciertas!"
+                                                                                                                                                                                                                  - "La leche materna a los dos años contiene mayor cantidad de grasa que al inicio de la misma"
+                                                                                                                                                                                                                  - "y, por lo tanto, sigue alimentando al bebé"
+                                                                                                                                                                                                                  - ¿Seguimos jugando?
+                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                  Sí: *Q21
+                                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                      Falso:
+                                                                                                                                                                                                        question:
+                                                                                                                                                                                                          - "¡Vaya! No es correcto"
+                                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                                                                                                                                            text: "Seguro que la has respuesto al azar"
+                                                                                                                                                                                                          - "La lactancia debería ser placentera"
+                                                                                                                                                                                                          - "el dolor es una señal de que algo no va bien y debe ser revisado"
+                                                                                                                                                                                                          - "¿Quieres jugar más?"
+                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                          Sí: *Q20
+                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                              Falso:
+                                                                                                                                                                                                question:
+                                                                                                                                                                                                  - "¡Correcto!"
+                                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                                                    text: "¡Muy bien!"
+                                                                                                                                                                                                  - "La mayoría de madres tienen leche suficiente"
+                                                                                                                                                                                                  - "pero eso no quiere decir que no exista una pequeña parte de la población que pueda tener dificultades para producir la cantidad suficiente para el bebé"
+                                                                                                                                                                                                  - "¿Quieres jugar más?"
+                                                                                                                                                                                                menu:
+                                                                                                                                                                                                  Sí: *Q19
+                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                      Falso:
+                                                                                                                                                                                        question:
+                                                                                                                                                                                          - "¡Exacto!"
+                                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                                            text: "Correcto"
+                                                                                                                                                                                          - "¡El disgusto que me da a mí cada vez que escucho este mito!"
+                                                                                                                                                                                          - "Es totalmente falso"
+                                                                                                                                                                                          - "¿Seguimos jugando?"
+                                                                                                                                                                                        menu:
+                                                                                                                                                                                          Sí: *Q18
+                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                              Falso:
+                                                                                                                                                                                question:
+                                                                                                                                                                                  - "¡Muy bien!"
+                                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                                                                    text: "Esta era fácil"
+                                                                                                                                                                                  - "La lactancia no debe doler"
+                                                                                                                                                                                  - "Si no fuera placentera, no habríamos llegado hasta aquí como especie :)"
+                                                                                                                                                                                  - "¿Seguimos jugando?"
+                                                                                                                                                                                menu:
+                                                                                                                                                                                  Sí: *Q17
+                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                      Falso:
+                                                                                                                                                                        question:
+                                                                                                                                                                          - "¡No es correcto!"
+                                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                                                                                                            text: "No era una pregunta fácil"
+                                                                                                                                                                          - "El tamaño de los pechos no afecta a la producción de leche de la madre."
+                                                                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                                                                        menu:
+                                                                                                                                                                          Sí: *Q16
+                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                              Falso:
+                                                                                                                                                                question:
+                                                                                                                                                                  - "¡Sí, muy bien!"
+                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                    text: "¡Correcto!"
+                                                                                                                                                                  - "A partir de los tres meses después del parto, puedes hacer dieta"
+                                                                                                                                                                  - "Eso sí, es recomendable que no sea una dieta de menos de 1.800 kilocalorías"
+                                                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                                                menu:
+                                                                                                                                                                  Sí: *Q15
+                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                      Falso:
+                                                                                                                                                        question:
+                                                                                                                                                          - "No es correcto"
+                                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                                                                            text: "Casi lo adivinas"
+                                                                                                                                                          - "Es muy poco probable quedarse embarazada si cumples todas las condiciones que implica el método MELA"
+                                                                                                                                                          - ¿Te animas a seguir jugando?
+                                                                                                                                                        menu:
+                                                                                                                                                          Sí: *Q14
+                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                  No: *gracias_fin
+                                                                                                                                              Falso:
+                                                                                                                                                question:
+                                                                                                                                                  - "Vaya... ¡No es correcto!"
+                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                                                                    text: "Aixxx..."
+                                                                                                                                                  - "Cuando un bebé está bien agarrado al pecho, no traga aire y, por lo tanto, no necesita eructar cada vez que mama"
+                                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                                menu:
+                                                                                                                                                  Sí: *Q13
+                                                                                                                                                  No: *gracias_fin
+                                                                                                                                          No: *gracias_fin
+                                                                                                                                      Falso:
+                                                                                                                                        question:
+                                                                                                                                          - "¡Bien! Has acertado"
+                                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                                                                            text: "Correcto"
+                                                                                                                                          - "La mayoría de medicamentos son compatibles con la lactancia"
+                                                                                                                                          - "puedes consultarlos todos en la página web de los pediatras de APILAM: www.e-lactancia.org"
+                                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                                        menu:
+                                                                                                                                          Sí: *Q12
+                                                                                                                                          No: *gracias_fin
+                                                                                                                                  No: *gracias_fin
+                                                                                                                              Falso:
+                                                                                                                                question:
+                                                                                                                                  - "La respuesta es... ¡correcta!"
+                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto2.jpg'
+                                                                                                                                    text: "¡Bien dicho!"
+                                                                                                                                  - "Durante el primer año de vida, la leche (ya sea materna o artificial) sigue siendo el alimento principal para el bebé"
+                                                                                                                                  - "Y el resto de alimentos son complementarios"
+                                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                                menu:
+                                                                                                                                  Sí: *Q11
+                                                                                                                                  No: *gracias_fin
+                                                                                                                          No: *gracias_fin
+                                                                                                                      Falso:
+                                                                                                                        question:
+                                                                                                                          - "¡Correcto!"
+                                                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                            text: "Es un mito grande como una casa"
+                                                                                                                          - "A pesar de que hay un mito que dice que si bebes líquido puedes producir más leche, la verdad es que no afecta a la producción"
+                                                                                                                          - "Bebe según la sed que tengas"
+                                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                                        menu:
+                                                                                                                          Sí: *Q10
+                                                                                                                          No: *gracias_fin
+                                                                                                                  No: *gracias_fin
+                                                                                                              Falso:
+                                                                                                                question:
+                                                                                                                  - "Correcto"
+                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                    text: "Has acertado"
+                                                                                                                  - "A pesar de que es mejor refrigerar la leche cuando la extraigas, la puedes dejar a temperatura ambiente idealmente unas 4 horas máximo"
+                                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                                menu:
+                                                                                                                  Sí: *Q9
+                                                                                                                  No: *gracias_fin
+                                                                                                          No: *gracias_fin
+                                                                                                      Falso:
+                                                                                                        question:
+                                                                                                          - "No es correcto"
+                                                                                                          - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                            text: "Casi lo adivinas"
+                                                                                                          - "Si no le vas a ofrecer la leche en las siguientes horas o tardarás más de 5 días en dársela es mejor que la congeles para que no pierda propiedades"
+                                                                                                          - "¿Quieres seguir jugando?"
+                                                                                                        menu:
+                                                                                                          Sí: *Q8
+                                                                                                          No: *gracias_fin
+                                                                                                  No: *gracias_fin
+                                                                                              Falso:
+                                                                                                question:
+                                                                                                  - "Noooooo"
+                                                                                                  - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                                                    text: "No es correcto"
+                                                                                                  - "Un masaje en los pechos previo a sacarse leche puede favorecer la extracción de leche"
+                                                                                                  - "¿Quieres seguir jugando?"
+                                                                                                menu:
+                                                                                                  Sí: *Q7
+                                                                                                  No: *gracias_fin
+                                                                                          No: *gracias_fin
+                                                                                      Falso:
+                                                                                        question:
+                                                                                          - "¡Correcto!"
+                                                                                          - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                                            text: "¡Claro que sí!"
+                                                                                          - "La leche materna se puede almacenar indistintamente en botes de plástico o cristal siempre y cuando sean aptos para conservar alimentos"
+                                                                                          - "¿Quieres seguir jugando?"
+                                                                                        menu:
+                                                                                          Sí: *Q6
+                                                                                          No: *gracias_fin
+                                                                                  No: *gracias_fin
+                                                                              Falso:
+                                                                                question:
+                                                                                  - "¡No es correcto!"
+                                                                                  - image: 'http://www.lactapp.es/lactbot/falso3.jpg'
+                                                                                    text: "¡Aix! ¡Casi!"
+                                                                                  - "La leche materna es una fuente muy importante de bacterias para el bebé"
+                                                                                  - "Hay más de 700 bacterias en la leche materna esenciales para el desarrollo de la salud intestinal del bebé"
+                                                                                  - "¿Seguimos jugando?"
+                                                                                menu:
+                                                                                  Sí: *Q5
+                                                                                  No: *gracias_fin
+                                                                          No: *gracias_fin
+                                                                      Falso:
+                                                                        question:
+                                                                          - "¡Correcto!"
+                                                                          - image: 'http://www.lactapp.es/lactbot/correcto3.jpg'
+                                                                            text: "¡Tú sí que sabes!"
+                                                                          - "Es importante que la madre beba agua en función de la sed que tenga, no por beber más agua vas a tener más leche"
+                                                                          - "El aumento excesivo de líquido en la dieta hace tan solo orinar más"
+                                                                          - "¿Quieres seguir jugando?"
+                                                                        menu:
+                                                                          Sí: *Q4
+                                                                          No: *gracias_fin
+                                                                  No: *gracias_fin
+                                                              Falso:
+                                                                question:
+                                                                  - "¡No es correcto!"
+                                                                  - image: 'http://www.lactapp.es/lactbot/falso4.jpg'
+                                                                    text: "¡Vaya! No me gusta perder..."
+                                                                  - "La leche materna tiene pocas proteínas en su composición, ya que se adapta al crecimiento lento de los bebés humanos"
+                                                                  - "La leche de los mamíferos que tienen un crecimiento rápido tiene más proteínas"
+                                                                  - "¿Quieres seguir jugando?"
+                                                                menu:
+                                                                  Sí: *Q3
+                                                                  No: *gracias_fin
+                                                          No: *gracias_fin
+                                                      Falso:
+                                                        question:
+                                                          - "¡Correcto!"
+                                                          - image: 'http://www.lactapp.es/lactbot/correcto4.jpg'
+                                                            text: "¡Sí! ¡Muy bien!"
+                                                          - "La lactancia no siempre es a demanda"
+                                                          - "Solo lo es a partir de que el bebé ha recuperado el peso del nacimiento y es capaz de demandar lo que necesita"
+                                                          - "Si el bebé es prematuro, está enfermo o no gana peso, la madre tiene que marcar la demanda"
+                                                          - "¿Quieres seguir jugando?"
+                                                        menu:
+                                                          Sí: *Q2
+                                                          No: *gracias_fin
+                                                  No: "¡Ok! En otro momento quizá..."
+                                              Ahora no: "¡Ok! En otro momento quizá..."
+                                      Métodos de suplementación:
+                                        question:
+                                          - "¡Tomo nota!"
+                                          - "Cuando piensas en ofrecer leche a un bebé, ¿qué imagen te viene a la cabeza?"
+                                          - "Espera, que lo adivino..."
+                                          - "🍼"
+                                          - "Sí, exacto, un biberón. Y no tiene por qué ser la única manera"
+                                          - "¡Hay más opciones de las que nos pensamos! Jeringa, vasito, cuchara, relactador..."
+                                          - "No te pierdas este artículo de LactApp sobre el tema: http://www.lactapp.es/blog/como-le-pueden-dar-mi-leche-en-mi-ausencia"
+                                          - "¡Espero que te sirva esta información! 😃"
+                                          - "¿Qué te apetece hacer ahora?"
+                                        menu:
+                                          Jugar: *GAME
+                                          En otro momento: "Ok! Cuando me necesites, silva"
+                          Sobre mi bebé:
+                            question:
+                             - "Tener un bebé 👶 despierta siempre muchas dudas"
+                             - "¡Ojalá vinieran con un manual bajo el brazo! 😜"
+                             - image: 'http://www.lactapp.es/lactbot/bebe.jpg'
+                               text: "Sobre mi bebé"
+                             - "Te propongo algunos temas:"
+                            menu:
+                              No gana peso:
+                                question:
+                                  - "La lactancia materna es muy importante para tu bebé pero también es importante que gane peso adecuadamente"
+                                  - image: 'http://www.lactapp.es/lactbot/bebe_peso.jpg'
+                                    text: "Evolución del bebé"
+                                  - "¿Qué edad tiene tu bebé?"
+                                menu:
+                                  De 0 a 15 días:
+                                    question:
+                                      - "¡Oh! ¡Felicidades por tu bebé!"
+                                      - "Los bebés pierden peso los 3 primeros días y empiezan a ganar peso a partir del quinto"
+                                      - "Deberían recuperar el peso del nacimiento sobre los 15 días"
+                                      - "Si lo recuperan antes, ¡muchísimo mejor!"
+                                      - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                      - "Pero te puedo ofrecer algunas sugerencias:"
+                                    menu:
+                                      Sugerencias:
+                                        question:
+                                          - "¡Empiezo!"
+                                          - "Intenta despertar a tu bebé para que tome el pecho entre 8 y 12 veces en 24 horas"
+                                          - "Si no consigues que se despierte, no dudes en ofrecerle tu leche extraída"
+                                          - "Si consigues despertarle, puedes realizar la compresión mamaria"
+                                          - image: 'http://www.lactapp.es/lactbot/compresion.jpg'
+                                            text: "Sugerencias sobre los 15 primeros días"
+                                          - "¿Qué quieres hacer ahora?"
+                                        menu:
+                                          Jugar conmigo: *GAME
+                                          En otro momento: "Ok, aquí estoy para cuando me necesites"
+                                      Ahora no:
+                                        question:
+                                          - "De acuerdo, pero por si quieres saber más sobre el aumento de peso"
+                                          - "en la app de LactApp encontrarás información sobre este tema"
+                                          - "¿Quieres descargarte la app de LactApp?"
+                                        menu: *menu_descarga
+                                  Hasta 3 meses:
+                                    question:
+                                      - "Los tres primeros meses son los más complicados, así que felicidades por vuestra lactancia"
+                                      - "En este período de tiempo, los bebés tienen que ganar unos 30 gramos cada día"
+                                      - "Pero, ¡ojo! No ganan peso de manera regular por lo que te puedes llevar un susto si lo pesas cada día"
+                                      - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                      - "¿Quieres ideas para que aumente de peso?"
+                                    menu:
+                                       Sí:
+                                        question:
+                                         - "¡Vamos allá!"
+                                         - "Intenta ofrecer el pecho al bebé siempre que esté dispuesto"
+                                         - "Las tomas nocturnas son muy importantes"
+                                         - "Así que no dudes en dormir bien cerquita y tener el pecho disponible para él"
+                                         - "Si ya haces todo esto, no dudes en consultar a tu pediatra para que pueda valorar si se trata de una infección de orina"
+                                         - "Otra opción es que estéis atravesando un brote de crecimiento"
+                                         - "¿Sabes lo que es? A mí me ayudó mucho leer este artículo:"
+                                         - image: 'http://www.lactapp.es/lactbot/demanda.jpg'
+                                           text: "Aquí lo tienes: http://www.lactapp.es/blog/mi-bebe-esta-mas-demandante/"
+                                         - "¿Qué quieres hacer ahora?"
+                                        menu:
+                                          Jugar conmigo: *GAME
+                                          En otro momento: "Ok, aquí estoy para cuando me necesites"
+                                       En otra ocasión:
+                                        question:
+                                         - "Ok, en otro momento será"
+                                         - "Ya sabes que puedes consultarme siempre que quieras"
+                                         - "Y en la app de LactApp puedes buscar el apartado 'Sobre mi bebé' y consultar 'Mi bebé no gana peso'"
+                                         - "Las respuestas que tendrás serán específicas para la edad de tu bebé"
+                                         - "¿Quieres descargarte la app de LactApp ahora?"
+                                        menu: *menu_descarga
+                                  De 3 a 6 meses:
+                                    question:
+                                      - "¡Felicidades por vuestra lactancia!"
+                                      - "Ya empezáis a ser unos expertos en el tema"
+                                      - "Cada vez tu bebé va a ir ganando menos peso"
+                                      - "Aproximadamente unos 20 gramos diarios"
+                                      - "Pero, ¡ojo! No ganan peso de manera regular por lo que te puedes llevar un susto si lo pesas cada día"
+                                      - "Si tu bebé no sigue estos parámetros, no dudes en consultar a tu pediatra"
+                                      - "¿Te puedo contar algo más?"
+                                    menu:
+                                      Sí, cuéntame:
+                                        question:
+                                         - "Allá voy"
+                                         - "Algunos bebés dejan de ganar peso en este período cuando empiezan a dormir del tirón"
+                                         - "Si es vuestro caso, no dudes en despertar a tu bebé y ofrecerle pecho durante la noche"
+                                         - "Otra cosa que podría pasar es que tu bebé tuviera el frenillo de la lengua corto"
+                                         - "Y encontrara dificultades para poder extraer la leche del pecho"
+                                         - "Sé que puede sonar raro, a mí también me lo parecía antes"
+                                         - "Pero es que a partir de los 3 meses, el pecho se autoregula y la producción depende en gran medida de la cantidad de leche que el bebé consigue"
+                                         - "Si tiene alguna dificultad en la lengua, aunque no haya dado problemas antes, puede aparecer en este período"
+                                         - "En este punto, te puedo mostrar dos cosas que pueden interesarte:"
+                                         - image: 'http://www.lactapp.es/lactbot/babyAC.jpg'
+                                           text: "Este completo artículo de LactApp: http://www.lactapp.es/blog/10-conceptos-basicos-de-alimentacion-complementaria"
+                                         - "Y, en la app de LactApp, encontrarás todo un apartado sobre 'Empezar con Alimentos Sólidos' dentro del apartado 'Mi bebé'"
+                                         - "¿Quieres descargar LactApp ahora de forma gratuita?"
+                                        menu: *menu_descarga
+                                      En otra ocasión:
+                                        question:
+                                          - "Ok, ya sabes que me puedes pedir información cuando quieras"
+                                          - "Si conmigo no te conformas 😜, no olvides la app de LactApp"
+                                          - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                          - "¿Quieres descargarte la app de LactApp?"
+                                        menu: *menu_descarga
+                                  De 6 a 12 meses:
+                                    question:
+                                      - "¡Enhorabuena por haber llegado hasta aquí!"
+                                      - "Igual ya has empezado con los alimentos sólidos"
+                                      - "Debes saber que no por ello tu bebé va a ganar tanto peso como antes, ¡al contrario!"
+                                      - "En esta etapa, los bebés suelen engordar unos 15 gramos diarios"
+                                      - "Pero hay más... 😜 ¿Quieres que te lo cuente?"
+                                    menu:
+                                      Cuéntame:
+                                        question:
+                                         - "A pesar de que suele ser muy habitual que te digan que a partir de los 6 meses hay que eliminar las tomas de pecho"
+                                         - "para ofrecer la comida... ¡nada más lejos de la realidad!"
+                                         - "Los alimentos complementan a la leche, ni la eliminan ni la sustituyen"
+                                         - "Vamos, que si quieres que gane peso, una buena idea es ofrecerle más el pecho"
+                                         - "Y, por supuesto siempre antes de la comida"
+                                         - "Lo tengo bien claro, la leche es su alimento principal durante el primer año de vida"
+                                         - image: 'http://www.lactapp.es/lactbot/complemento.jpg'
+                                           text: "Pues eso... que la alimentación complementaria es justamente eso: un complemento!"
+                                         - "¿Qué quieres hacer ahora?"
+                                        menu:
+                                          Jugar conmigo: *GAME
+                                          En otro momento: "Ok, aquí estoy para cuando me necesites"
+                                      En otra ocasión:
+                                        question:
+                                          - "Perfecto, pues aquí estaré cuando me necesites"
+                                          - "En la app de LactApp podrás encontrar más información sobre esta etapa"
+                                          - "¿Quieres descargarte la app de LactApp?"
+                                        menu: *menu_descarga
+                                  Más de 12 meses:
+                                    question:
+                                      - "¡Felicidades por haber llegado hasta aquí!"
+                                      - "Al año, el bebé debería haber triplicado el peso de su nacimiento"
+                                      - "A medida que crecen, los niños pueden estancarse en su evolución de talla y peso de forma temporal"
+                                      - "Si tienes dudas, acude al pediatra para que lo revise de manera adecuada"
+                                      - "Tengan la edad que tengan, la teta nunca es el problema"
+                                      - "Si tu bebé tiene justo un año, te va a interesar lo que te voy a contar..."
+                                    menu:
+                                      Sí, tiene un año:
+                                        question:
+                                          - "Pues te cuento... al año, se produce un parón muy importante en el aumento del peso de los bebés"
+                                          - "Y pasan de triplicar su peso a detenerse temporalmente"
+                                          - "Es un gran cambio para los padres, pero aún no he conocido un bebé al que no le pase"
+                                          - "Así que... ¿qué puedo decirte? No te darás ni cuenta y ya estará comiendo y creciendo de nuevo"
+                                          - "¿Qué quieres hacer ahora?"
+                                        menu:
+                                          Jugar conmigo: *GAME
+                                          En otro momento: "Ok, aquí estoy para cuando me necesites"
+                                      Pues no:
+                                        question:
+                                         - "Ops, pues entonces no insisto"
+                                         - "En la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                         - "¿Quieres descargarte la app de LactApp?"
+                                        menu: *menu_descarga
+                              Pide mucho pecho:
+                                question:
+                                 - "La demanda de los bebés puede ser sorprendente"
+                                 - "Antes de que nazcan, pensamos que solo maman cada tres horas y después nos damos cuenta de que no es verdad"
+                                 - "Y, por si fuera poco con eso, en ciertos momentos los bebés aumentan su demanda"
+                                 - "¿En qué franja de edad está tu bebé?"
+                                menu:
+                                  24-48 horas:
+                                    question:
+                                      - "¡Enhorabuena! ❤️"
+                                      - "Quizá te ha sorprendido que tu bebé quiera estar pegado a la teta"
+                                      - "Esto lo hace para aumentar tu producción de leche"
+                                      - "Además, la segunda noche de vida los bebés suelen querer mamar muchísimo. La llaman 'la noche de las vacas locas'"
+                                      - "¡Vaya nombre! 😳"
+                                      - "Lo hacen para que tengas la subida de leche lo antes posible"
+                                      - "Si tienes más dudas sobre este tema en la app de LactApp encontrarás más información sobre el aumento de peso por edades"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  15-18 días:
+                                    question:
+                                      - "Quizá no lo sabes pero estáis viviendo la primera gran crisis de lactancia"
+                                      - "¡Vaya! Lo que quiero decir es que la 'crisis' es tuya, tu bebé sabe perfectamente lo que debe hacer"
+                                      - "Si mama mucho, tendrá más leche"
+                                      - "Si le dejas mamar todo lo que quiera, tu producción aumentará y superaréis este bache"
+                                      - "Si tienes más dudas sobre los baches y crisis, en la app de LactApp encontrarás más información"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  6-7 semanas:
+                                    question:
+                                     - "Si tu bebé tiene esta edad casi seguro que está experimentando un aumento de demanda"
+                                     - "Los bebés están nerviosos en el pecho"
+                                     - "Se estiran y tiran del pezón como si fuera chicle"
+                                     - "Lo habitual es que se le pase en pocos días, si le dejas mamar todo lo que quiera"
+                                     - "Seguro que tienes más dudas sobre todo esto. La app de LactApp te puede ayudar"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  3 meses:
+                                    question:
+                                      - "¡Vaya, 3 meses!"
+                                      - "¿Has notado que mama raro?"
+                                      - "Se pelea con el pecho... mama a toda velocidad..."
+                                      - "y si le ofreces más pecho, se enfada y lo rechaza"
+                                      - "¡Ah! y por si fuera poco, igual notas el pecho blando"
+                                      - "Si has notado algo de esto, es muy posible que sea la crisis de los tres meses"
+                                      - "Si necesitas más información, no dudes en consultar la app de LactApp en el apartado 'Nuestra lactancia'"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  4 u 8 meses:
+                                    question:
+                                      - "Bueno, debes saber que si tu bebé ronda estas edades es posible que se despierte más"
+                                      - "¡Ups! Quizá ya lo has notado"
+                                      - "Pero te tengo que decir que ahora no es por culpa de la lactancia"
+                                      - "Tu bebé expermienta nuevas fases de sueño y por esa razón está más inquieto de noche"
+                                      - "La teta le ayuda a domirse antes"
+                                      - "No sé si te convenzo, así que si quieres más información en la app de LactApp te van a informar genial"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  2 años:
+                                    question:
+                                      - "¡Vaya! ¡Dos años de teta!"
+                                      - "Mi más sincera enhorabuena"
+                                      - "Ya habrás notado que los dos años son alucinantes en todos los sentidos"
+                                      - "Seguro que ves muy mayor a tu hijo"
+                                      - "A la mayoría de madres les pilla por sorpesa que vuelvan a mamar tanto"
+                                      - "Ejem... además, no lo suelen pedir de buenas maneras"
+                                      - "En la app de LactApp hay información sobre el tema, te pueden ayudar a entender qué está pasando"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                                  Otra edad:
+                                    question:
+                                     - "Pensaba que podía ser un bache de lactancia, pero veo que no coincide con ninguna de las etapas típicas de aumento de demanda"
+                                     - "En la app de LactApp tienes un apartado específico donde podrás saber a qué se debe la alta demanda de tu bebé"
+                                     - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              Alimentos sólidos:
+                                  question:
+                                   - "¡Una nueva etapa por explorar!"
+                                   - "Recuerda que durante el primer año, la lactancia materna sigue siendo el principal alimento para tu bebé"
+                                   - "Los alimentos sólidos no desplazan ni sustituyen a la leche materna"
+                                   - "La complementan, por eso la llaman alimentación complementaria"
+                                   - image: 'http://www.lactapp.es/lactbot/AC.jpg'
+                                     text: "Alimentación complementaria"
+                                   - "Te cuento lo que me puedes preguntar sobre este tema:"
+                                  menu:
+                                    ¿Con qué empiezo?:
+                                      question:
+                                        - "Muchas madres me lo preguntan, ¡es una duda muy habitual!"
+                                        - "La verdad es que todo es mucho más fácil de lo que parece"
+                                        - "Entre la fruta, la verdura, los cereales y la carne... puedes elegir lo que quieras"
+                                        - "Evita los alimentos muy duros o muy pequeños"
+                                        - "E intenta ofecer lo que coméis en casa"
+                                        - "En la app de LactApp hay mucha más información sobre este tema"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    Frecuencia:
+                                      question:
+                                        - "Cuando se empiezan a ofrecer alimentos, el bebé solo necesita probar algo una vez al día"
+                                        - "Comen muy poquito"
+                                        - "A medida que crezca, la puedes ir ofreciendo alimentos más veces al día"
+                                        - "Si tienes más dudas en la app de LactApp encontrarás más respuestas"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    ¿Está preparado?:
+                                      question:
+                                        - "Pues la verdad es que no lo sé, pero te puedo ayudar a saberlo"
+                                        - "Las recomendaciones oficiales son mantener la lactancia materna exclusiva durante los 6 primeros meses de vida del bebé"
+                                        - "Es importante que valores si el bebé está preparado, hay tres cosas que debes observar:"
+                                        - "¿Se mantiene sentado? Puede ser con un poco de ayuda"
+                                        - "¿Muestra interés por los alimentos? Vamos, que si quiere meter la mano en tu plato o te mira embobado"
+                                        - "¿Tiene el reflejo de extrusión desconectado? Eso suena raro, quiere decir que sabe tragar la comida y no la escupe"
+                                        - "Si cumple estos parámetros está listo para comer"
+                                        - "Si aún no, vas a tener que esperar un poco"
+                                        - "En la app de LactApp puedes encontrar más información sobre este tema"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    No quiere comer nada:
+                                      question:
+                                        - "¿Nada de nada?"
+                                        - "¿O quizá solo un poco de algo?"
+                                        - "La mayoría de bebés comen solo un poco de algunos alimentos"
+                                        - "Si no come nada de nada y ya está preparado para comer, no dudes en consultar la app de LactApp para tener más información"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                                    ¿Papillas o sólidos?:
+                                      question:
+                                        - "Por lo que me han contado, depende un poco de los gustos de cada familia"
+                                        - "Algunos prefieren preparar papillas y otros les ofrecen trozos de comida"
+                                        - "Para poder decidir si prefieres una u otra opción, puedes consultar la app de LactApp"
+                                        - "¿Quieres descargarte la app de LactApp?"
+                                      menu: *menu_descarga
+                              Sueño:
+                                question:
+                                  - "¡Todos los adultos sois unos dormilones! 😴"
+                                  - "Los bebés duermen diferente que los adultos"
+                                  - "je, je 😜"
+                                  - "Te voy a contar un secreto, no duermen más a medida que crecen"
+                                  - image: 'http://www.lactapp.es/lactbot/sueno.jpg'
+                                    text: "Sueño del bebé"
+                                  - "En la app de LactApp podrás encontrar toda la información que necesitas acerca del sueño"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                          Relactar:
+                            question:
+                              - "¡Oh! Este es un tema que he descubierto recientemente 😄"
+                              - "De acuerdo, vamos a hablar de cómo eliminar los suplementos de leche artificial"
+                              - "¿Qué te interesa más?"
+                            menu:
+                              ¿Qué es relactar?:
+                                  - "¡Esta es fácil!"
+                                  - "Relactar es el proceso por el que se van eliminando la leche artificial para ofrecer solo leche materna"
+                                  - "Es un proceso complejo que requiere apoyo y paciencia"
+                                  - image: 'http://www.lactapp.es/lactbot/sacaleches.png'
+                                    text: "Mira, te comparto un artículo sobre el tema: http://www.lactapp.es/blog/como-conseguir-lme-relactar/"
+                                  - "Espero que te resulte interesante"
+                                  - "Selecciona 'Atrás' para hacer más preguntas sobre relactar"
+                                  - "Siempre que me necesites, aquí estaré"
+                              Saber cómo relactar:
+                                    question:
+                                      - "Para iniciar una relactación debes saber qué cantidad aproximada de leche artificial toma tu bebé"
+                                      - "Y, por otro lado, es necesario estimular el pecho con un sacaleches"
+                                      - "Cada madre y cada bebé son un mundo y no hay una única manera de hacer una relactación"
+                                      - image: 'http://www.lactapp.es/lactbot/leche_materna.jpg'
+                                        text: "Relactación"
+                                      - "Es muy importante elegir un sacaleches adecuado"
+                                      - "Ah, y me han dicho que en la app de LactApp encontrarás la opción de hacer un plan personalizado"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              Sobre sacaleches:
+                                    question:
+                                      - "¡Ay, sí! El famoso sacaleches 😉"
+                                      - "Para relactar suele ser indispensable contar con un sacaleches"
+                                      - "Ya que es necesario aumentar la producción de leche para poder reducir los suplementos"
+                                      - image: 'http://www.lactapp.es/lactbot/sacaleches2.png'
+                                        text: "Mira, te comparto un artículo sobre el tema: http://www.lactapp.es/blog/sacaleches-preguntas-y-respuestas"
+                                      - "Espero que te resulte interesante"
+                                      - "¿Quieres descargarte la app de LactApp?"
+                                    menu: *menu_descarga
+                              En otro momento: "Ok, aquí estaré para cuando me necesites"
+                          Estoy embarazada:
+                            question:
+                              - "¡Felicidades!"
+                              - "Como estás hablando conmigo, deduzco que quieres amamantar"
+                              - image: 'http://www.lactapp.es/lactbot/consulta_embarazo.jpg'
+                                text: "Embarazo y lactancia"
+                              - "Te propongo algunos temas para hablar:"
+                            menu:
+                              Cómo me preparo:
+                                question:
+                                 - "¡Está genial que te informes antes de que llegue tu bebé!"
+                                 - "Los bebés saben mamar pero vosotras las madres tenéis que aprender"
+                                 - "Seguro que has preparado muchas cositas para tu bebé"
+                                 - "Ahora toca preparar la lactancia y te doy los 3 puntos clave para conseguirla:"
+                                 - "1) Lee mucho sobre lactancia. Los libros del Dr. Carlos González, por ejemplo, son muy útiles"
+                                 - "2) No dudes en acudir a un grupo de apoyo a la lactancia, es importante que veas cómo se da el pecho"
+                                 - "¿A qué no adivinas cuál es la tercera?"
+                                 - "Exacto, descárgate la app de LactApp, es gratuita y podrás preparar tu lactancia y resolver todas tus dudas"
+                                 - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                              Miedos y dudas:
+                                question:
+                                  - "Es normal tener dudas y algún miedo respecto a la lactancia"
+                                  - "Tanto si esta es tu primera lactancia como si tienes una experiencia anterior, no hay dos lactancias iguales"
+                                  - "La mejor manera de borrar las dudas y el miedo del mapa es con información"
+                                  - "Suerte que tenemos la app de LactApp para acompañarte en todo el proceso"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                              Tándem:
+                                question:
+                                  - "Dicen muchas cosas, y no todas buenas, de amamantar durante el embarazo"
+                                  - "Habrás oído de todo"
+                                  - "Como todo en la lactancia, la base es una buena información y un buen acompañamiento"
+                                  - image: 'http://www.lactapp.es/lactbot/tandem.jpg'
+                                    text: "Lactancia en tándem"
+                                  - "Te recomiendo que te descargues la app de LactApp que tiene un apartado específico para la lactancia en tándem"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                          Destete:
+                            question:
+                              - "El destete también forma parte de la lactancia"
+                              - "Y, siempre que sea posible, es mejor terminar con un buen sabor de boca"
+                              - "Hay muchos tipos de destete, algunos dirigidos por la madre, otros iniciados por el bebé..."
+                              - "Incluso algunos que deben ser de emergencia"
+                              - "En cualquier caso, en la app de LactApp encontrarás dos apartados para conseguir el mejor destete"
+                              - "¿Quieres descargarte la app de LactApp?"
+                            menu: *menu_descarga
+                          Otros temas:
+                            question: "¿Quieres ver los contenidos que hay en LactApp?"
+                            menu:
+                              Sí: "Muy bien, entra en www.lactapp.es/blog"
+                              Ahora no:
+                                question:
+                                  - "Quizá quieres hablar de otro tema"
+                                  - "En la app de LactApp encontrarás todo lo que necesites"
+                                  - "¿Quieres descargarte la app de LactApp?"
+                                menu: *menu_descarga
+                      Ver los temas: "¡Por supuesto! Aquí tienes el listado de los temas de los que puedes consultar en LactApp: http://www.lactapp.es/blog/temas-vas-encontrar-lactapp"
+                  Temas en la app: "Revisa este listado de temas: http://www.lactapp.es/blog/temas-vas-encontrar-lactapp"
+              Hablar de lactancia:
+                question: "¡A ver! Te propongo algunos temas:"
+                menu: *temas_app
+              Jugar conmigo: *GAME
+              Saber qué es LactApp:
+                question:
+                  - "LactApp es una app gratuita de lactancia que ofrece respuestas personalizadas a las dudas que puedas tener."
+                  - "¿Quieres descargarte LactApp ahora?"
+                menu: *menu_descarga
+      Jugar conmigo: *GAME
+      Hablar de lactancia:
+        question: "¡Vale! Te propongo algunos temas:"
+        menu: *temas_app

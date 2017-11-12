@@ -9,8 +9,9 @@
   },
   "scripts": {
     "test": "mocha test",
+    "serve": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100  lib/server.js",
     "start": "node --require babel-register --require babel-polyfill lib/server.js",
-    "develop": "nodemon server.js --exec babel-node",
+    "develop": "nodemon src/server.js --exec babel-node",
     "console": "node --require babel-register --require babel-polyfill",
     "build": "babel src -d lib/",
     "heroku-postbuild": "npm run build"
@@ -28,9 +29,10 @@
     "nodemon": "1.11.0"
   },
   "dependencies": {
-    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#152e8b2f117222f164f812c9b64c94803aa94be4",
+    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#9ec8b0b3c16a190ffbf72b9ca8c5ddb791549472",
     "dotenv": "4.0.0",
-    "js-yaml": "^3.8.1"
+    "js-yaml": "^3.8.1",
+    "//": "prior version of dd-node-client = 152e8b2f117222f164f812c9b64c94803aa94be4"
   },
   "repository": "git@github.com:rolandpan/lactbot.git"
 }

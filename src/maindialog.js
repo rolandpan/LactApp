@@ -11,7 +11,7 @@
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-export const CURRENT_VERSION='2017-06-29-main';
+export const CURRENT_VERSION='2017-11-12-main';
 export const COMPLETION_QUESTIONAIRE='2017-05-26-completion';
 export const HELP_MENU_TREE = '2017-06-29-help';
 export const DEMO_VERSION='2017-06-02-lact-demo-eng';
