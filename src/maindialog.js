@@ -11,7 +11,7 @@
 
 import {Dialog, NLPModel,log} from 'deepdialog';
 
-export const CURRENT_VERSION='2017-11-14-main';
+export const CURRENT_VERSION='2017-11-20-main';
 export const COMPLETION_QUESTIONAIRE='2017-11-13-completion';
 export const HELP_MENU_TREE = '2017-06-29-help';
 export const DEMO_VERSION='2017-06-02-lact-demo-eng';
@@ -58,7 +58,7 @@ MainDialog.onResult('MenuTreeDialog', 'completion_questionaire', async function(
 //
 MainDialog.onIntent('image_input', async function (session, {entities}, {message}) {
   if (imageHandler(session, message)) {
-    await session.send('Bueno!');
+    await session.send('¡Muy bien!');
   }
   else {
     await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE});
