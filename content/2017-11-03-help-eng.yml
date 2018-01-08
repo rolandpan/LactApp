@@ -1,0 +1,41 @@
+question: "What can I help you with?"
+menu:
+  Who are you?: &menu_help_1
+    question:
+     - "I am the LactApp assistant"
+     - "I am a chatbot programmed by the LactApp team to help you"
+     - "Every day I learn new things"
+     - "Maybe you aren't sure what a chatbot is"
+    menu:
+      What is a chatbot?: &menu_help_2
+        question:
+         - "I am a programmed to provide information."
+         - "I am lucky that they have taught me about breastfeeding"
+         - "I find it an extremely interesting topic"
+         - "Would you like to know how I work or how I learn new things?"
+        menu:
+          How do you work?: &menu_help_3
+            - "You can talk with me whenever you’d like"
+            - "I can suggest topics to discuss and you can select the topic you like the best"
+            - "For now, to respond you can only select from the options I give you"
+            - "The help menu below can help you resolve any other doubts you may have about me"
+          How do you learn?: &menu_help_4
+            - "They have taught me a lot"
+            - "I learn every day thanks to people like you that talk with me"
+            - "Little by little I will learn more and will be able to discuss more topics"
+          How do I go back?: &menu_help_5
+            - "There will always be a Go Back button to return to the previous question"
+            - "You may also access the help menu below"
+          I want to talk to someone: "Email: hola@lactap.es"
+      I know what it is!:
+        question:
+          - "That’s what I like to hear! That more people understand that we can be useful"
+          - "What would you like to know?"
+        menu:
+          What topics can you talk about: &menu_help_6
+            - "I am young but learn quickly"
+            - "I can talk about lactation but also about LactApp or myself"
+          How do you learn?: *menu_help_4
+          Can I talk to someone?:  "Email: hola@lactap.es"
+  How do you work?: *menu_help_3
+  How do I go back?: *menu_help_5
