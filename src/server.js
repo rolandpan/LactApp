@@ -1,9 +1,7 @@
 import './loadenv';
 import {App, log} from 'deepdialog';
 import {MainDialog, MainNLP} from './maindialog';
-//import {PromptDialog} from './promptdialog';
 import {MenuTreeDialog} from './menutreedialog';
-//import {OnboardDialog} from './onboarddialog';
 import {YesNoDialog} from './yesnodialog';
 
 
