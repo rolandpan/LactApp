@@ -1,0 +1,6 @@
+question:
+  - "I was great chatting with you!"
+  - "Can I help you with something else?"
+menu:
+  Yes: "Ok great!"
+  Not now: "Ok. I'll be here if you need me."
