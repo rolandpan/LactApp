@@ -14,6 +14,7 @@ import {Dialog, any, log} from 'deepdialog';
 import {isString} from 'util';
 import {loadMenuTree, getPath} from './loadMenuTree';
 import {sleep} from 'deepdialog/lib/util';
+import {setLanguage} from './maindialog';
 import {COMPLETION_QUESTIONAIRE} from './maindialog';
 import {UNRECOGNIZED_IMAGE_RESPONSE} from './maindialog';
 import {UNRECOGNIZED_TEXT_RESPONSE} from './maindialog';
@@ -21,9 +22,9 @@ import {CHOOSE_MENU_ITEM_RESPONSE} from './maindialog';
 import {HELP_MENU_TREE} from './maindialog';
 //import {RESTART_PATH} from './maindialog';
 
-const BACK_BUTTON='Atrás';
-const START_BUTTON='Volver al inicio';
-const AFFIRMATIVE='Sí';
+const BACK_BUTTON={spanish:'Atrás',english:'Go back'};
+const START_BUTTON={spanish:'Volver al inicio',english:'Start over'};
+const AFFIRMATIVE={spanish:'Sí',english:'Yes'};
 
 //const BACK_BUTTON='Back';
 //const START_BUTTON='Start over';
@@ -36,7 +37,8 @@ export const MenuTreeDialog = new Dialog({
 });
 
 MenuTreeDialog.onStart(async function (session, {versionName, path}) {
-  log.info('Started MenuTreeDialog');
+
+  log.info('Started MenuTreeDialog, versionName: %j', versionName);
 
   var fullMenuTree = await loadMenuTree(versionName, path);
   var menuTree = getPath(fullMenuTree, path);
@@ -55,23 +57,33 @@ MenuTreeDialog.onText('exit', async function (session) {
   await session.finish();
 });
 
+MenuTreeDialog.onText('reset', async function (session) {
+  await session.reset();
+});
+
+
 // text matching for help
 MenuTreeDialog.onText('ayuda', async function (session) {
-  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
 MenuTreeDialog.onText('Ayuda', async function (session) {
-  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
 MenuTreeDialog.onText('no lo entiendo', async function (session) {
-  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
 MenuTreeDialog.onIntent('help', async function (session) {
-  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE});
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
 
 
 MenuTreeDialog.onIntent('image_input', async function (session) {
-  await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE});
+  await setLanguage(session);
+  await session.send({text: UNRECOGNIZED_IMAGE_RESPONSE[session.globals.Language]});
 });
 
 // handle response for any payload for menu item selections
@@ -88,6 +100,11 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
   var responseToUser = getPath(fullMenuTree, newPath);
   var restartPath = [];
   var restartMenuTree = getPath(fullMenuTree, restartPath);
+
+  //
+  // make sure Language is set
+  //
+  await setLanguage(session);
 
   //
   // check if menu reponse is in list of defined items
@@ -115,8 +132,8 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       //
       // check if menutree is completion dialog
       //
-      if (versionName == COMPLETION_QUESTIONAIRE) {
-        if (notification.data.payload == AFFIRMATIVE) {
+      if (versionName == COMPLETION_QUESTIONAIRE[session.globals.Language]) {
+        if (notification.data.payload == AFFIRMATIVE[session.globals.Language]) {
           await session.finish(true);
         }
         else {
@@ -136,7 +153,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
     //
     // Check for Navigation buttons: back (up one level) or start (go to beginning)
     //
-    if (notification.data.text == BACK_BUTTON) {
+    if (notification.data.text == BACK_BUTTON[session.globals.Language]) {
       var len = path.length;
       // if at top of tree, end and return to main dialog
       if (len <= 1) {
@@ -151,15 +168,15 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
         await session.save();
       }
     }
-    else if (notification.data.text == START_BUTTON) {
+    else if (notification.data.text == START_BUTTON[session.globals.Language]) {
       log.debug('restart path: %j', restartPath );
       await sendQuestionAndMenu(session, restartMenuTree);
       session.set({path: restartPath});
       await session.save();
     }
     else {
-      await session.send({text: UNRECOGNIZED_TEXT_RESPONSE});
-      await session.send({text: CHOOSE_MENU_ITEM_RESPONSE});
+      await session.send({text: UNRECOGNIZED_TEXT_RESPONSE[session.globals.Language]});
+      await session.send({text: CHOOSE_MENU_ITEM_RESPONSE[session.globals.Language]});
       var currentMenuTree = getPath(fullMenuTree, path);
       await sendQuestionAndMenu(session, currentMenuTree);
     }
@@ -169,8 +186,9 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
 
 // recovery handler not active yet - need changes to lib
 MenuTreeDialog.onRecovery(async function (session) {
+  await setLanguage(session);
   await session.send({
-    text: UNRECOGNIZED_TEXT_RESPONSE});
+    text: UNRECOGNIZED_TEXT_RESPONSE[session.globals.Language]});
 });
 
 
@@ -200,9 +218,9 @@ async function sendQuestionAndMenu(session, menuTree) {
     replyButtons.push(makeButton(mi));
   }
   // leave off back and to beginning buttons for completion questionaire
-  if (session.get('versionName') != COMPLETION_QUESTIONAIRE) {
-    replyButtons.push(makeButton(BACK_BUTTON));
-    replyButtons.push(makeButton(START_BUTTON));
+  if (session.get('versionName') != COMPLETION_QUESTIONAIRE[session.globals.Language]) {
+    replyButtons.push(makeButton(BACK_BUTTON[session.globals.Language]));
+    replyButtons.push(makeButton(START_BUTTON[session.globals.Language]));
   }
 
   var responseList = [];
