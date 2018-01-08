@@ -29,7 +29,7 @@
     "nodemon": "1.11.0"
   },
   "dependencies": {
-    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#9ec8b0b3c16a190ffbf72b9ca8c5ddb791549472",
+    "deepdialog": "git+ssh://git@github.com:aneilbaboo/deepdialog-node-client.git#06f86fa4757515ee70dcb5c585b323d74f98738e",
     "dotenv": "4.0.0",
     "js-yaml": "^3.8.1",
     "//": "prior version of dd-node-client = 152e8b2f117222f164f812c9b64c94803aa94be4"
