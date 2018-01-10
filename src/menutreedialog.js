@@ -75,11 +75,18 @@ MenuTreeDialog.onText('no lo entiendo', async function (session) {
   await setLanguage(session);
   await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
+MenuTreeDialog.onText('help', async function (session) {
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
+});
+MenuTreeDialog.onText('Help', async function (session) {
+  await setLanguage(session);
+  await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
+});
 MenuTreeDialog.onIntent('help', async function (session) {
   await setLanguage(session);
   await session.start('MenuTreeDialog', 'help', {versionName: HELP_MENU_TREE[session.globals.Language]});
 });
-
 
 MenuTreeDialog.onIntent('image_input', async function (session) {
   await setLanguage(session);
