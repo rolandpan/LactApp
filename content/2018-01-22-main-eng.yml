@@ -1,0 +1,1220 @@
+question:
+  - "Hello! I'm LactApp's assistant!"
+  - "I will be here to help you and you can respond by pressing the buttons below 👇"
+menu:
+  Understood:
+    question:
+      - "Great!"
+      - "Do you want to know more about me?"
+    menu:
+      Sure, tell me:
+        question:
+          - "I assure you that you will not meet another chatbot more dedicated to the topic of breastfeeding than me 😎"
+          - "With me you can find information on breastfeeding. I can provide you with interesting articles; check out what I have to offer..."
+          - "And you will not find better company than me for the long breastfeeding nights with your baby 😉"
+          - "I will be here whenever you need me"
+          - "Write HELP to keep talking about how I work"
+        menu:
+          Ok:
+            question:
+              - "What can I do for you?"
+            menu: 
+              How do you work: &BIEN_4
+                question:
+                  - "You can talk to me about various topics that may interest you"
+                  - "Every day I learn more 💪"
+                  - "As we talk, I will propose topics you may be interested in"
+                  - "and you can choose what you want to know more about about"
+                  - "The buttons below 👇 will help us understand each other"
+                  - image: 'http://www.lactapp.es/lactbot/broma.jpg'
+                    text: "I learn quickly"
+                  - "What do you want to do now?"
+                menu:
+                  Contact LactApp: &contacta
+                    - "I thought you would never ask!"
+                    - "Write an email to hola@lactapp.es"
+                    - "I will be here whenever you need me"
+                  About breastfeeding: 
+                    question:
+                      - "I have learned a lot with the LactApp app"
+                      - "Do you want to chat with me a bit about breastfeeding or do you prefer to see the topics in the app?"
+                    menu:
+                      Talk to you:
+                        question:
+                          - "I'm learning little by little"
+                          - "Let me suggest some topics:"
+                        menu: &temas_app
+                          About me: 
+                            question:
+                              - "Many women feel pain while breastfeeding"
+                              - "Is this your case?"
+                            menu:
+                              Yes:
+                                question:
+                                  - "Pain should not be a part of breastfeeding"
+                                  - "It is important that you solve it as soon as possible"
+                                  - "When do you feel pain?"
+                                menu:
+                                  At the beginning of the feeding:
+                                    question:
+                                      "Is your baby a newborn?"
+                                    menu:
+                                      Yes:
+                                        question: "Are your breasts hard?"
+                                        menu:
+                                          Yes:
+                                            question:
+                                              - "It is possible that in the first few days your breasts may be engorged"
+                                              - "If your breasts are too hard, you may feel uncomfortable"
+                                              - "In the LactApp app you can find information on how to solve it"
+                                              - "Go to the 'About me' section and consult 'Pain during breastfeeding'"
+                                              - "Do you want to download the LactApp app?"
+                                            menu: &menu_descarga
+                                              Yes: 
+                                                question: "Select your option:"
+                                                menu:
+                                                  iPhone: "Great! Here's the link to the App Store, LactApp is free: http://bit.ly/lactappios"
+                                                  Android: "Great! Here's the link to Google Play, LactApp is free: http://bit.ly/lactappandroid"
+                                                  Other:
+                                                    - "Oh no! At the moment, LactApp is only available for Android or iPhone"
+                                                    - "If you want to follow our publications you can visit our blog: www.lactapp.es/blog"
+                                              Got it: "Great, I hope it helps!"
+                                              Not now:
+                                                - "Okay, whenever you would like"
+                                                - "Also, if you have more doubts you can visit the web www.lactapp.es"
+                                          No:
+                                            question: "Are your nipples cracking?"
+                                            menu:
+                                              Yes:
+                                                question:
+                                                  - "It's good that you asked for help"
+                                                  - "Cracks should not be part of breastfeeding 😖"
+                                                  - "Usually, cracks are due to a poor latch, but there may be other causes"
+                                                  - "The sooner you know the cause, the sooner you can solve the problem."
+                                                  - "Enter LactApp in the 'About me' menu and see the section 'Cracks'"
+                                                  - "Do you want to download the LactApp app?"
+                                                menu: *menu_descarga
+                                              No:
+                                                question:
+                                                  - "Approximately during the first 15 days of life, the baby's latch can be uncomfortable"
+                                                  - "But you have to make sure that the discomfort is not caused by other reasons"
+                                                  - "Enter LactApp to find solutions, do you want to download the LactApp app?"
+                                                menu: *menu_descarga
+                                      No:
+                                        question: "How long have you been in pain?"
+                                        menu:
+                                          Recently:
+                                            question:
+                                              - "It's good you're asking for help"
+                                              - "Pain should not be part of breastfeeding and it should be addressed as soon as possible"
+                                              - "It could be different things"
+                                              - "From an obstruction to mastitis in case you have a fever"
+                                              - "There are other types of infections in the breast that only produce a sharp pain at the beginning of a feeding"
+                                              - "It is important to find out what it is"
+                                              - "Enter LactApp to find the cause of pain"
+                                              - "Do you want to download the LactApp app?"
+                                            menu: *menu_descarga
+                                          I always have pain:
+                                            question:
+                                              - "No mother should breastfeed with pain"
+                                              - "Pain is one of the main causes that lead to the abandonment of breastfeeding"
+                                              - "Maybe you've endured pain for a long time"
+                                              - "They may have told you that your baby breastfeeds well"
+                                              - "But I have no doubt that something can be improved"
+                                              - "In the LactApp app you will find a section called 'About me' and inside you will see the topic 'Pain while breastfeeding'"
+                                              - "I think it can be very useful to follow the steps that the app will propose"
+                                              - "and so you can find the cause of pain and solve it"
+                                              - "Do you want to download the LactApp app?"
+                                            menu: *menu_descarga
+                                  After breastfeeding:
+                                    question:
+                                     - "Make sure your nipple does not change color"
+                                     - "When a baby badly grabs or compresses the nipple with the gum, there is a lack of blood supply"
+                                     - "Try to apply heat just after breastfeeding"
+                                     - "If it works for you, it's probably that"
+                                     - "See this article with more information (the content is in Spanish, I'm working on getting it translated to English):"
+                                     - image: 'http://www.lactapp.es/lactbot/compresion.jpg'
+                                       text: "Breast compression"
+                                     - "Here is an article that may interest you: http://www.lactapp.es/blog/isquemia-del-pezon-tres-posibles-causas/"
+                                     - "If you want more information about pain after breastfeeding, consult the LactApp app"
+                                     - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  All the time:
+                                    question:
+                                      - "Breastfeeding with pain is very hard"
+                                      - "It is important that you seek help"
+                                      - "In the LactApp app you can find out what causes the pain"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                              No:
+                                question:
+                                  - "Great, that's how it should be"
+                                  - "If you want I can talk about other topics"
+                                  - image: 'http://www.lactapp.es/lactbot/madre-bebe.jpg'
+                                    text: "Breastfeeding mom"
+                                  - "I'll propose some:"
+                                menu:
+                                  Return to work:
+                                    question:
+                                      - "Going back to work and breastfeeding is possible if you want"
+                                      - "In most cases it is a question of planning"
+                                      - "It is important to know how old the baby will be, with whom they will stay and how long you will be separated"
+                                      - "Would you like to make a personalized plan?"
+                                      - image: 'http://www.lactapp.es/lactbot/plan_personalizado.jpg'
+                                        text: "Return to work"
+                                      - "In the LactApp app you can create your personalized plan to return to work and continue with breastfeeding"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  Milk supply:
+                                    question:
+                                      - "The perception of not having enough milk is something that almost all mothers feel at some point"
+                                      - "It is important that they help you evaluate whether it is your feeling or there really is some difficulty in your breastfeeding"
+                                      - "LactApp can help you find out. Enter the section 'About me' and 'Do I have little milk?'"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  Other issues:
+                                    question:
+                                      - "I see that you have read through the most common topics of consultation"
+                                      - "I am learning things every day, I will soon master more subjects"
+                                      - "In the meantime, you can check out the LactApp app that lists all the lactation issues you may need help with"
+                                      - "Do you want to download the LactApp app?"
+                                    menu:
+                                      Feelings: 
+                                        question:
+                                          - "Okay! Emotions during breastfeeding can be a roller coaster"
+                                          - "I will take note, thanks for the suggestion"
+                                          - "If you need to solve your doubts immediately, enter the LactApp app"
+                                          - "In the section 'About me' choose the topic 'About My Feelings'"
+                                          - "Do you want to download the LactApp app?"
+                                        menu: *menu_descarga
+                                      Increase milk supply:
+                                        question:
+                                          - "I see your point 👍 It is true that this subject concerns many mothers"
+                                          - "It seems like a good idea to learn about it"
+                                          - "If you need help now to increase your production, I know you will find answers in LactApp"
+                                          - "In the 'About me' section choose the topic 'How can I produce more milk?'"
+                                          - "Do you want to download the LactApp app?"
+                                        menu: *menu_descarga
+                                      Storing breast milk:
+                                        question:
+                                          - "Ah! It turns out that I do know something about this..."
+                                          - "Breast milk at room temperature lasts between 4 and 6 hours"
+                                          - "If you keep it in the refrigerator, it can last about 5 days"
+                                          - "And if you freeze it, about 6 months easily"
+                                          - "Do you want more information?"
+                                        menu:
+                                          Sure, tell me more:
+                                            question:
+                                             - "Okay, I'll tell you something else:"
+                                             - "You can keep it in glass or plastic bottles meant to keep food"
+                                             - "And they should be able to be cleaned well, of course!"
+                                             - "There are also specific storage bags for milk"
+                                             - "What else can I tell you? 😬"
+                                             - "I know you can defrost it the moment you need it"
+                                             - "And it does not need to be too hot"
+                                             - "OMG, so many things! 😮"
+                                             - "But the LactApp girls know more than I do and they will be able to explain everything even better"
+                                             - "Enter the free LactApp app in the section 'Our lactation' and select 'How to conserve and handle milk'"
+                                             - "Do you want to download the LactApp app?"
+                                            menu: *menu_descarga
+                                          No, thanks:
+                                            question: "All right, what do you feel like doing now?"
+                                            menu:
+                                              Play: &GAME
+                                                question: 
+                                                  - "Test your knowledge of breastfeeding!"
+                                                  - "Choose whether the following statement is true or false:"
+                                                  - "Ready?"
+                                                menu:
+                                                  Yes: &Q1
+                                                    question:
+                                                      - "Ok, let's play!"
+                                                      - "True or false: breastfeeding should always be done on demand"
+                                                    menu:
+                                                      True:
+                                                        question:
+                                                          - "Is not correct! What a shame!"
+                                                          - image: 'https://media.giphy.com/media/k61nOBRRBMxva/giphy.gif'
+                                                          - "The truth is that breastfeeding shouldn't always be on demand"
+                                                          - "It is on demand only after the baby has regained birth weight and is able to demand what they need"
+                                                          - "If the baby is premature, is sick or does not gain weight enough, the mother has to lead the demand"
+                                                          - "Do you want to continue playing?"
+                                                        menu:
+                                                          Yes: &Q2
+                                                            question:
+                                                              - "Let's move on to the next one"
+                                                              - "True or false: breast milk has litte protein"
+                                                            menu:
+                                                              True:
+                                                                question:
+                                                                  - "Correct! Very good!"
+                                                                  - image: 'https://media.giphy.com/media/Svh0OgjrzvNaU/giphy.gif'
+                                                                  - "Breast milk has little protein in its composition as it adapts to the slow growth of human babies"
+                                                                  - "Milk from rapidly growing mammals has more protein"
+                                                                  - "Do you want to continue playing with me?"
+                                                                menu:
+                                                                  Yes: &Q3
+                                                                    question:
+                                                                      - "Great, next!:"
+                                                                      - "True or false: in order to have milk, you must hydrate a lot"
+                                                                    menu:
+                                                                      True:
+                                                                        question:
+                                                                          - "Incorrect! I might cry..."
+                                                                          - image: 'https://media.giphy.com/media/10tIjpzIu8fe0/giphy.gif'
+                                                                          - "It is important for the mother to drink water depending on the thirst she has; drinking more water will not give you more milk"
+                                                                          - "Excessive fluid in your diet will only make you urinate more"
+                                                                          - "Keep playing?"
+                                                                        menu:
+                                                                          Yes: &Q4
+                                                                            question:
+                                                                              - "Awesome!"
+                                                                              - "True or false: breast milk has a lot of bacteria"
+                                                                            menu:
+                                                                              True:
+                                                                                question:
+                                                                                  - "Correct! Jumping for joy!"
+                                                                                  - image: 'https://media.giphy.com/media/3ohhwo4PzDFaz2sADu/giphy.gif'
+                                                                                  - "Breast milk is a very important source of bacteria for the baby"
+                                                                                  - "There are over 700 bacteria in breast milk essential for the development of baby's intestinal health"
+                                                                                  - "Keep playing?"
+                                                                                menu:
+                                                                                  Yes: &Q5
+                                                                                    question:
+                                                                                      - "Here you have another question:"
+                                                                                      - "True or false: The best bottles to conserve breast milk are made of glass"
+                                                                                    menu:
+                                                                                      True:
+                                                                                        question:
+                                                                                          - "Oops! That's not correct"
+                                                                                          - image: 'https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif'
+                                                                                          - "Breast milk can be stored indiscriminately in plastic or glass bottles as long as they are suitable for food preservation"
+                                                                                          - "Keep playing?"
+                                                                                        menu:
+                                                                                          Yes: &Q6
+                                                                                            question:
+                                                                                              - "Very well, get ready:"
+                                                                                              - "True or false: Before extracting milk, it may be helpful to perform a breast massage"
+                                                                                            menu:
+                                                                                              True:
+                                                                                                question: 
+                                                                                                  - "Correct! Aww yeah!"
+                                                                                                  - image: 'https://media.giphy.com/media/3o84UaGEtyayvBIFwc/giphy.gif'
+                                                                                                  - "A breast massage can favor the extraction of milk"
+                                                                                                  - "Keep playing?"
+                                                                                                menu:
+                                                                                                  Yes: &Q7
+                                                                                                    question:
+                                                                                                      - "Good!"
+                                                                                                      - "True or false: After pumping, if you will not use that milk in the next few days, it will be better to freeze it"
+                                                                                                    menu:
+                                                                                                      True:
+                                                                                                        question:
+                                                                                                          - "Correct! Exactly"
+                                                                                                          - image: 'https://media.giphy.com/media/WsKVAem02Efuw/giphy.gif'
+                                                                                                          - "If you are not going to feed the milk to your baby in the following hours or it will be more than 5 days before you do, it is better to freeze it so it does not lose properties"
+                                                                                                          - "Keep playing?"
+                                                                                                        menu:
+                                                                                                          Yes: &Q8
+                                                                                                            question:
+                                                                                                              - "Good, here you have another question about storing breast milk"
+                                                                                                              - "True or false: You can leave the milk out of the refrigerator for 12 hours"
+                                                                                                            menu:
+                                                                                                              True:
+                                                                                                                question:
+                                                                                                                  - "Is not correct... You almost guessed it"
+                                                                                                                  - image: 'https://media.giphy.com/media/t9ctG5MZhyyU8/giphy.gif'
+                                                                                                                  - "Although it is better to refrigerate the milk after pumping, you can leave it at room temperature ideally about 4 hours maximum"
+                                                                                                                  - "Keep playing?"
+                                                                                                                menu:
+                                                                                                                  Yes: &Q9
+                                                                                                                    question:
+                                                                                                                      - "You are on fire!"
+                                                                                                                      - "True or false: Before extracting your milk, you must drink plenty of liquid"
+                                                                                                                    menu:
+                                                                                                                      True:
+                                                                                                                        question:
+                                                                                                                          - "Incorrect! It's a very common mistake"
+                                                                                                                          - image: 'https://media.giphy.com/media/xT1XGWbE0XiBDX2T8Q/giphy.gif'
+                                                                                                                          - "Although there is a myth that says that if you drink liquid you can produce more milk, the truth is that it does not affect production"
+                                                                                                                          - "Drink according to your thirst"
+                                                                                                                          - "Keep playing?"
+                                                                                                                        menu:
+                                                                                                                          Yes: &Q10
+                                                                                                                            question:
+                                                                                                                              - "Go!"
+                                                                                                                              - "True or false: After the baby is 6 months old, you must first offer food and then breastfeed"
+                                                                                                                            menu:
+                                                                                                                              True:
+                                                                                                                                question:
+                                                                                                                                  - "Oh, wow! That is not correct"
+                                                                                                                                  - image: 'https://media.giphy.com/media/KQHuCWFQdhUJO/giphy.gif'
+                                                                                                                                  - "During the first year of life, milk (whether maternal or formula) is still the main food for the baby"
+                                                                                                                                  - "And other foods are complementary"
+                                                                                                                                  - "Keep playing?"
+                                                                                                                                menu:
+                                                                                                                                  Yes: &Q11
+                                                                                                                                    question:
+                                                                                                                                      - "Ok, go!"
+                                                                                                                                      - "Now an easy one..."
+                                                                                                                                      - "True or false: When you breastfeed you cannot take any medicine"
+                                                                                                                                    menu:
+                                                                                                                                      True:
+                                                                                                                                        question:
+                                                                                                                                          - "Oops, it was not as easy as I thought"
+                                                                                                                                          - image: 'https://media.giphy.com/media/l0OXWXUHdp4K9nitq/giphy.gif'
+                                                                                                                                          - "Most medications are compatible with breastfeeding"
+                                                                                                                                          - "you can consult them all on the website of the pediatricians of APILAM: www.e-lactancia.org"
+                                                                                                                                          - "Keep playing?"
+                                                                                                                                        menu:
+                                                                                                                                          Yes: &Q12
+                                                                                                                                            question:
+                                                                                                                                              - "Let's go! A new question:"
+                                                                                                                                              - "True or false: Babies do not need to belch after breastfeeding"
+                                                                                                                                            menu:
+                                                                                                                                              True:
+                                                                                                                                                question:
+                                                                                                                                                  - "Good! Correct"
+                                                                                                                                                  - image: 'https://media.giphy.com/media/l0MYxef0mpdcnQnvi/giphy.gif'
+                                                                                                                                                  - "When a baby is held tight to the breast, it does not swallow air and therefore does not need to belch every time they are breastfeed"
+                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                menu:
+                                                                                                                                                  Yes: &Q13
+                                                                                                                                                    question:
+                                                                                                                                                      - "I think you have the record for playing this game"
+                                                                                                                                                      - "Go!"
+                                                                                                                                                      - "True or false: Breastfeeding is a natural contraceptive for the first 6 months of the baby's life"
+                                                                                                                                                    menu:
+                                                                                                                                                      True:
+                                                                                                                                                        question:
+                                                                                                                                                          - "Yessss! It's correct!"
+                                                                                                                                                          - image: 'https://media.giphy.com/media/l41YiyqQNn53A9fuE/giphy.gif'
+                                                                                                                                                          - "It is very unlikely that you will become pregnant if you meet all the conditions involved in the LAM method"
+                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                        menu:
+                                                                                                                                                          Yes: &Q14
+                                                                                                                                                            question:
+                                                                                                                                                              - "You're unstoppable!"
+                                                                                                                                                              - "True or false: If you breastfeed, you cannot diet"
+                                                                                                                                                            menu:
+                                                                                                                                                              True:
+                                                                                                                                                                question:
+                                                                                                                                                                  - "Ohhh! That's not true"
+                                                                                                                                                                  - image: 'https://media.giphy.com/media/4PZkTgkVNCiRy/giphy.gif'
+                                                                                                                                                                  - "Three months after delivery, you can diet"
+                                                                                                                                                                  - "Of course, it is advisable not to be on a diet of less than 1,800 kilocalories"
+                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                menu:
+                                                                                                                                                                  Yes: &Q15
+                                                                                                                                                                    question:
+                                                                                                                                                                      - "Ok, one more:"
+                                                                                                                                                                      - "True or false: Small breasts can make enough milk to support breastfeeding"
+                                                                                                                                                                    menu:
+                                                                                                                                                                      True:
+                                                                                                                                                                        question:
+                                                                                                                                                                          - "Correct! Very good!"
+                                                                                                                                                                          - image: 'https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'
+                                                                                                                                                                          - "The size of the breasts does not affect the milk production of the mother"
+                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                        menu:
+                                                                                                                                                                          Yes: &Q16
+                                                                                                                                                                            question:
+                                                                                                                                                                              - "Very good, go!"
+                                                                                                                                                                              - "True or false: Breastfeeding should be pleasurable for both mother and baby"
+                                                                                                                                                                            menu:
+                                                                                                                                                                              True:
+                                                                                                                                                                                question:
+                                                                                                                                                                                  - "Very good! This was easy"
+                                                                                                                                                                                  - image: 'https://media.giphy.com/media/12YimfUI3xDZzq/giphy.gif'
+                                                                                                                                                                                  - "Breastfeeding should not hurt"
+                                                                                                                                                                                  - "If it were not pleasant, we would not be where we are as a species 😉"
+                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                menu:
+                                                                                                                                                                                  Yes: &Q17
+                                                                                                                                                                                    question:
+                                                                                                                                                                                      - "Very good, go:"
+                                                                                                                                                                                      - "True or false: If you get upset, your milk stops"
+                                                                                                                                                                                    menu:
+                                                                                                                                                                                      True:
+                                                                                                                                                                                        question:
+                                                                                                                                                                                          - "Noooo! That is not correct"
+                                                                                                                                                                                          - image: 'https://media.giphy.com/media/EjfrQy8TnyxVK/giphy.gif'
+                                                                                                                                                                                          - "I do get upset every time I hear this myth!"
+                                                                                                                                                                                          - "It is totally false"
+                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                        menu:
+                                                                                                                                                                                          Yes: &Q18
+                                                                                                                                                                                            question:
+                                                                                                                                                                                              - "Ok, go:"
+                                                                                                                                                                                              - "True or false: All mothers have enough milk to breastfeed their children"
+                                                                                                                                                                                            menu:
+                                                                                                                                                                                              True: 
+                                                                                                                                                                                                question:
+                                                                                                                                                                                                  - "I'm sorry but... it is not correct"
+                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/gOJcqRj9M3Z4c/giphy.gif'
+                                                                                                                                                                                                  - "Most mothers have enough milk" 
+                                                                                                                                                                                                  - "but that does not mean that there is not a small part of the population that may have difficulty producing enough for their baby"
+                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                menu:
+                                                                                                                                                                                                  Yes: &Q19
+                                                                                                                                                                                                    question:
+                                                                                                                                                                                                      - "You are on a roll!"
+                                                                                                                                                                                                      - "True or false: Breastfeeding should not cause pain"
+                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                      True:
+                                                                                                                                                                                                        question:
+                                                                                                                                                                                                          - "Very good!"
+                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif'
+                                                                                                                                                                                                          - "Breastfeeding should be pleasurable"
+                                                                                                                                                                                                          - "Pain is a sign that something is not right and should be reviewed"
+                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                          Yes: &Q20
+                                                                                                                                                                                                            question:
+                                                                                                                                                                                                              - "Ok, I'm sure you will guess the next one:"
+                                                                                                                                                                                                              - "True or false: Breast milk continues to nourish the baby at two years of age"
+                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                              True:
+                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                  - "Congrats! You're right!"
+                                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/31lPv5L3aIvTi/giphy.gif'
+                                                                                                                                                                                                                  - "Breast milk at two years old contains more fat than at the beginning of breastfeeding"
+                                                                                                                                                                                                                  - "and, therefore, continues to feed the baby"
+                                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                  Yes: &Q21
+                                                                                                                                                                                                                    question:
+                                                                                                                                                                                                                      - "You really like this!"
+                                                                                                                                                                                                                      - "True or false: If I get pregnant while I breastfeed, I can continue breastfeeding"
+                                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                                      True:
+                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                          - "Of course! You're right!"
+                                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/ur6Eqdu0WIeiI/giphy.gif'
+                                                                                                                                                                                                                          - "This is called tandem breastfeeding"
+                                                                                                                                                                                                                          - "And it can be done, unless there is a medical indication that you cannot, among other things, have sex"
+                                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                          Yes: &Q22
+                                                                                                                                                                                                                            question:
+                                                                                                                                                                                                                              - "You're unstoppable!"
+                                                                                                                                                                                                                              - "I'm sure you will guess the next one!"
+                                                                                                                                                                                                                              - "True or false: Sleeping also feeds the baby"
+                                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                                              True:
+                                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                                  - "No! It's false.  You did not get that one"
+                                                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/10jniOyQtffjbO/giphy.gif'
+                                                                                                                                                                                                                                  - "Luckily for many adults, sleeping does not nourish"
+                                                                                                                                                                                                                                  - "If the baby has not regained birth weight and sleeps a lot, you should wake them up and offer your breast"
+                                                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                                  Yes: &Q23
+                                                                                                                                                                                                                                    question:
+                                                                                                                                                                                                                                      - "Ok, I'm sure you will guess the next one:"
+                                                                                                                                                                                                                                      - "True or false: Babies can use your breast as a pacifier"
+                                                                                                                                                                                                                                    menu:
+                                                                                                                                                                                                                                      True:
+                                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                                          - "No way! Incorrect"
+                                                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/3og0IBdxsxb9zVNedW/giphy.gif'
+                                                                                                                                                                                                                                          - "Babies use pacifiers as real nipples and not vice versa"
+                                                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                                          Yes: &Q24
+                                                                                                                                                                                                                                            question:
+                                                                                                                                                                                                                                              - "Ok, next one:"
+                                                                                                                                                                                                                                              - "True or false: If you have to undergo an x-ray you can continue with breastfeeding"
+                                                                                                                                                                                                                                            menu:
+                                                                                                                                                                                                                                              True:
+                                                                                                                                                                                                                                                - "Correct! Very good!"
+                                                                                                                                                                                                                                                - image: 'https://media.giphy.com/media/DKnMqdm9i980E/giphy.gif'
+                                                                                                                                                                                                                                                - "Most diagnostic tests are compatible with breastfeeding"
+                                                                                                                                                                                                                                                - "You can consult them all on the website of the pediatricians of APILAM: www.e-lactancia.org"
+                                                                                                                                                                                                                                                - "Oh! You left me with no more questions!"
+                                                                                                                                                                                                                                                - "Thanks for playing, it has been a pleasure"
+                                                                                                                                                                                                                                                - "What do you want to do now?"
+                                                                                                                                                                                                                                              False:
+                                                                                                                                                                                                                                                - "Is not correct!  What a shame"
+                                                                                                                                                                                                                                                - image: 'https://media.giphy.com/media/i3Vz6D4KuVWWQ/giphy.gif'
+                                                                                                                                                                                                                                                - "Most diagnostic tests are compatible with breastfeeding"
+                                                                                                                                                                                                                                                - "you can consult them all on the website of the pediatricians of APILAM: www.e-lactancia.org"
+                                                                                                                                                                                                                                                - "Oh! You left me with no more questions!"
+                                                                                                                                                                                                                                                - "Thanks for playing with me, it has been a pleasure"
+                                                                                                                                                                                                                                                - "What do you want to do now?"
+                                                                                                                                                                                                                                          No: &gracias_fin "Thank you for playing with me!"
+                                                                                                                                                                                                                                      False: 
+                                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                                          - "Very good! You got this one"
+                                                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/3o8dFBcecbeoHgQTFS/giphy.gif'
+                                                                                                                                                                                                                                          - "Babies use pacifiers as real nipples and not vice versa"
+                                                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                                          Yes: *Q24
+                                                                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                                              False:
+                                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                                  - "Very good! Correct"
+                                                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/xTiN0oEX5JKwfeiphe/giphy.gif'
+                                                                                                                                                                                                                                  - "Luckily for many adults, sleeping does not nourish"
+                                                                                                                                                                                                                                  - "If the baby has not regained birth weight and sleeps a lot, you should wake them up and offer them the breast"
+                                                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                                  Yes: *Q23
+                                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                                      False:
+                                                                                                                                                                                                                        question:
+                                                                                                                                                                                                                          - "Oh! That is not correct.  This time you did not get it!"
+                                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/a9xhxAxaqOfQs/giphy.gif'
+                                                                                                                                                                                                                          - "This is called tandem breastfeeding"
+                                                                                                                                                                                                                          - "And it can be done, unless there is a medical indication that you can not, among other things, have sex"
+                                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                                          Yes: *Q22
+                                                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                              False:
+                                                                                                                                                                                                                question:
+                                                                                                                                                                                                                  - "It is not correct! You almost guessed it"
+                                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/10QDnTeWjie8cE/giphy.gif'
+                                                                                                                                                                                                                  - "Breast milk at two years old contains more fat than at the beginning of breastfeeding"
+                                                                                                                                                                                                                  - "and, therefore, continues to feed the baby"
+                                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                                menu:
+                                                                                                                                                                                                                  Yes: *Q21
+                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                      False:
+                                                                                                                                                                                                        question:
+                                                                                                                                                                                                          - "Oh! That is not correct"
+                                                                                                                                                                                                          - image: 'https://media.giphy.com/media/11HxElzKUMmBxu/giphy.gif'
+                                                                                                                                                                                                          - "Breastfeeding should be pleasurable"
+                                                                                                                                                                                                          - "Pain is a sign that something is not right and should be checked"
+                                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                                        menu:
+                                                                                                                                                                                                          Yes: *Q20
+                                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                              False:
+                                                                                                                                                                                                question:
+                                                                                                                                                                                                  - "Correct! Very good!"
+                                                                                                                                                                                                  - image: 'https://media.giphy.com/media/xTkcEBlMhHRx6FuCfC/giphy.gif'
+                                                                                                                                                                                                  - "Most mothers have enough milk" 
+                                                                                                                                                                                                  - "But that does not mean that there is not a small part of the population that may have difficulty producing enough for the baby"
+                                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                                menu:
+                                                                                                                                                                                                  Yes: *Q19
+                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                      False:
+                                                                                                                                                                                        question:
+                                                                                                                                                                                          - "Exactly! It's correct"
+                                                                                                                                                                                          - image: 'https://media.giphy.com/media/urVY61nyYSTJK/giphy.gif'
+                                                                                                                                                                                          - "I do get upset every time I hear this myth!"
+                                                                                                                                                                                          - "It is totally false"
+                                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                                        menu:
+                                                                                                                                                                                          Yes: *Q18
+                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                              False: 
+                                                                                                                                                                                question:
+                                                                                                                                                                                  - "Very good! That one was easy"
+                                                                                                                                                                                  - image: 'https://media.giphy.com/media/n988gduPMFC8w/giphy.gif'
+                                                                                                                                                                                  - "Breastfeeding should not hurt"
+                                                                                                                                                                                  - "If it were not pleasant, we would not be where we are as a species 😉"
+                                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                                menu:
+                                                                                                                                                                                  Yes: *Q17
+                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                      False:
+                                                                                                                                                                        question:
+                                                                                                                                                                          - "It is not correct! It was not an easy question"
+                                                                                                                                                                          - image: 'https://media.giphy.com/media/l41YoRDjZxCSpGrcI/giphy.gif'
+                                                                                                                                                                          - "The size of the breasts do not affect the milk production of the mother"
+                                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                                        menu:
+                                                                                                                                                                          Yes: *Q16
+                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                              False:
+                                                                                                                                                                question:
+                                                                                                                                                                  - "Yes, very good! Correct!"
+                                                                                                                                                                  - image: 'http://www.lactapp.es/lactbot/correcto.jpg'
+                                                                                                                                                                  - "Three months after delivery, you can diet"
+                                                                                                                                                                  - "Of course, it is advisable to not be on a diet of less than 1,800 kilocalories"
+                                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                                menu:
+                                                                                                                                                                  Yes: *Q15
+                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                      False:
+                                                                                                                                                        question:
+                                                                                                                                                          - "That is not correct. You almost guessed it"
+                                                                                                                                                          - image: 'https://media.giphy.com/media/lN9amhr8GZMhG/giphy.gif'
+                                                                                                                                                          - "It is very unlikely that you will become pregnant if you meet all the conditions involved in the LAM method"
+                                                                                                                                                          - "Keep playing?"
+                                                                                                                                                        menu:
+                                                                                                                                                          Yes: *Q14
+                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                              False:
+                                                                                                                                                question:
+                                                                                                                                                  - "It is not correct!"
+                                                                                                                                                  - image: 'https://media.giphy.com/media/zRMNxyKsj5tXW/giphy.gif'
+                                                                                                                                                  - "When a baby is held tight to the breast, they do not swallow air and therefore do not need to belch every time they are fed"
+                                                                                                                                                  - "Keep playing?"
+                                                                                                                                                menu:
+                                                                                                                                                  Yes: *Q13
+                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                          No: *gracias_fin 
+                                                                                                                                      False:
+                                                                                                                                        question:
+                                                                                                                                          - "Good! It's correct! You got it"
+                                                                                                                                          - image: 'https://media.giphy.com/media/xT9IgokxfakjpXtr4Q/giphy.gif'
+                                                                                                                                          - "Most medications are compatible with breastfeeding"
+                                                                                                                                          - "You can consult them all on the website of the pediatricians of APILAM: www.e-lactancia.org"
+                                                                                                                                          - "Keep playing?"
+                                                                                                                                        menu:
+                                                                                                                                          Yes: *Q12
+                                                                                                                                          No: *gracias_fin 
+                                                                                                                                  No: *gracias_fin 
+                                                                                                                              False:
+                                                                                                                                question:
+                                                                                                                                  - "The answer is...correct! Well done!"
+                                                                                                                                  - image: 'https://media.giphy.com/media/3ov9jSmllAIKuthAe4/giphy.gif'
+                                                                                                                                  - "During the first year of life, milk (whether maternal or formula) is still the main food for the baby"
+                                                                                                                                  - "And other foods are complementary"
+                                                                                                                                  - "Keep playing?"
+                                                                                                                                menu:
+                                                                                                                                  Yes: *Q11
+                                                                                                                                  No: *gracias_fin 
+                                                                                                                          No: *gracias_fin 
+                                                                                                                      False:
+                                                                                                                        question:
+                                                                                                                          - "Correct!"
+                                                                                                                          - image: 'https://media.giphy.com/media/yF3lmMZO1j0Y/giphy.gif'
+                                                                                                                          - "Although there is a myth that says that if you drink liquid you can produce more milk, the truth is that it does not affect production"
+                                                                                                                          - "Drink according to your thirst"
+                                                                                                                          - "Keep playing?"
+                                                                                                                        menu:
+                                                                                                                          Yes: *Q10
+                                                                                                                          No: *gracias_fin 
+                                                                                                                  No: *gracias_fin 
+                                                                                                              False:
+                                                                                                                question:
+                                                                                                                  - "Correct! You hit it"
+                                                                                                                  - image: 'https://media.giphy.com/media/s2qXK8wAvkHTO/giphy.gif'
+                                                                                                                  - "Although it is better to refrigerate the milk after pumping, it can be left at room temperature for about 4 hours maximum"
+                                                                                                                  - "Keep playing?"
+                                                                                                                menu:
+                                                                                                                  Yes: *Q9
+                                                                                                                  No: *gracias_fin 
+                                                                                                          No: *gracias_fin 
+                                                                                                      False:
+                                                                                                        question:
+                                                                                                          - "It is not correct...you almost guessed it"
+                                                                                                          - image: 'https://media.giphy.com/media/YHmYK1x341Nf2/giphy.gif'
+                                                                                                          - "If you are not going to feed the milk in the following hours or within 5 days, it is better to freeze it so it does not lose properties"
+                                                                                                          - "Keep playing?"
+                                                                                                        menu:
+                                                                                                          Yes: *Q8
+                                                                                                          No: *gracias_fin                                                                                
+                                                                                                  No: *gracias_fin 
+                                                                                              False:
+                                                                                                question:
+                                                                                                  - "Noooooo. It is not correct"
+                                                                                                  - image: 'https://media.giphy.com/media/xTeWOAByHmPN1n7IqI/giphy.gif'
+                                                                                                  - "A massage in the breasts prior to pumping can favor the extraction of milk"
+                                                                                                  - "Keep playing?"
+                                                                                                menu:
+                                                                                                  Yes: *Q7
+                                                                                                  No: *gracias_fin 
+                                                                                          No: *gracias_fin 
+                                                                                      False:
+                                                                                        question:
+                                                                                          - "Correct!"
+                                                                                          - image: 'https://media.giphy.com/media/l8XYZYdlOHSrS/giphy.gif'
+                                                                                          - "Breast milk can be stored indiscriminately in plastic or glass bottles as long as they are suitable for food preservation"
+                                                                                          - "Keep playing?"
+                                                                                        menu:
+                                                                                          Yes: *Q6
+                                                                                          No: *gracias_fin 
+                                                                                  No: *gracias_fin 
+                                                                              False:
+                                                                                question:
+                                                                                  - "It is not correct! What a shame"
+                                                                                  - image: 'https://media.giphy.com/media/rin3bb7XSJuYE/giphy.gif'
+                                                                                  - "Breast milk is a very important source of bacteria for the baby"
+                                                                                  - "There are over 700 bacteria in breast milk essential for the development of baby's intestinal health"
+                                                                                  - "Keep playing?"
+                                                                                menu:
+                                                                                  Yes: *Q5
+                                                                                  No: *gracias_fin 
+                                                                          No: *gracias_fin 
+                                                                      False:
+                                                                        question:
+                                                                          - "Correct! Very good!"
+                                                                          - image: 'https://media.giphy.com/media/l3vR2NcAVb9nhBoEE/giphy.gif'
+                                                                          - "It is important for the mother to drink water depending on her thirst, not to think that drinking more water will give more milk"
+                                                                          - "Excessive fluid gain in the diet just makes you urinate more often"
+                                                                          - "Keep playing?"
+                                                                        menu:
+                                                                          Yes: *Q4
+                                                                          No: *gracias_fin
+                                                                  No: *gracias_fin   
+                                                              False:
+                                                                question:
+                                                                  - "It is not correct! What a shame..."
+                                                                  - image: 'https://media.giphy.com/media/3oEjHJBolSjqwiZ2rS/giphy.gif'
+                                                                  - "Breast milk has little protein in its composition as it adapts to the slow growth of human babies"
+                                                                  - "Milk from rapidly growing mammals has more protein"
+                                                                  - "Do you want to continue playing?"
+                                                                menu:
+                                                                  Yes: *Q3
+                                                                  No: *gracias_fin
+                                                          No: *gracias_fin
+                                                      False:
+                                                        question:
+                                                          - "Correct! Yes, very good!"
+                                                          - image: 'https://media.giphy.com/media/c4rB7DMXKgktG/giphy.gif'
+                                                          - "The truth is that breastfeeding shouldn't always be on demand"
+                                                          - "It is only once the baby has regained birth weight and is able to demand what they need"
+                                                          - "If the baby is premature, is sick or does not gain enough weight, the mother has to lead the demand"
+                                                          - "Do you want to continue playing?"
+                                                        menu:
+                                                          Yes: *Q2
+                                                          No: *gracias_fin
+                                                  No: "Okay! Maybe we can play another time..."
+                                              Not now: "Okay then, some other time"
+                                      Supplementation methods:
+                                        question:
+                                          - "Taking note!"
+                                          - "When you think of giving a baby milk, what image comes to your head?"
+                                          - "Wait, let me guess..."
+                                          - "🍼"
+                                          - "Yes, exactly, a bottle. There is no reason that should be the only way"
+                                          - "There are other options that we do not think about! Syringe, cup, spoon..."
+                                          - "Don't miss this LactApp article on the topic: http://www.lactapp.es/blog/como-le-pueden-dar-mi-leche-en-mi-ausencia"
+                                          - "I hope you find this information useful! 😃"
+                                          - "What do you want to do next?"
+                                        menu: 
+                                          Play: *GAME
+                                          Not now: "Okay then, at some other time"
+                          About my baby:
+                            question:
+                             - "Having a baby 👶 always awakens many doubts"
+                             - "I wish they came with a manual!"
+                             - image: 'http://www.lactapp.es/lactbot/bebe.jpg'
+                               text: "About my baby"
+                             - "I suggest some topics:"
+                            menu:
+                              Weight lack:
+                                question:
+                                  - "Breastfeeding is very important for your baby but so is proper weight gain"
+                                  - image: 'http://www.lactapp.es/lactbot/bebe_peso.jpg'
+                                    text: "Baby's weight development"
+                                  - "How old is your baby?"
+                                menu:
+                                  0 to 15 days:
+                                    question:
+                                      - "Oh! Congratulations!"
+                                      - "Babies lose weight the first 3 days and begin to gain weight after the fifth day"
+                                      - "They should regain birth weight over 15 days"
+                                      - "If they regain it sooner, much better!"
+                                      - "If your baby does not follow these parameters, do not hesitate to consult your pediatrician"
+                                      - "But I can offer some suggestions:"
+                                    menu:
+                                      Suggestions:
+                                        question:
+                                          - "I'll start"
+                                          - "Try to wake up your baby to breastfeed between 8 and 12 times in 24 hours"
+                                          - "If you do not get your baby to wake up, do not hesitate to offer your extracted milk"
+                                          - "If you can't wake your baby up, you can perform breast compression"
+                                          - image: 'http://www.lactapp.es/lactbot/compresion.jpg'
+                                            text: "Suggestions about the first 15 days"
+                                          - "What would you like to do now?"
+                                        menu:
+                                          Play: *GAME
+                                          Not now: "Okay then, some other time"
+                                      Not now:
+                                        question:
+                                          - "Ok then, but in case you want to know more about weight gain"
+                                          - "In the LactApp app you will find information on this topic"
+                                          - "Do you want to download the LactApp app?"
+                                        menu: *menu_descarga
+                                  Up to 3 months:
+                                    question:
+                                      - "The first three months are the most complicated, so congratulations on your breastfeeding"
+                                      - "In this period of time, babies have to gain about 30 grams each day"
+                                      - "But, hey! They do not gain weight on a regular basis so you may get scared if you weigh the baby every day"
+                                      - "If your baby does not follow these parameters, do not hesitate to consult your pediatrician"
+                                      - "Do you want some ideas to help with your baby's weight gain?"
+                                    menu:
+                                       Yes:
+                                        question:
+                                         - "Here we go!"
+                                         - "Try to offer the breast whenever the baby is willing to take it"
+                                         - "Breastfeeding at night is very important"
+                                         - "So do not hesitate to sleep close enough and have your breast available for the baby"
+                                         - "If you already do all this, do not hesitate to consult your pediatrician so you can assess if it is a urine infection"
+                                         - "Another option is that your baby is going through a growth spurt"
+                                         - "Know what that is? It helped me a lot to read this article (the content is in Spanish, I'm working on getting it translated to English):"
+                                         - image: 'http://www.lactapp.es/lactbot/demanda.jpg'
+                                           text: "Breastfeeding on demand"
+                                         - "Here you have it: http://www.lactapp.es/blog/mi-bebe-esta-mas-demandante/"
+                                         - "What would you like to do now?"
+                                        menu:
+                                          Play: *GAME
+                                          Not now: "Okay then, some other time"
+                                       Another moment:
+                                        question:
+                                         - "Okay, some other time"
+                                         - "You already know that you can consult me whenever you want"
+                                         - "And in the LactApp app you can search the section 'About my baby' and see 'My baby does not gain weight'"
+                                         - "The answers you will find will be specific to your baby's age"
+                                         - "Do you want to download the LactApp app?"
+                                        menu: *menu_descarga
+                                  3 to 6 months:
+                                    question:
+                                      - "Congratulations on your breastfeeding!"
+                                      - "You are already experts on the subject"
+                                      - "Your baby is going to be gaining less weight"
+                                      - "Approximately 20 grams per day"
+                                      - "But, hey! They do not gain weight on a regular basis so you may get scared if you weigh the baby every day"
+                                      - "If your baby does not follow these parameters, do not hesitate to consult your pediatrician"
+                                      - "Can I tell you something else?"
+                                    menu:
+                                      Yes, tell me:
+                                        question:
+                                         - "I'll start"
+                                         - "Some babies stop gaining weight in this period when they start to sleep for many hours at a time"
+                                         - "If this is your case, do not hesitate to wake up your baby to breastfeed at night"
+                                         - "Another thing that could happen is that your baby is tongue-tied"
+                                         - "And will find it difficult to extract milk from the breast"
+                                         - "I know it may sound weird, it seemed weird to me before too"
+                                         - "But after 3 months, the breast self-regulates and production depends largely on the amount of milk that the baby gets"
+                                         - "If the baby has any tongue difficulties, even if they didn't have problems before, they may appear during this time"
+                                         - "At this point, I can show you two things that may interest you:"
+                                         - image: 'http://www.lactapp.es/lactbot/babyAC.jpg'
+                                           text: "Complementary food"
+                                         - "This complete LactApp article (the content is in Spanish, I'm working on getting it translated to English): http://www.lactapp.es/blog/10-conceptos-basicos-de-alimentacion-complementaria"
+                                         - "And, in the LactApp app, you will find a section on 'Solid Foods' in the section 'My baby'"
+                                         - "Do you want to download LactApp now for free?"
+                                        menu: *menu_descarga
+                                      Not now:
+                                        question:
+                                          - "Ok, you know you can ask me for information whenever you want"
+                                          - "If you do not agree with me 😜, do not forget the LactApp app"
+                                          - "In the LactApp app you will find more information on weight gain by age"
+                                          - "Do you want to download LactApp now for free?"
+                                        menu: *menu_descarga
+                                  6 to 12 months:
+                                    question:
+                                      - "Congratulations on your breastfeeding!"
+                                      - "Maybe you've already started with solid foods"
+                                      - "You should know that your baby will not gain as much weight as before, it's the other way around!"
+                                      - "At this stage, babies usually gain about 15 grams a day"
+                                      - "But there is more... 😜 You want me to tell you?"
+                                    menu:
+                                      Tell me:
+                                        question:
+                                         - "Although it is usually very common to be told that after 6 months you have to wean"
+                                         - "to offer food... Nothing is further from reality!"
+                                         - "Food is a supplement to the milk, it doesn't remove or replace it"
+                                         - "So, If you want the baby to gain weight, a good idea is to breastfeed more"
+                                         - "And of course always before the meal"
+                                         - "I have it very clear, milk is their main food during the first year of life"
+                                         - image: 'http://www.lactapp.es/lactbot/complemento.jpg'
+                                           text: "That's what I mean... complementary food is just that: a complement!"
+                                         - "What do you want to do now?"
+                                        menu:
+                                          Play: *GAME
+                                          Not now: "Okay then, at some other time"                                      
+                                      Not now:
+                                        question:
+                                          - "Ok, I'll be here whenever you need me"
+                                          - "In the LactApp app you can find more information about this stage"
+                                          - "Do you want to download LactApp now?"
+                                        menu: *menu_descarga
+                                  More than 12 months:
+                                    question:
+                                      - "Wow! More than 12 months breastfeeding, congratulations!"
+                                      - "At one year of age, the baby should be triple the birth weight"
+                                      - "As they grow, children can stop their size and weight development on a temporary basis"
+                                      - "If you have doubts, go to the pediatrician for a proper check-up"
+                                      - "As old as they may be, breastfeeding is never the problem"
+                                      - "If your baby is just a year old, you'll be interested in what I'm going to tell you..."
+                                    menu:
+                                      Yes, one year old:
+                                        question:
+                                          - "Let me tell you... at a year old, a very important stop occurs in the weight increase of the babies"
+                                          - "And they go from tripling their weight to stopping temporarily"
+                                          - "It's a big change for parents, but I have not yet met a baby who this does not happen to"
+                                          - "So... what can I say? You will not notice and will be eating and growing again"
+                                          - "What do you want to do now?"
+                                        menu:
+                                          Play: *GAME
+                                          Not now: "Okay then, some other time" 
+                                      No, really:
+                                        question:
+                                         - "Oops, Well then I will not insist"
+                                         - "In the LactApp app you will find more information on weight gain by age"
+                                         - "Do you want to download the LactApp app?"
+                                        menu: *menu_descarga
+                              Highly demanding:
+                                question:
+                                 - "We never expect babies to be so demanding"
+                                 - "Before they are born, we think that they only nurse every three hours and then we realize that it is not true"
+                                 - "And, if that were not enough, at certain times babies increase their demand"
+                                 - "What age range is your baby in?"
+                                menu:
+                                  24-48 hours:
+                                    question:
+                                      - "Congratulations! ❤️"
+                                      - "Maybe you didn't expect your baby to breastfeed for so long"
+                                      - "Your baby does it to increase your milk production"
+                                      - "In addition, the second night of life, babies breastfeed a lot. It's called 'the night of mad cows'"
+                                      - "What a name! 😳"
+                                      - "Babies do it to help the milk come"
+                                      - "If you have more questions about this topic in the LactApp app you will find more information on weight gain for ages"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  15-18 days:
+                                    question:
+                                      - "Maybe you do not know but you are experiencing the first major breastfeeding crisis"
+                                      - "What I want to say is that you are the one having the 'crisis', your baby knows exactly what they are doing"
+                                      - "If you breastfeed a lot, you will have more milk"
+                                      - "If you let your baby breastfeed as much as they want, your production will increase and you will overcome these hurdles"
+                                      - "If you have more doubts about hurdles or crises, in the LactApp app you will find more information"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  6-7 weeks:
+                                    question:
+                                     - "If your baby is this age, you are likely to be experiencing a time of demand"
+                                     - "Babies are nervous while breastfeeding"
+                                     - "They stretch and pull the nipple like chewing gum"
+                                     - "The usual thing is that it's over in a few days, if you let the baby breastfeed all they want"
+                                     - "Surely you have more doubts about all this. The LactApp app can help you"
+                                     - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  3 months:
+                                    question:
+                                      - "I see!"
+                                      - "Have you noticed that the baby is breastfeeding strangely?"
+                                      - "Fights with the breast... breastfeeds very quickly..."
+                                      - "and if you offer the breast more, they get angry and reject it"
+                                      - "Oh! and if that were not enough, your breast seems to be empty"
+                                      - "If you have noticed any of this, it is very possible that it is the three month crisis"
+                                      - "If you need more information, do not hesitate to consult the LactApp app in the section 'Our lactation'"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  4 or 8 months:
+                                    question:
+                                      - "Well, you should know that if your baby is around this ages they may wake up more"
+                                      - "Oops! Maybe you've already noticed"
+                                      - "But I have to say that this time it is not the lactation's fault"
+                                      - "Your baby is experiencing new phases of sleep and for that reason is more restless at night"
+                                      - "Breastfeeding helps the baby to sleep sooner"
+                                      - "I do not know if I am convincing you, so if you want more information in the LactApp app you will be informed"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  2 years:
+                                    question:
+                                      - "Wow! 2 years breastfeeding!"
+                                      - "My sincerest congratulations"
+                                      - "You will have noticed that the two year olds are amazing in every way"
+                                      - "Surely you see your child has grown"
+                                      - "Most mothers don't expect them to breastfeed again so much"
+                                      - "And... also, they do not usually ask for it with good manners"
+                                      - "In the LactApp app there is information on the topic, they can help you understand what is happening"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                                  Other age:
+                                    question:
+                                     - "I thought it might be a bump in the road with my lactation, but I see that it does not match any of the typical stages of increased demand"
+                                     - "In the LactApp app you have a specific section where you can know why your baby has a higher demand"
+                                     - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                              Solid food:
+                                  question:
+                                   - "A new stage to explore!"
+                                   - "Remember that during the first year, breast milk is still the main food for your baby"
+                                   - "Solid foods do not displace or replace breast milk"
+                                   - "Solid foods complement the milk, this is why it is called complementary food"
+                                   - image: 'http://www.lactapp.es/lactbot/AC.jpg'
+                                     text: "complementary food"
+                                   - "Let me share what you can ask me about this subject:"
+                                  menu:
+                                    What do I start with?:
+                                      question:
+                                        - "Many mothers ask me, it's a very common question!"
+                                        - "The truth is that everything is much easier than it seems"
+                                        - "Among fruit, vegetables, cereals and meat ... you can choose what you want"
+                                        - "Avoid very hard or very small foods"
+                                        - "And try to offer what you usually eat at home"
+                                        - "In the LactApp app there is much more information on this subject"
+                                        - "Do you want to download the LactApp app?"
+                                      menu: *menu_descarga
+                                    Frequency:
+                                      question:
+                                        - "When you start offering food, your baby just needs to try something once a day"
+                                        - "They eat very little"
+                                        - "As they grow, you can offer food more times a day"
+                                        - "If you have more questions in the LactApp app you will find more answers"
+                                        - "Do you want to download the LactApp app?"
+                                      menu: *menu_descarga
+                                    Is my baby ready?:
+                                      question:
+                                        - "Well the truth is that I do not know, but I can help you find out"
+                                        - "The official recommendations are to maintain exclusively breastfeeding during the first 6 months of the baby's life"
+                                        - "It is important for you to evaluate if the baby is prepared, there are three things to observe:"
+                                        - "Is the baby able to remain seated? Can be given a little help"
+                                        - "Does the baby show interest in food? I mean, do they want to touch your food or do they look at you amazed"
+                                        - "Do they have the extrusion reflex disconnected? That sounds weird, it means they know how to swallow food and do not spit it out"
+                                        - "If the baby meets these parameters they are ready to eat"
+                                        - "If not, you're going to have to wait a little"
+                                        - "In the LactApp app there is much more information on this subject"
+                                        - "Do you want to download the LactApp app?"
+                                      menu: *menu_descarga
+                                    My baby doesn't want to eat:
+                                      question:
+                                        - "Nothing at all?"
+                                        - "Or maybe just a little something?"
+                                        - "Most babies eat only a little of some food"
+                                        - "If your baby does not eat anything and is ready to eat, do not hesitate to consult the LactApp app for more information"
+                                        - "Do you want to download the LactApp app?"
+                                      menu: *menu_descarga
+                                    Purees or solid food:
+                                      question:
+                                        - "From what I have been told, it basically depends on the decisions of each family"
+                                        - "Some prefer to prepare puree and others offer them pieces of food"
+                                        - "In order to decide if you prefer one or the other option, you can consult the LactApp app"
+                                        - "Do you want to download the LactApp app?"
+                                      menu: *menu_descarga
+                              Sleeping:
+                                question:
+                                  - "All adults are sleepy! 😴"
+                                  - "Babies sleep differently than adults"
+                                  - "he, he 😜"
+                                  - "I'm going to tell you a secret, babies do not sleep more as they grow up"
+                                  - image: 'http://www.lactapp.es/lactbot/sueno.jpg'
+                                    text: "Baby sleep"
+                                  - "In the LactApp app you can find all the information you need about baby sleeping"
+                                  - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                          Relactation:
+                            question:
+                              - "Oh! This is a topic I recently discovered 😄"
+                              - "Okay, let's talk about how to eliminate formula supplements"
+                              - "What interests you most?"
+                            menu: 
+                              What is relactation?:
+                                question:
+                                  - "This is easy!"
+                                  - "Relactation is the process by which formula is eliminated to offer only breast milk"
+                                  - "It is a complex process that requires support and patience"
+                                  - image: 'http://www.lactapp.es/lactbot/sacaleches.png' 
+                                    text: "Breast pump"
+                                  - "Look at this article (the content is in Spanish, I'm working on getting it translated to English): http://www.lactapp.es/blog/como-conseguir-lme-relactar/"
+                                  - "Hope you find it interesting"
+                                  - "Press 'Back' to keep asking about relactation"
+                                menu: *menu_descarga 
+                              How to relactate:
+                                question:
+                                  - "To start relactation you must know how much formula your baby drinks"
+                                  - "And, on the other hand, it is necessary to stimulate the breast with a breast pump"
+                                  - "Every mother and baby are different and there is no one way to start a relactation"
+                                  - image: 'http://www.lactapp.es/lactbot/leche_materna.jpg'
+                                    text: "Relactation"
+                                  - "It is very important to choose a suitable breast pump"
+                                  - "Oh, and I've been told that in the LactApp app you'll find the option to make a custom plan"
+                                  - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                              About breast pump:
+                                    question:
+                                      - "Oh yes! The famous breast pump 😉"
+                                      - "Relactation usually means a breast pump"
+                                      - "Since it is necessary to increase milk production in order to reduce the supplements"
+                                      - image: 'http://www.lactapp.es/lactbot/sacaleches2.png' 
+                                        text: "Breast pump"
+                                      - "Let me share an article about this with you (the content is in Spanish, I'm working on getting it translated to English): http://www.lactapp.es/blog/sacaleches-preguntas-y-respuestas"
+                                      - "I hope you find it interesting"
+                                      - "Do you want to download the LactApp app?"
+                                    menu: *menu_descarga
+                              Other time: "Okay, I'll be here anytime"
+                          I'm pregnant:
+                            question:
+                              - "Congratulations!"
+                              - "Since you're talking to me, I assume you want to breastfeed"
+                              - image: 'http://www.lactapp.es/lactbot/consulta_embarazo.jpg'
+                                text: "Pregnancy and breastfeeding"
+                              - "Let me propose some topics:"
+                            menu:
+                              How do I prepare:
+                                question:
+                                 - "It's great that you are looking for information before your baby arrives!"
+                                 - "Babies know how to breastfeed but mothers have to learn"
+                                 - "I’m sure you have prepared various things for your baby’s arrival"
+                                 - "Now it is time to prepare for lactation and I will give you three key points to achieve it:"
+                                 - "1) Read about lactation. Read books by Dr. Carlos Gonzalez for example, they are very useful"
+                                 - "2) Do not hesitate in reaching out to a breastfeeding support group, it is important to see how one breastfeeds"
+                                 - "Can you guess the third one?"
+                                 - "Exactly, download the LactApp app, it is free and helps you solve doubts and helps you prepare for breastfeeding"
+                                 - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                              Fears and Doubts:
+                                question:
+                                  - "It is normal to have doubts and fears about breastfeeding"
+                                  - "This is true whether this is your first time breastfeeding or you’ve had prior experience, it is usually not the same every time"
+                                  - "The best way to get rid of your doubts and fears completely is to be informed"
+                                  - "Luckily the LactApp app can accompany you during the whole process"
+                                  - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                              Tandem:
+                                question:
+                                  - "They say a lot of things, and they are not all good, about breastfeeding during pregnancy"
+                                  - "You’ve heard everything probably"
+                                  - "Like everything, for breastfeeding the base is good information and accompaniment"
+                                  - image: 'http://www.lactapp.es/lactbot/tandem.jpg'
+                                    text: "Tandem Breastfeeding"
+                                  - "I recommend you download the LactApp app for more information about tandem breastfeeding"
+                                  - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                          Weaning:
+                            question:
+                              - "Weaning is also part of lactation"
+                              - "And whenever possible it is important to end things nicely"
+                              - "There are various types of weanings, some led by the mother, some initiated by the baby"
+                              - "Even some that are done by emergency"
+                              - "In any case, on the LactApp app you will find two sections that describe the best way to wean"
+                              - "Do you want to download the LactApp app?"
+                            menu: *menu_descarga
+                          Other topics:
+                            question: "Do you want to see the topics on LactApp"
+                            menu:
+                              Yes: "Great, check out www.lactapp.es/blog"
+                              Not now:
+                                question:
+                                  - "Would you like to discuss another topic?"
+                                  - "In the LactApp app you will find what you need"
+                                  - "Do you want to download the LactApp app?"
+                                menu: *menu_descarga
+                      See the topics: "Of course! Here you have a list of all the topics you can find on LactApp: http://www.lactapp.es/blog/temas-vas-encontrar-lactapp"
+                  Topics in the app: "Review this list of topics: http://www.lactapp.es/blog/temas-vas-encontrar-lactapp"
+              Talk about breastfeeding:
+                question: "Here! I’ll suggest some topics:"
+                menu: *temas_app
+              Play: *GAME
+              Knowing what LactApp is:
+                question:
+                  - "LactApp is a free app about lactation that offers personalized responses to any doubts you may have"
+                  - "Do you want to download the LactApp app?"
+                menu: *menu_descarga
+      Play: *GAME
+      Talk about breastfeeding:
+        question: "Great! Let me suggest some topics:"
+        menu: *temas_app
