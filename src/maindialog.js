@@ -17,7 +17,7 @@ import {Dialog, NLPModel,log} from 'deepdialog';
 // Each has corresponding smooch app
 //
 export const CHANNEL_ID = {spanish:'EXqZgbnqb5Bf2D9Z9P5Gn8',english:'2vsYq19wkHW1Yoeon9AwBt'};
-export const CURRENT_VERSION={spanish:'2017-11-20-main',english:'2017-12-28-main-eng'};
+export const CURRENT_VERSION={spanish:'2017-11-20-main',english:'2018-01-22-main-eng'};
 export const COMPLETION_QUESTIONAIRE={spanish:'2017-11-13-completion',english:'2018-01-06-completion-eng'};
 export const HELP_MENU_TREE = {spanish:'2017-06-29-help',english:'2017-11-03-help-eng'};
 export const DEMO_VERSION='2017-06-02-lact-demo-eng';
