@@ -54,7 +54,7 @@ MenuTreeDialog.onStart(async function (session, {versionName, path}) {
 
 // exit
 MenuTreeDialog.onText('exit', async function (session) {
-  await session.finish();
+  await session.finish(false);
 });
 
 MenuTreeDialog.onText('reset', async function (session) {
@@ -164,7 +164,7 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       var len = path.length;
       // if at top of tree, end and return to main dialog
       if (len <= 1) {
-        await session.finish(false);
+        await session.finish(true);
       }
       else {
         // otherwise go to parent node
@@ -176,10 +176,11 @@ MenuTreeDialog.onPayload( any, async function (session, notification) {
       }
     }
     else if (notification.data.text == START_BUTTON[session.globals.Language]) {
-      log.debug('restart path: %j', restartPath );
-      await sendQuestionAndMenu(session, restartMenuTree);
-      session.set({path: restartPath});
-      await session.save();
+      await session.finish(false);
+      // log.debug('restart path: %j', restartPath );
+      // await sendQuestionAndMenu(session, restartMenuTree);
+      // session.set({path: restartPath});
+      // await session.save();
     }
     else {
       await session.send({text: UNRECOGNIZED_TEXT_RESPONSE[session.globals.Language]});
