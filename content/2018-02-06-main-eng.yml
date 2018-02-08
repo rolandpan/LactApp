@@ -18,7 +18,7 @@ menu:
           Ok:
             question:
               - "What can I do for you?"
-            menu: 
+            menu:
               How do you work: &BIEN_4
                 question:
                   - "You can talk to me about various topics that may interest you"
@@ -34,7 +34,7 @@ menu:
                     - "I thought you would never ask!"
                     - "Write an email to hola@lactapp.es"
                     - "I will be here whenever you need me"
-                  About breastfeeding: 
+                  About breastfeeding:
                     question:
                       - "I have learned a lot with the LactApp app"
                       - "Do you want to chat with me a bit about breastfeeding or do you prefer to see the topics in the app?"
@@ -44,7 +44,7 @@ menu:
                           - "I'm learning little by little"
                           - "Let me suggest some topics:"
                         menu: &temas_app
-                          About me: 
+                          About me:
                             question:
                               - "Many women feel pain while breastfeeding"
                               - "Is this your case?"
@@ -70,7 +70,7 @@ menu:
                                               - "Go to the 'About me' section and consult 'Pain during breastfeeding'"
                                               - "Do you want to download the LactApp app?"
                                             menu: &menu_descarga
-                                              Yes: 
+                                              Yes:
                                                 question: "Select your option:"
                                                 menu:
                                                   iPhone: "Great! Here's the link to the App Store, LactApp is free: http://bit.ly/lactappios"
@@ -177,9 +177,8 @@ menu:
                                       - "I see that you have read through the most common topics of consultation"
                                       - "I am learning things every day, I will soon master more subjects"
                                       - "In the meantime, you can check out the LactApp app that lists all the lactation issues you may need help with"
-                                      - "Do you want to download the LactApp app?"
                                     menu:
-                                      Feelings: 
+                                      Feelings:
                                         question:
                                           - "Okay! Emotions during breastfeeding can be a roller coaster"
                                           - "I will take note, thanks for the suggestion"
@@ -221,7 +220,7 @@ menu:
                                             question: "All right, what do you feel like doing now?"
                                             menu:
                                               Play: &GAME
-                                                question: 
+                                                question:
                                                   - "Test your knowledge of breastfeeding!"
                                                   - "Choose whether the following statement is true or false:"
                                                   - "Ready?"
@@ -297,7 +296,7 @@ menu:
                                                                                               - "True or false: Before extracting milk, it may be helpful to perform a breast massage"
                                                                                             menu:
                                                                                               True:
-                                                                                                question: 
+                                                                                                question:
                                                                                                   - "Correct! Aww yeah!"
                                                                                                   - image: 'https://media.giphy.com/media/3o84UaGEtyayvBIFwc/giphy.gif'
                                                                                                   - "A breast massage can favor the extraction of milk"
@@ -448,11 +447,11 @@ menu:
                                                                                                                                                                                               - "Ok, go:"
                                                                                                                                                                                               - "True or false: All mothers have enough milk to breastfeed their children"
                                                                                                                                                                                             menu:
-                                                                                                                                                                                              True: 
+                                                                                                                                                                                              True:
                                                                                                                                                                                                 question:
                                                                                                                                                                                                   - "I'm sorry but... it is not correct"
                                                                                                                                                                                                   - image: 'https://media.giphy.com/media/gOJcqRj9M3Z4c/giphy.gif'
-                                                                                                                                                                                                  - "Most mothers have enough milk" 
+                                                                                                                                                                                                  - "Most mothers have enough milk"
                                                                                                                                                                                                   - "but that does not mean that there is not a small part of the population that may have difficulty producing enough for their baby"
                                                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                                                 menu:
@@ -543,7 +542,7 @@ menu:
                                                                                                                                                                                                                                                 - "Thanks for playing with me, it has been a pleasure"
                                                                                                                                                                                                                                                 - "What do you want to do now?"
                                                                                                                                                                                                                                           No: &gracias_fin "Thank you for playing with me!"
-                                                                                                                                                                                                                                      False: 
+                                                                                                                                                                                                                                      False:
                                                                                                                                                                                                                                         question:
                                                                                                                                                                                                                                           - "Very good! You got this one"
                                                                                                                                                                                                                                           - image: 'https://media.giphy.com/media/3o8dFBcecbeoHgQTFS/giphy.gif'
@@ -551,8 +550,8 @@ menu:
                                                                                                                                                                                                                                           - "Keep playing?"
                                                                                                                                                                                                                                         menu:
                                                                                                                                                                                                                                           Yes: *Q24
-                                                                                                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                                                  No: *gracias_fin
                                                                                                                                                                                                                               False:
                                                                                                                                                                                                                                 question:
                                                                                                                                                                                                                                   - "Very good! Correct"
@@ -562,8 +561,8 @@ menu:
                                                                                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                                                                                 menu:
                                                                                                                                                                                                                                   Yes: *Q23
-                                                                                                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                                                          No: *gracias_fin
                                                                                                                                                                                                                       False:
                                                                                                                                                                                                                         question:
                                                                                                                                                                                                                           - "Oh! That is not correct.  This time you did not get it!"
@@ -573,8 +572,8 @@ menu:
                                                                                                                                                                                                                           - "Keep playing?"
                                                                                                                                                                                                                         menu:
                                                                                                                                                                                                                           Yes: *Q22
-                                                                                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                                  No: *gracias_fin
                                                                                                                                                                                                               False:
                                                                                                                                                                                                                 question:
                                                                                                                                                                                                                   - "It is not correct! You almost guessed it"
@@ -584,7 +583,7 @@ menu:
                                                                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                                                                 menu:
                                                                                                                                                                                                                   Yes: *Q21
-                                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                                  No: *gracias_fin
                                                                                                                                                                                                           No: *gracias_fin
                                                                                                                                                                                                       False:
                                                                                                                                                                                                         question:
@@ -595,19 +594,19 @@ menu:
                                                                                                                                                                                                           - "Keep playing?"
                                                                                                                                                                                                         menu:
                                                                                                                                                                                                           Yes: *Q20
-                                                                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                                  No: *gracias_fin
                                                                                                                                                                                               False:
                                                                                                                                                                                                 question:
                                                                                                                                                                                                   - "Correct! Very good!"
                                                                                                                                                                                                   - image: 'https://media.giphy.com/media/xTkcEBlMhHRx6FuCfC/giphy.gif'
-                                                                                                                                                                                                  - "Most mothers have enough milk" 
+                                                                                                                                                                                                  - "Most mothers have enough milk"
                                                                                                                                                                                                   - "But that does not mean that there is not a small part of the population that may have difficulty producing enough for the baby"
                                                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                                                 menu:
                                                                                                                                                                                                   Yes: *Q19
-                                                                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                                          No: *gracias_fin
                                                                                                                                                                                       False:
                                                                                                                                                                                         question:
                                                                                                                                                                                           - "Exactly! It's correct"
@@ -617,9 +616,9 @@ menu:
                                                                                                                                                                                           - "Keep playing?"
                                                                                                                                                                                         menu:
                                                                                                                                                                                           Yes: *Q18
-                                                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                                                              False: 
+                                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                              False:
                                                                                                                                                                                 question:
                                                                                                                                                                                   - "Very good! That one was easy"
                                                                                                                                                                                   - image: 'https://media.giphy.com/media/n988gduPMFC8w/giphy.gif'
@@ -628,8 +627,8 @@ menu:
                                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                                 menu:
                                                                                                                                                                                   Yes: *Q17
-                                                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                                          No: *gracias_fin
                                                                                                                                                                       False:
                                                                                                                                                                         question:
                                                                                                                                                                           - "It is not correct! It was not an easy question"
@@ -638,8 +637,8 @@ menu:
                                                                                                                                                                           - "Keep playing?"
                                                                                                                                                                         menu:
                                                                                                                                                                           Yes: *Q16
-                                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                                  No: *gracias_fin
                                                                                                                                                               False:
                                                                                                                                                                 question:
                                                                                                                                                                   - "Yes, very good! Correct!"
@@ -649,8 +648,8 @@ menu:
                                                                                                                                                                   - "Keep playing?"
                                                                                                                                                                 menu:
                                                                                                                                                                   Yes: *Q15
-                                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                                  No: *gracias_fin
+                                                                                                                                                          No: *gracias_fin
                                                                                                                                                       False:
                                                                                                                                                         question:
                                                                                                                                                           - "That is not correct. You almost guessed it"
@@ -659,8 +658,8 @@ menu:
                                                                                                                                                           - "Keep playing?"
                                                                                                                                                         menu:
                                                                                                                                                           Yes: *Q14
-                                                                                                                                                          No: *gracias_fin 
-                                                                                                                                                  No: *gracias_fin 
+                                                                                                                                                          No: *gracias_fin
+                                                                                                                                                  No: *gracias_fin
                                                                                                                                               False:
                                                                                                                                                 question:
                                                                                                                                                   - "It is not correct!"
@@ -669,8 +668,8 @@ menu:
                                                                                                                                                   - "Keep playing?"
                                                                                                                                                 menu:
                                                                                                                                                   Yes: *Q13
-                                                                                                                                                  No: *gracias_fin 
-                                                                                                                                          No: *gracias_fin 
+                                                                                                                                                  No: *gracias_fin
+                                                                                                                                          No: *gracias_fin
                                                                                                                                       False:
                                                                                                                                         question:
                                                                                                                                           - "Good! It's correct! You got it"
@@ -680,8 +679,8 @@ menu:
                                                                                                                                           - "Keep playing?"
                                                                                                                                         menu:
                                                                                                                                           Yes: *Q12
-                                                                                                                                          No: *gracias_fin 
-                                                                                                                                  No: *gracias_fin 
+                                                                                                                                          No: *gracias_fin
+                                                                                                                                  No: *gracias_fin
                                                                                                                               False:
                                                                                                                                 question:
                                                                                                                                   - "The answer is...correct! Well done!"
@@ -691,8 +690,8 @@ menu:
                                                                                                                                   - "Keep playing?"
                                                                                                                                 menu:
                                                                                                                                   Yes: *Q11
-                                                                                                                                  No: *gracias_fin 
-                                                                                                                          No: *gracias_fin 
+                                                                                                                                  No: *gracias_fin
+                                                                                                                          No: *gracias_fin
                                                                                                                       False:
                                                                                                                         question:
                                                                                                                           - "Correct!"
@@ -702,8 +701,8 @@ menu:
                                                                                                                           - "Keep playing?"
                                                                                                                         menu:
                                                                                                                           Yes: *Q10
-                                                                                                                          No: *gracias_fin 
-                                                                                                                  No: *gracias_fin 
+                                                                                                                          No: *gracias_fin
+                                                                                                                  No: *gracias_fin
                                                                                                               False:
                                                                                                                 question:
                                                                                                                   - "Correct! You hit it"
@@ -712,8 +711,8 @@ menu:
                                                                                                                   - "Keep playing?"
                                                                                                                 menu:
                                                                                                                   Yes: *Q9
-                                                                                                                  No: *gracias_fin 
-                                                                                                          No: *gracias_fin 
+                                                                                                                  No: *gracias_fin
+                                                                                                          No: *gracias_fin
                                                                                                       False:
                                                                                                         question:
                                                                                                           - "It is not correct...you almost guessed it"
@@ -722,8 +721,8 @@ menu:
                                                                                                           - "Keep playing?"
                                                                                                         menu:
                                                                                                           Yes: *Q8
-                                                                                                          No: *gracias_fin                                                                                
-                                                                                                  No: *gracias_fin 
+                                                                                                          No: *gracias_fin
+                                                                                                  No: *gracias_fin
                                                                                               False:
                                                                                                 question:
                                                                                                   - "Noooooo. It is not correct"
@@ -732,8 +731,8 @@ menu:
                                                                                                   - "Keep playing?"
                                                                                                 menu:
                                                                                                   Yes: *Q7
-                                                                                                  No: *gracias_fin 
-                                                                                          No: *gracias_fin 
+                                                                                                  No: *gracias_fin
+                                                                                          No: *gracias_fin
                                                                                       False:
                                                                                         question:
                                                                                           - "Correct!"
@@ -742,8 +741,8 @@ menu:
                                                                                           - "Keep playing?"
                                                                                         menu:
                                                                                           Yes: *Q6
-                                                                                          No: *gracias_fin 
-                                                                                  No: *gracias_fin 
+                                                                                          No: *gracias_fin
+                                                                                  No: *gracias_fin
                                                                               False:
                                                                                 question:
                                                                                   - "It is not correct! What a shame"
@@ -753,8 +752,8 @@ menu:
                                                                                   - "Keep playing?"
                                                                                 menu:
                                                                                   Yes: *Q5
-                                                                                  No: *gracias_fin 
-                                                                          No: *gracias_fin 
+                                                                                  No: *gracias_fin
+                                                                          No: *gracias_fin
                                                                       False:
                                                                         question:
                                                                           - "Correct! Very good!"
@@ -765,7 +764,7 @@ menu:
                                                                         menu:
                                                                           Yes: *Q4
                                                                           No: *gracias_fin
-                                                                  No: *gracias_fin   
+                                                                  No: *gracias_fin
                                                               False:
                                                                 question:
                                                                   - "It is not correct! What a shame..."
@@ -801,7 +800,7 @@ menu:
                                           - "Don't miss this LactApp article on the topic: https://www.lactapp.es/blog/5-ways-my-baby-can-be-given-my-milk-in-my-absence/"
                                           - "I hope you find this information useful! 😃"
                                           - "What do you want to do next?"
-                                        menu: 
+                                        menu:
                                           Play: *GAME
                                           Not now: "Okay then, at some other time"
                           About my baby:
@@ -812,7 +811,7 @@ menu:
                                text: "About my baby"
                              - "I suggest some topics:"
                             menu:
-                              Weight lack:
+                              Baby weight:
                                 question:
                                   - "Breastfeeding is very important for your baby but so is proper weight gain"
                                   - image: 'http://www.lactapp.es/lactbot/bebe_peso.jpg'
@@ -933,7 +932,7 @@ menu:
                                          - "What do you want to do now?"
                                         menu:
                                           Play: *GAME
-                                          Not now: "Okay then, at some other time"                                      
+                                          Not now: "Okay then, at some other time"
                                       Not now:
                                         question:
                                           - "Ok, I'll be here whenever you need me"
@@ -958,14 +957,14 @@ menu:
                                           - "What do you want to do now?"
                                         menu:
                                           Play: *GAME
-                                          Not now: "Okay then, some other time" 
+                                          Not now: "Okay then, some other time"
                                       No, really:
                                         question:
                                          - "Oops, Well then I will not insist"
                                          - "In the LactApp app you will find more information on weight gain by age"
                                          - "Do you want to download the LactApp app?"
                                         menu: *menu_descarga
-                              Highly demanding:
+                              High demand:
                                 question:
                                  - "We never expect babies to be so demanding"
                                  - "Before they are born, we think that they only nurse every three hours and then we realize that it is not true"
@@ -1111,18 +1110,18 @@ menu:
                               - "Oh! This is a topic I recently discovered 😄"
                               - "Okay, let's talk about how to eliminate formula supplements"
                               - "What interests you most?"
-                            menu: 
+                            menu:
                               What is relactation?:
                                 question:
                                   - "This is easy!"
                                   - "Relactation is the process by which formula is eliminated to offer only breast milk"
                                   - "It is a complex process that requires support and patience"
-                                  - image: 'http://www.lactapp.es/lactbot/sacaleches.png' 
+                                  - image: 'http://www.lactapp.es/lactbot/sacaleches.png'
                                     text: "Breast pump"
                                   - "Look at this article: https://www.lactapp.es/blog/how-to-achieve-exclusive-maternal-lactation-relactation/"
                                   - "Hope you find it interesting"
                                   - "Press 'Back' to keep asking about relactation"
-                                menu: *menu_descarga 
+                                menu: *menu_descarga
                               How to relactate:
                                 question:
                                   - "To start relactation you must know how much formula your baby drinks"
@@ -1139,7 +1138,7 @@ menu:
                                       - "Oh yes! The famous breast pump 😉"
                                       - "Relactation usually means a breast pump"
                                       - "Since it is necessary to increase milk production in order to reduce the supplements"
-                                      - image: 'http://www.lactapp.es/lactbot/sacaleches2.png' 
+                                      - image: 'http://www.lactapp.es/lactbot/sacaleches2.png'
                                         text: "Breast pump"
                                       - "Let me share an article about this with you: https://www.lactapp.es/blog/breastpump-q-a/"
                                       - "I hope you find it interesting"
