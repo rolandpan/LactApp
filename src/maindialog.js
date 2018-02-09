@@ -15,8 +15,9 @@ import {Dialog, NLPModel,log} from 'deepdialog';
 //
 // Two channels one for english language one for spanish Language
 // Each has corresponding smooch app
+// 2/9/2018 changed channel IDs for english language, old:  2vsYq19wkHW1Yoeon9AwBt, new: 2idK7yZzjk2JsA7uaDgmKb
 //
-export const CHANNEL_ID = {spanish:'EXqZgbnqb5Bf2D9Z9P5Gn8',english:'2vsYq19wkHW1Yoeon9AwBt'};
+export const CHANNEL_ID = {spanish:'EXqZgbnqb5Bf2D9Z9P5Gn8',english:'2idK7yZzjk2JsA7uaDgmKb'};
 export const CURRENT_VERSION={spanish:'2017-11-20-main',english:'2018-02-06-main-eng'};
 export const COMPLETION_QUESTIONAIRE={spanish:'2017-11-13-completion',english:'2018-01-06-completion-eng'};
 export const HELP_MENU_TREE = {spanish:'2017-06-29-help',english:'2017-11-03-help-eng'};
